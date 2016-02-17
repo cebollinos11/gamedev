@@ -650,7 +650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a4c90301e80a0429c6aecf72c90ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 1
 --- !u!114 &1754712096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df0c5678370debb46b65d9e0c0605193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turnSpeed: 4
+  turnSpeed: 10
   referencePointObject: {fileID: 672831590}
 --- !u!114 &1754712097
 MonoBehaviour:
@@ -675,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5caf24f36034f7044b2d65b8e53bab7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
 --- !u!1 &1802304824
 GameObject:
   m_ObjectHideFlags: 0
