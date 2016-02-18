@@ -10,16 +10,16 @@ public class GameMaster : MonoBehaviour {
     }
     turns curTurn = turns.player;
 
-    //[SerializeField] Enemy[] enemiesOnMap;
+    [SerializeField] Enemy[] enemiesOnMap;
     int curEnemy = 0;
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        
 	    switch(curTurn)
         {
             case turns.player:
