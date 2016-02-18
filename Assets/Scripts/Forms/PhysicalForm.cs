@@ -11,6 +11,36 @@ public class PhysicalForm : Player {
 	void Start () {
         base.Start();
 	}
+
+    void TryToSpawnDigital() {
+
+        //try to explode
+        InternetTerminal[] terminals = GameObject.FindObjectsOfType<InternetTerminal>();
+
+        bool isTerminalClose = false;
+
+        for (int i = 0; i < terminals.Length; i++)
+        {
+            if (Vector3.Distance(transform.position, terminals[i].transform.position) < 4)
+            {
+                Debug.Log("can split");
+                isTerminalClose = true;
+            }
+        }
+
+        if (isTerminalClose)
+        {
+            Debug.Log("EXPLODEEEEEE");
+            spawnedForms[0] = Instantiate(spawnableForms[0], spawnpoint.position, Quaternion.identity) as Player;
+            spawnedForms[0].state = playerState.idle;
+        }
+
+        else
+        {
+            Debug.Log("cannot split now into terminal form");
+        }
+    
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -40,8 +70,7 @@ public class PhysicalForm : Player {
                 }
                 else
                 {
-                    spawnedForms[0] = Instantiate(spawnableForms[0], spawnpoint.position, Quaternion.identity) as Player;
-                    spawnedForms[0].state = playerState.idle;
+                    TryToSpawnDigital();
                 }
             }
         }

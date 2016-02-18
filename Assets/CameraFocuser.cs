@@ -33,12 +33,14 @@ public class CameraFocuser : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            FocusOn(forms[0].transform.position);
+            target = GameObject.Find("PhysicalForm").transform.position;
+            FocusOn(target);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            FocusOn(forms[1].transform.position);
+            target = GameObject.Find("DigitalForm(Clone)").transform.position;
+            FocusOn(target);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
