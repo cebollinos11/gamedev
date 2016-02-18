@@ -40,7 +40,7 @@ public class CameraOrbit : MonoBehaviour {
             if (refPoint == null)
                 refPoint = referencePointObject;
 
-            Debug.Log(refPoint.position);
+            //Debug.Log(refPoint.position);
             //transform.LookAt(refPoint);
             transform.RotateAround(refPoint.position, Vector3.up, Input.GetAxis("Mouse X") * turnSpeed);
             //transform.RotateAround(refPoint.position, Vector3.right, Input.GetAxis("Mouse Y") * turnSpeed);
