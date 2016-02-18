@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
     NavMeshAgent agent;
 
     int moveSpeed = 5;
-    int actionPointsLeft = 5;
+    public int actionPointsLeft = 5;
 	
     enum playerState
     {
@@ -19,10 +19,10 @@ public class Player : MonoBehaviour {
     }
     [SerializeField] playerState state = playerState.idle;
 
-    LayerMask lm;
+    LayerMask layerMask;
     void Start()
     {
-        lm = 1 << LayerMask.NameToLayer("Walkable");
+        layerMask = 1 << LayerMask.NameToLayer("Walkable");
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -46,7 +46,7 @@ public class Player : MonoBehaviour {
         if (actionPointsLeft > 0)
         {
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100, lm))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100, layerMask))
             {
                 Vector3 hitPoint = hit.point;
 
