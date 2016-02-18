@@ -9,7 +9,7 @@ public class enemyController : MonoBehaviour {
 	void Start () {
 
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(target.transform.position);
+        //agent.SetDestination(target.transform.position);
 	}
 	
 	// Update is called once per frame
