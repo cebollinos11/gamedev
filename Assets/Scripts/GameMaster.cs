@@ -48,19 +48,27 @@ public class GameMaster : MonoBehaviour {
 
     void enemyTurn()
     {
-        if(enemiesOnMap[curEnemy].state == Enemy.enemyState.idle)
+        if (enemiesOnMap.Length > 0)
         {
-            if(enemiesOnMap.Length-1 <= curEnemy)
+            if (enemiesOnMap[curEnemy].state == Enemy.enemyState.idle)
             {
-                curEnemy = 0;
-                curTurn = turns.player;
-                player.resetTurn();
+                if (enemiesOnMap.Length - 1 <= curEnemy)
+                {
+                    curEnemy = 0;
+                    curTurn = turns.player;
+                    player.resetTurn();
+                }
+                else
+                {
+                    curEnemy++;
+                    enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
+                }
             }
-            else
-            {
-                curEnemy++;
-                enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
-            }
+        }
+        else
+        {
+            curTurn = turns.player;
+            player.resetTurn();
         }
     }
 
@@ -69,7 +77,11 @@ public class GameMaster : MonoBehaviour {
         //if the end turn btn is clicked and its currently the players turn, then change turn to enemy
         if (player.state == Player.playerState.idle && curTurn == turns.player)
         {
-            enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
+            if (enemiesOnMap.Length > 0) 
+            { 
+                enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn; 
+            }
+
             curTurn = turns.enemy;
         }
     }

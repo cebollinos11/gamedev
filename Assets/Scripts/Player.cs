@@ -24,16 +24,22 @@ public class Player : MonoBehaviour {
     public playerState state = playerState.idle;
 
     LayerMask layerMask;
-    void Start()
+    public virtual void Start()
     {
         actionPointsLeft = maxActionPoints;
         gamemaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         layerMask = 1 << LayerMask.NameToLayer("Walkable");
         agent = GetComponent<NavMeshAgent>();
+
+        
+        pointerLine.SetPosition(0, transform.position);
+
+        
     }
 
 	// Update is called once per frame
-	void Update () {
+    public virtual void Update()
+    {
         if (gamemaster.curTurn == GameMaster.turns.player)
         {
             switch (state)
