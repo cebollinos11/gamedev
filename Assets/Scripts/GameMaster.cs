@@ -56,7 +56,13 @@ public class GameMaster : MonoBehaviour {
                 {
                     curEnemy = 0;
                     curTurn = turns.player;
-                    player.resetTurn();
+
+                    GameObject[] playerForms = GameObject.FindGameObjectsWithTag("Player");
+                    foreach (GameObject form in playerForms)
+                    {
+                        Player fscript = form.GetComponent<Player>();
+                        fscript.resetTurn();
+                    }
                 }
                 else
                 {
@@ -68,7 +74,13 @@ public class GameMaster : MonoBehaviour {
         else
         {
             curTurn = turns.player;
-            player.resetTurn();
+
+            GameObject[] playerForms = GameObject.FindGameObjectsWithTag("Player");
+            foreach (GameObject form in playerForms)
+            {
+                Player fscript = form.GetComponent<Player>();
+                fscript.resetTurn();
+            }
         }
     }
 

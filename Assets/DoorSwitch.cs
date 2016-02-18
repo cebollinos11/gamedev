@@ -18,7 +18,7 @@ public class DoorSwitch : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.gameObject.name == "DigitalForm")
+        if (other.gameObject.name == "DigitalForm(Clone)")
         {
             Debug.Log("opening door");
             DoorToOpen.Open();
@@ -30,7 +30,7 @@ public class DoorSwitch : MonoBehaviour {
     void OnTriggerExit(Collider other)
     {
 
-        if (other.gameObject.name == "DigitalForm")
+        if (other.gameObject.name == "DigitalForm(Clone)")
         {
             Debug.Log("closing door");
             DoorToOpen.Close();

@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class DigitalForm : Player {
-
+    
 	// Use this for initialization
 	void Start () {
         base.Start();

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-    GameMaster gamemaster;
+    [HideInInspector] public GameMaster gamemaster;
 
     [SerializeField] Transform pointer;
     [SerializeField] TextMesh pointerText;
@@ -18,6 +18,7 @@ public class Player : MonoBehaviour {
 
     public enum playerState
     {
+        disabled,
         idle,
         move
     }
@@ -40,7 +41,7 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
     public virtual void Update()
     {
-        if (gamemaster.curTurn == GameMaster.turns.player)
+        if (gamemaster.curTurn == GameMaster.turns.player && state != playerState.disabled)
         {
             switch (state)
             {
@@ -66,6 +67,8 @@ public class Player : MonoBehaviour {
     {   
         if (actionPointsLeft > 0)
         {
+            resetPointer();
+
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100, layerMask))
             {
@@ -125,20 +128,7 @@ public class Player : MonoBehaviour {
     { 
         if (agent.remainingDistance < 0.01F)
         {
-            if (!pointer.gameObject.activeSelf)
-            {
-                pointer.gameObject.SetActive(true);
-            }
-            if (!pointerLine.gameObject.activeSelf)
-            {
-                pointerLine.gameObject.SetActive(true);
-                pointerLine.SetPosition(0, transform.position);
-            }
-            if (!pointerText.gameObject.activeSelf)
-            {
-                pointerText.gameObject.SetActive(true);
-                pointerText.text = "" + 0;
-            }
+            resetPointer();
 
             state = playerState.idle;
         }
@@ -150,5 +140,23 @@ public class Player : MonoBehaviour {
         pointerLine.gameObject.SetActive(true);
         pointerText.gameObject.SetActive(true);
         pointer.gameObject.SetActive(true);
+    }
+
+    public void resetPointer()
+    {
+        if (!pointer.gameObject.activeSelf)
+        {
+            pointer.gameObject.SetActive(true);
+        }
+        if (!pointerLine.gameObject.activeSelf)
+        {
+            pointerLine.gameObject.SetActive(true);
+            pointerLine.SetPosition(0, transform.position);
+        }
+        if (!pointerText.gameObject.activeSelf)
+        {
+            pointerText.gameObject.SetActive(true);
+            pointerText.text = "" + 0;
+        }
     }
 }

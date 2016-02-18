@@ -29,26 +29,10 @@ GameObject:
   - 23: {fileID: 2336230}
   - 195: {fileID: 19500810}
   - 114: {fileID: 11430484}
+  - 54: {fileID: 5454230}
   m_Layer: 0
   m_Name: PhysicalForm
   m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &150572
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 472880}
-  - 33: {fileID: 3313972}
-  - 23: {fileID: 2364336}
-  m_Layer: 0
-  m_Name: movementCircle
-  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +83,7 @@ Transform:
   m_Children:
   - {fileID: 443918}
   m_Father: {fileID: 484914}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!4 &430428
 Transform:
   m_ObjectHideFlags: 1
@@ -124,18 +108,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 410294}
   m_RootOrder: 0
---- !u!4 &472880
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150572}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.462, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 484914}
-  m_RootOrder: 1
 --- !u!4 &484914
 Transform:
   m_ObjectHideFlags: 1
@@ -143,11 +115,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.86343, y: 4.16, z: -0.22157669}
+  m_LocalPosition: {x: -29.823442, y: 4.1, z: -0.39045668}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 430428}
-  - {fileID: 472880}
   - {fileID: 410294}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -203,32 +174,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &2364336
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150572}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 2100000, guid: f79a42347f5680d4191b2db8809b4105, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!23 &2397584
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -255,13 +200,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &3313972
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150572}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &3336468
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -276,6 +214,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166008}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &5454230
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136242}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6589556
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -320,11 +273,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8715b6f38b5b29144aa7ba8edea29363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gamemaster: {fileID: 0}
   pointer: {fileID: 410294}
   pointerText: {fileID: 10283636}
   pointerLine: {fileID: 12080100}
   maxActionPoints: 5
-  state: 0
+  state: 1
+  spawnableForms:
+  - {fileID: 11457110, guid: 7620413badb9852488054d304c9bc4a7, type: 2}
+  spawnedForms:
+  - {fileID: 0}
 --- !u!120 &12080100
 LineRenderer:
   m_ObjectHideFlags: 1
