@@ -3,18 +3,21 @@ using System.Collections;
 
 public class GameMaster : MonoBehaviour {
 
-    enum turns
+    public enum turns
     {
         player,
         enemy
     }
-    turns curTurn = turns.player;
+    public turns curTurn = turns.player;
 
     [SerializeField] Enemy[] enemiesOnMap;
-    int curEnemy = 0;
+    public int curEnemy = 0;
+
+    Player player;
 
 	// Use this for initialization
 	void Start () {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 	}
 	
 	// Update is called once per frame
@@ -31,41 +34,42 @@ public class GameMaster : MonoBehaviour {
             default:
                 break;
         }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            btnEndTurn();
+        }
 	}
 
     void playerTurn()
     {
-        /*
-         * if(player out of actionpoints)
-         * {
-         * curTurn = turns.enemy;
-         * }
-         * */
+        
     }
 
     void enemyTurn()
     {
-        /*
-         * if(enemiesOnMap[curEnemy] is out of actionpoints)
-         * {
-         *      if(enemiesOnMap.count+1 >= curEnemy)
-         *      {
-         *          curEnemy = 0;
-         *          curTurn = turns.player;
-         *      }
-         *      else
-         *      {
-         *          curEnemy++;
-         *      }
-         * }
-         * */
+        if(enemiesOnMap[curEnemy].state == Enemy.enemyState.idle)
+        {
+            if(enemiesOnMap.Length-1 <= curEnemy)
+            {
+                curEnemy = 0;
+                curTurn = turns.player;
+                player.resetTurn();
+            }
+            else
+            {
+                curEnemy++;
+                enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
+            }
+        }
     }
 
     void btnEndTurn()
     {
         //if the end turn btn is clicked and its currently the players turn, then change turn to enemy
-        if(curTurn == turns.player)
+        if (player.state == Player.playerState.idle && curTurn == turns.player)
         {
+            enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
             curTurn = turns.enemy;
         }
     }

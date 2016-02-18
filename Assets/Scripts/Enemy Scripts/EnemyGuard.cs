@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyGuard : Enemy {
 
+    Player player;
+    
     int actionPointLength = 3;
     [SerializeField] int maxActionPoints = 5;
     [SerializeField] int moveSpeed = 5;
@@ -13,6 +15,12 @@ public class EnemyGuard : Enemy {
     public int waypointID = 0;
 
     Vector3 curPosition = new Vector3(0, 0, 0);
+
+    public float fieldOfViewRange = 52f;
+    public float visionRange = 30;
+
+    public bool turningEnemy = true;
+    bool turnRight = false;
 
     enum enemyState
     {
@@ -25,9 +33,16 @@ public class EnemyGuard : Enemy {
     {
         agent = GetComponent<NavMeshAgent>();
         actionpointsLeft = maxActionPoints;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 	// Update is called once per frame
 	void Update () {
+
+        if(canSeePlayer())
+        {
+            Destroy(player.gameObject);
+        }
+
 	    switch(base.state)
         {
             case Enemy.enemyState.idle:
@@ -85,6 +100,20 @@ public class EnemyGuard : Enemy {
             curPosition = transform.position;
             eState = enemyState.patrol;
         }
+        else if(turningEnemy)
+        {
+            if(turnRight)
+            {
+                transform.Rotate(Vector3.up * 90);
+                turnRight = false;
+            }
+            else
+            {
+                transform.Rotate(Vector3.up * -90);
+                turnRight = true;
+            }
+            actionpointsLeft--;
+        }
     }
     void patrol()
     {
@@ -99,5 +128,29 @@ public class EnemyGuard : Enemy {
             waypointID++;
             eState = enemyState.stand;
         }
+    }
+
+    public bool canSeePlayer()
+    {
+        Vector3 rayDirection = player.transform.position - transform.position;
+        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
+        RaycastHit hit;
+
+        if ((Vector3.Angle(rayDirection, transform.forward)) < fieldOfViewRange)
+        {
+            if (Physics.Raycast(transform.position, rayDirection, out hit, visionRange))
+            {
+                if (hit.transform.tag == "Player")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        return false;
     }
 }

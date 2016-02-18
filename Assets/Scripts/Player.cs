@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
+    GameMaster gamemaster;
+
     [SerializeField] Transform pointer;
     [SerializeField] TextMesh pointerText;
     [SerializeField] LineRenderer pointerLine;
@@ -10,34 +12,47 @@ public class Player : MonoBehaviour {
     NavMeshAgent agent;
 
     int moveSpeed = 5;
-    public int actionPointsLeft = 5;
-	
-    enum playerState
+    [SerializeField] int maxActionPoints = 5;
+    int actionPointsLeft = 5;
+    int pointerDistance = 0;
+
+    public enum playerState
     {
         idle,
         move
     }
-    [SerializeField] playerState state = playerState.idle;
+    public playerState state = playerState.idle;
 
     LayerMask layerMask;
     void Start()
     {
+        actionPointsLeft = maxActionPoints;
+        gamemaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         layerMask = 1 << LayerMask.NameToLayer("Walkable");
         agent = GetComponent<NavMeshAgent>();
     }
 
 	// Update is called once per frame
 	void Update () {
-        switch(state)
+        if (gamemaster.curTurn == GameMaster.turns.player)
         {
-            case playerState.idle:
-                idle();
-                break;
-            case playerState.move:
-                move();
-                break;
-            default:
-                break;
+            switch (state)
+            {
+                case playerState.idle:
+                    idle();
+                    break;
+                case playerState.move:
+                    move();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            if(pointerLine.gameObject.activeSelf) pointerLine.gameObject.SetActive(false);
+            if (pointerText.gameObject.activeSelf) pointerText.gameObject.SetActive(false);
+            if (pointer.gameObject.activeSelf) pointer.gameObject.SetActive(false);
         }
 	}
 
@@ -58,7 +73,7 @@ public class Player : MonoBehaviour {
                 RaycastHit hitt;
                 if (Physics.Raycast(transform.position, heading, out hitt, distance))
                 {
-                    if(hitt.transform.tag == "wall")
+                    if(hitt.transform.gameObject.layer != LayerMask.NameToLayer("Walkable"))
                     {
                         hitPoint = hitt.point;
                     }
@@ -68,7 +83,7 @@ public class Player : MonoBehaviour {
                 lineEndPos = hitPoint;
 
                 //distance from point to player
-                int pointerDistance = Mathf.FloorToInt(Vector3.Distance(transform.position, hitPoint) / moveSpeed);
+                pointerDistance = Mathf.FloorToInt(Vector3.Distance(transform.position, hitPoint) / moveSpeed);
 
                 if (pointerDistance > actionPointsLeft) //don't move more than action points left
                 {
@@ -94,6 +109,8 @@ public class Player : MonoBehaviour {
                 pointerLine.gameObject.SetActive(false);
                 pointerText.gameObject.SetActive(false);
                 pointer.gameObject.SetActive(false);
+                actionPointsLeft -= pointerDistance;
+                pointerDistance = 0;
                 state = playerState.move;
             }
         }
@@ -119,5 +136,13 @@ public class Player : MonoBehaviour {
 
             state = playerState.idle;
         }
+    }
+
+    public void resetTurn()
+    {
+        actionPointsLeft = maxActionPoints;
+        pointerLine.gameObject.SetActive(true);
+        pointerText.gameObject.SetActive(true);
+        pointer.gameObject.SetActive(true);
     }
 }
