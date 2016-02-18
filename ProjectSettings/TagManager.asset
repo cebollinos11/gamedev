@@ -15,8 +15,8 @@ TagManager:
   - 
   - 
   - Walkable
-  - 
-  - 
+  - PhysicalWorld
+  - CableWorld
   - 
   - 
   - 
