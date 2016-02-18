@@ -6,14 +6,17 @@ public class CameraFocuser : MonoBehaviour {
 
     public GameObject[] forms;
     
-    Vector3 target;
+    Transform target;
     float speed  = 10;
+
+
+    CameraOrbit cOrbit;
 
 	// Use this for initialization
 
     public void FocusOn(Vector3 where)
     {
-        target = where;
+        target.position = where;
 
         Vector3 centerino = transform.position + transform.forward * 60f ;
 
@@ -25,7 +28,7 @@ public class CameraFocuser : MonoBehaviour {
     }
 
 	void Start () {
-	
+        cOrbit = GetComponent<CameraOrbit>();
 	}
 	
 	// Update is called once per frame
@@ -33,20 +36,20 @@ public class CameraFocuser : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            target = GameObject.Find("PhysicalForm").transform.position;
-            FocusOn(target);
+            target = GameObject.Find("PhysicalForm").transform;
+            
+            FocusOn(target.position);
+            cOrbit.referencePointObject = target;
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            target = GameObject.Find("DigitalForm(Clone)").transform.position;
-            FocusOn(target);
+            target = GameObject.Find("DigitalForm(Clone)").transform;
+            FocusOn(target.position);
+            cOrbit.referencePointObject = target;
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            FocusOn(forms[2].transform.position);
-        }
+       
 	    
 	}
 }
