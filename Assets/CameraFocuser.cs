@@ -18,7 +18,7 @@ public class CameraFocuser : MonoBehaviour {
     {
         target.position = where;
 
-        Vector3 centerino = transform.position + transform.forward * 60f ;
+        Vector3 centerino = transform.position + transform.forward * 30f ;
 
        
 
