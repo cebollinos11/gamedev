@@ -36,17 +36,24 @@ public class CameraFocuser : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            target = GameObject.Find("PhysicalForm").transform;
-            
-            FocusOn(target.position);
-            cOrbit.referencePointObject = target;
+            GameObject form = GameObject.Find("PhysicalForm");
+            if (form != null)
+            {
+                target = form.transform;
+                FocusOn(target.position);
+                cOrbit.referencePointObject = target;
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            target = GameObject.Find("DigitalForm(Clone)").transform;
-            FocusOn(target.position);
-            cOrbit.referencePointObject = target;
+            GameObject form = GameObject.Find("DigitalForm(Clone)");
+            if(form != null)
+            {
+                target = form.transform;
+                FocusOn(target.position);
+                cOrbit.referencePointObject = target;
+            }
         }
 
        

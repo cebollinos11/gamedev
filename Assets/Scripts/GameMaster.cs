@@ -1,8 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class GameMaster : MonoBehaviour {
 
+    //UI elements
+    Transform gameUI;
+    Text txtCurTurn;
+    Button btnEndTurn;
+    //
     public enum turns
     {
         player,
@@ -13,11 +18,16 @@ public class GameMaster : MonoBehaviour {
     [SerializeField] Enemy[] enemiesOnMap;
     public int curEnemy = 0;
 
-    Player player;
+    FormsManager formManager;
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        formManager = GetComponent<FormsManager>();
+
+        gameUI = GameObject.FindGameObjectWithTag("gameUI").transform;
+        txtCurTurn = gameUI.FindChild("txtTurn").GetComponent<Text>();
+        btnEndTurn = gameUI.FindChild("btnEndTurn").GetComponent<Button>();
+        btnEndTurn.onClick.AddListener(() => endTurnBtnClicked());
 	}
 	
 	// Update is called once per frame
@@ -37,17 +47,25 @@ public class GameMaster : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            btnEndTurn();
+            endTurnBtnClicked();
         }
 	}
 
     void playerTurn()
     {
-        
+        if(txtCurTurn.text != "Turn: Player")
+        {
+            txtCurTurn.text = "Turn: Player";
+        }
     }
 
     void enemyTurn()
     {
+        if(txtCurTurn.text != "Turn: Enemy")
+        {
+            txtCurTurn.text = "Turn: Enemy";
+        }
+
         if (enemiesOnMap.Length > 0)
         {
             if (enemiesOnMap[curEnemy].state == Enemy.enemyState.idle)
@@ -57,12 +75,7 @@ public class GameMaster : MonoBehaviour {
                     curEnemy = 0;
                     curTurn = turns.player;
 
-                    GameObject[] playerForms = GameObject.FindGameObjectsWithTag("Player");
-                    foreach (GameObject form in playerForms)
-                    {
-                        Player fscript = form.GetComponent<Player>();
-                        fscript.resetTurn();
-                    }
+                    formManager.resetTurn();
                 }
                 else
                 {
@@ -74,20 +87,14 @@ public class GameMaster : MonoBehaviour {
         else
         {
             curTurn = turns.player;
-
-            GameObject[] playerForms = GameObject.FindGameObjectsWithTag("Player");
-            foreach (GameObject form in playerForms)
-            {
-                Player fscript = form.GetComponent<Player>();
-                fscript.resetTurn();
-            }
+            formManager.resetTurn();
         }
     }
 
-    void btnEndTurn()
+    void endTurnBtnClicked()
     {
         //if the end turn btn is clicked and its currently the players turn, then change turn to enemy
-        if (player.state == Player.playerState.idle && curTurn == turns.player)
+        if (formManager.state == FormsManager.formState.idle && curTurn == turns.player)
         {
             if (enemiesOnMap.Length > 0) 
             { 

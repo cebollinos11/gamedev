@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyGuard : Enemy {
 
-    Player player;
+    GameObject player;
     
     int actionPointLength = 3;
     [SerializeField] int maxActionPoints = 5;
@@ -33,7 +33,7 @@ public class EnemyGuard : Enemy {
     {
         agent = GetComponent<NavMeshAgent>();
         actionpointsLeft = maxActionPoints;
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 	// Update is called once per frame
 	void Update () {
