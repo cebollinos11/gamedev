@@ -47,8 +47,7 @@ public class FormsManager : MonoBehaviour {
         gamemaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         layerMask = 1 << LayerMask.NameToLayer("Walkable");
 
-        curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
-        pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
+        
 
         //ui
         gameUI = GameObject.FindGameObjectWithTag("gameUI").transform;
@@ -66,6 +65,9 @@ public class FormsManager : MonoBehaviour {
         spawnedForms = new GameObject[spawnableForms.Length];
         spawnedForms[0] = physical;
         //
+
+        curAgent = spawnedForms[0].GetComponent<NavMeshAgent>();
+        pointerLine.SetPosition(0, spawnedForms[0].transform.position);
 	}
 	
 	// Update is called once per frame
