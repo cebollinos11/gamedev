@@ -2006,6 +2006,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11477550, guid: fe07d8782eaa7f04cb9e4a8c819d1e55, type: 2}
+      propertyPath: waypoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 415732, guid: fe07d8782eaa7f04cb9e4a8c819d1e55, type: 2}
       propertyPath: m_LocalPosition.x
       value: -66.14157
@@ -3057,6 +3061,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11477806, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
+      propertyPath: enemiesOnMap.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 468188, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
