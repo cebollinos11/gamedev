@@ -34,7 +34,7 @@ public class CameraOrbit : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
 
             if (refPoint == null)
