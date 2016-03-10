@@ -12,6 +12,9 @@ public class FormsManager : MonoBehaviour {
     Button btnCombine;
     //
 
+    //camera follower
+    CameraFocuser camFocus;
+
     [HideInInspector] public GameMaster gamemaster;
 
     bool isSplitted = false;
@@ -68,6 +71,9 @@ public class FormsManager : MonoBehaviour {
 
         curAgent = spawnedForms[0].GetComponent<NavMeshAgent>();
         pointerLine.SetPosition(0, spawnedForms[0].transform.position);
+
+
+        camFocus = Object.FindObjectOfType<CameraFocuser>();
 	}
 	
 	// Update is called once per frame
@@ -166,6 +172,7 @@ public class FormsManager : MonoBehaviour {
                 actionPointsLeft -= pointerDistance+1;
                 pointerDistance = 0;
                 state = formState.move;
+                camFocus.TargetToFollow = spawnedForms[curForm].transform;
             }
         }
     }
@@ -173,8 +180,8 @@ public class FormsManager : MonoBehaviour {
     {
         if (curAgent.remainingDistance < 0.01F)
         {
+            camFocus.TargetToFollow = null;
             resetPointer();
-
             state = formState.idle;
         }
     }
@@ -216,6 +223,7 @@ public class FormsManager : MonoBehaviour {
                 curForm = formID;
                 curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
                 pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
+                
             }
             else if (!isSplitted)
             {
