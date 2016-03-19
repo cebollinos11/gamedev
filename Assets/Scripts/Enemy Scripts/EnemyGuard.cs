@@ -18,6 +18,7 @@ public class EnemyGuard : Enemy {
 
     public float fieldOfViewRange = 52f;
     public float visionRange = 30;
+    public float spotRange = 20;
 
     public bool turningEnemy = true;
     bool turnRight = false;
@@ -29,6 +30,9 @@ public class EnemyGuard : Enemy {
     }
     enemyState eState = enemyState.stand;
 
+    [HideInInspector] public bool investigate = false;
+    [HideInInspector] public Vector3 investigatePos;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -38,9 +42,16 @@ public class EnemyGuard : Enemy {
 	// Update is called once per frame
 	void Update () {
 
-        if(canSeePlayer())
+        if(canSeePlayer() == 2)
+        {
+            investigate = true;
+            Debug.Log("investigating");
+        }
+        else if(canSeePlayer() == 1)
         {
             Destroy(player.gameObject);
+
+            Debug.Log("spotted!");
         }
 
 	    switch(base.state)
@@ -88,13 +99,18 @@ public class EnemyGuard : Enemy {
 
     void stand()
     {
-        if(waypoints.Length > 0)
+        if(investigate)
+        {
+            agent.SetDestination(investigatePos);
+            curPosition = transform.position;
+            eState = enemyState.patrol;
+        }
+        else if(waypoints.Length > 0)
         { 
             if(waypoints.Length-1 < waypointID)
             {
                 waypointID = 0;
             }
-
             agent.SetDestination(waypoints[waypointID].position);
 
             curPosition = transform.position;
@@ -125,13 +141,25 @@ public class EnemyGuard : Enemy {
 
         if (agent.remainingDistance <= 0.01F)
         {
-            waypointID++;
+            if (!investigate)
+            {
+                waypointID++;
+            }
+            else
+            {
+                investigate = false;
+            }
             eState = enemyState.stand;
         }
     }
 
-    public bool canSeePlayer()
+    public int canSeePlayer()
     {
+        // 0 = cant see him
+        // 1 = player spotted
+        // 2 = investigate
+        int state = 0;
+
         Vector3 rayDirection = player.transform.position - transform.position;
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         RaycastHit hit;
@@ -142,15 +170,19 @@ public class EnemyGuard : Enemy {
             {
                 if (hit.transform.tag == "Player")
                 {
-                    return true;
-                }
-                else
-                {
-                    return false;
+                    if(Vector3.Distance(hit.transform.position, transform.position) < spotRange)
+                    {
+                        state = 1; //if player spotted
+                    }
+                    else
+                    {
+                        state = 2; //if investigate
+                        investigatePos = hit.transform.position;
+                    }
                 }
             }
         }
 
-        return false;
+        return state;
     }
 }
