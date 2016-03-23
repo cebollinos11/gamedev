@@ -29,31 +29,33 @@ public class CameraFocuser : MonoBehaviour {
 
 	void Start () {
         cOrbit = GetComponent<CameraOrbit>();
+        StartFocusOn("PhysicalForm");
 	}
+
+    void StartFocusOn(string s)
+    {
+
+        GameObject form = GameObject.Find(s);
+        if (form != null)
+        {
+            target = form.transform;
+            FocusOn(target.position);
+            cOrbit.referencePointObject = target;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            GameObject form = GameObject.Find("PhysicalForm");
-            if (form != null)
-            {
-                target = form.transform;
-                FocusOn(target.position);
-                cOrbit.referencePointObject = target;
-            }
+            StartFocusOn("PhysicalForm");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            GameObject form = GameObject.Find("DigitalForm(Clone)");
-            if(form != null)
-            {
-                target = form.transform;
-                FocusOn(target.position);
-                cOrbit.referencePointObject = target;
-            }
+            StartFocusOn("DigitalForm(Clone)");
+            
         }
 
         if (TargetToFollow != null)
