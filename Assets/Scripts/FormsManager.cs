@@ -172,6 +172,7 @@ public class FormsManager : MonoBehaviour {
                 actionPointsLeft -= pointerDistance+1;
                 pointerDistance = 0;
                 state = formState.move;
+                Debug.Log(spawnedForms[curForm]);
                 camFocus.TargetToFollow = spawnedForms[curForm].transform;
             }
         }
