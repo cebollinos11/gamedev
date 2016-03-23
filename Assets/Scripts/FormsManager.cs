@@ -17,7 +17,7 @@ public class FormsManager : MonoBehaviour {
 
     [HideInInspector] public GameMaster gamemaster;
 
-    bool isSplitted = false;
+    [HideInInspector] public bool isSplitted = false;
 
     [SerializeField] Transform pointer;
     [SerializeField] TextMesh pointerText;
