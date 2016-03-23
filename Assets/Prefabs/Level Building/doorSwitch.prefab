@@ -30,7 +30,7 @@ GameObject:
   - 65: {fileID: 6572474}
   - 23: {fileID: 2316536}
   - 114: {fileID: 11456332}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: doorSwitch
   m_TagString: Untagged
   m_Icon: {fileID: 0}

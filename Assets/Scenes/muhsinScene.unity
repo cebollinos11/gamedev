@@ -800,6 +800,10 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 1127284416}
+    - target: {fileID: 125644, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
   m_IsPrefabParent: 0
