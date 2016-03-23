@@ -4,18 +4,20 @@ using UnityEngine.EventSystems;
 
 public class DoorSwitchBtn : MonoBehaviour, IPointerClickHandler {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    DoorSwitch dw;
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
 
+    public void setDoorSwitch(DoorSwitch doorw)
+    {
+        dw = doorw;
+    }
     public void OnPointerClick(PointerEventData eventData)
     {
+        dw.unlockDoor();
         Debug.Log("clickkeeed");
     }
 }

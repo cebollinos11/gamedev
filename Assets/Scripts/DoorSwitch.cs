@@ -17,7 +17,7 @@ public class DoorSwitch : MonoBehaviour {
 
 
     [SerializeField] bool complete, physical, digital = false;
-    
+    [SerializeField] Transform btn;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +30,9 @@ public class DoorSwitch : MonoBehaviour {
             physical = digital = complete;
         }
 
-        light.color = (doorUnlocked ? enabledColor : disabledColor); 
+        light.color = (doorUnlocked ? enabledColor : disabledColor);
+
+        btn.GetComponent<DoorSwitchBtn>().setDoorSwitch(this);
 	}
 	
 	// Update is called once per frame
@@ -45,14 +47,35 @@ public class DoorSwitch : MonoBehaviour {
         }
 	}
 
+    public void unlockDoor()
+    {
+        doorUnlocked = true;
+        light.color = enabledColor;
+        door.gameObject.SetActive(false);
+
+        hideBtn();
+    }
+
     void showBtn()
     {
-        Debug.Log("show btn");
-        showingBtn = true;
+        if (!doorUnlocked)
+        {
+            Debug.Log("show btn");
+            if (!btn.gameObject.activeSelf)
+            {
+                btn.gameObject.SetActive(true);
+            }
+            showingBtn = true;
+        }
     }
     void hideBtn()
     {
         Debug.Log("hide btn");
+        if (btn.gameObject.activeSelf)
+        {
+            btn.gameObject.SetActive(false);
+        }
+
         showingBtn = false;
     }
 
@@ -70,7 +93,7 @@ public class DoorSwitch : MonoBehaviour {
                     }
                 }
             }
-            else
+            else if(splitted)
             {
                 if ((physical && other.gameObject == formManager.spawnedForms[0]) || (digital && other.gameObject == formManager.spawnedForms[1]))
                 {
