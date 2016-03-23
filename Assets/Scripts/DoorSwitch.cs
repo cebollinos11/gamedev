@@ -8,9 +8,16 @@ public class DoorSwitch : MonoBehaviour {
     GameObject[] playerForms;
     bool splitted = false;
 
-    public Transform door;
+    [SerializeField] Transform door;
+    bool showingBtn = false;
+    bool doorUnlocked = false;
+
+    [SerializeField] Light light;
+    [SerializeField] Color disabledColor, enabledColor;
+
+
     [SerializeField] bool complete, physical, digital = false;
-    
+    [SerializeField] Transform btn;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +29,10 @@ public class DoorSwitch : MonoBehaviour {
         {
             physical = digital = complete;
         }
+
+        light.color = (doorUnlocked ? enabledColor : disabledColor);
+
+        btn.GetComponent<DoorSwitchBtn>().setDoorSwitch(this);
 	}
 	
 	// Update is called once per frame
@@ -33,19 +44,76 @@ public class DoorSwitch : MonoBehaviour {
                 splitted = formManager.isSplitted;
                 playerForms = GameObject.FindGameObjectsWithTag("Player");
             }
-
-            if (complete)
-            {
-
-            }
-            if(physical)
-            {
-
-            }
-            if(digital)
-            {
-
-            }
         }
 	}
+
+    public void unlockDoor()
+    {
+        doorUnlocked = true;
+        light.color = enabledColor;
+        door.gameObject.SetActive(false);
+
+        hideBtn();
+    }
+
+    void showBtn()
+    {
+        if (!doorUnlocked)
+        {
+            Debug.Log("show btn");
+            if (!btn.gameObject.activeSelf)
+            {
+                btn.gameObject.SetActive(true);
+            }
+            showingBtn = true;
+        }
+    }
+    void hideBtn()
+    {
+        Debug.Log("hide btn");
+        if (btn.gameObject.activeSelf)
+        {
+            btn.gameObject.SetActive(false);
+        }
+
+        showingBtn = false;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            if(complete)
+            {
+                if (!splitted)
+                {
+                    if (!showingBtn)
+                    {
+                        showBtn();
+                    }
+                }
+            }
+            else if(splitted)
+            {
+                if ((physical && other.gameObject == formManager.spawnedForms[0]) || (digital && other.gameObject == formManager.spawnedForms[1]))
+                {
+                    if (!showingBtn)
+                    {
+                        showBtn();
+                    }
+                }
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            if (showingBtn)
+            {
+                hideBtn();
+            }
+        }
+    }
 }
