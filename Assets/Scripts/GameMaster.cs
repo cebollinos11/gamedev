@@ -28,6 +28,9 @@ public class GameMaster : MonoBehaviour {
         txtCurTurn = gameUI.FindChild("txtTurn").GetComponent<Text>();
         btnEndTurn = gameUI.FindChild("btnEndTurn").GetComponent<Button>();
         btnEndTurn.onClick.AddListener(() => endTurnBtnClicked());
+
+        //grab all enemies from map
+        enemiesOnMap = GameObject.FindObjectsOfType<Enemy>();
 	}
 	
 	// Update is called once per frame
