@@ -34,7 +34,7 @@ public class FormsManager : MonoBehaviour {
 
     int curForm = 0;
     [SerializeField] GameObject[] spawnableForms;
-    [SerializeField] GameObject[] spawnedForms;
+    public GameObject[] spawnedForms;
 
     public enum formState
     {
