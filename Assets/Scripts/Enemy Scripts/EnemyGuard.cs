@@ -23,6 +23,10 @@ public class EnemyGuard : Enemy {
     public bool turningEnemy = true;
     bool turnRight = false;
 
+    bool playerkilled;
+
+    UIMaster ui;
+
     enum enemyState
     {
         stand,
@@ -38,7 +42,15 @@ public class EnemyGuard : Enemy {
         agent = GetComponent<NavMeshAgent>();
         actionpointsLeft = maxActionPoints;
         player = GameObject.FindGameObjectWithTag("Player");
+        ui = GameObject.FindObjectOfType<UIMaster>();
     }
+
+    IEnumerator Die() {
+        ui.ShowGameOver();
+        yield return new WaitForSeconds(3f);
+        Application.LoadLevel(Application.loadedLevel);
+    }
+
 	// Update is called once per frame
 	void Update () {
 
@@ -49,7 +61,12 @@ public class EnemyGuard : Enemy {
         }
         else if(canSeePlayer() == 1)
         {
-            Destroy(player.gameObject);
+            //Destroy(player.gameObject);
+            if (!playerkilled)
+            {
+                playerkilled = true;
+                StartCoroutine(Die());
+            }
 
             Debug.Log("spotted!");
         }
