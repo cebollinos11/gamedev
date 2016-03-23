@@ -76,7 +76,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145084}
-  m_LocalRotation: {x: 0, y: 0.70762324, z: 0, w: 0.70659}
+  m_LocalRotation: {x: 0, y: 0.6747482, z: 0, w: 0.7380481}
   m_LocalPosition: {x: -66.86818, y: 1.4, z: 2.5232468}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
@@ -93,7 +93,7 @@ Transform:
   m_GameObject: {fileID: 116674}
   m_LocalRotation: {x: 0.7071069, y: 0.000000029802319, z: 0, w: 0.70710677}
   m_LocalPosition: {x: -2, y: 0, z: 21.36}
-  m_LocalScale: {x: 83, y: 65, z: 50}
+  m_LocalScale: {x: 68.5, y: 65, z: 50}
   m_Children: []
   m_Father: {fileID: 415732}
   m_RootOrder: 1
@@ -117,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 149160}
   m_LocalRotation: {x: 0.7071068, y: 2.842171e-14, z: 2.842171e-14, w: 0.7071067}
   m_LocalPosition: {x: -1.22, y: 0, z: 10.72}
-  m_LocalScale: {x: 47.07, y: 32, z: 50}
+  m_LocalScale: {x: 38, y: 32, z: 50}
   m_Children: []
   m_Father: {fileID: 415732}
   m_RootOrder: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   moveSpeed: 5
   waypoints: []
   waypointID: 0
-  fieldOfViewRange: 40
+  fieldOfViewRange: 35
   visionRange: 40
   spotRange: 20
   turningEnemy: 1
