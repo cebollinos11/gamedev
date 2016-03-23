@@ -74,7 +74,7 @@ public class FormsManager : MonoBehaviour {
 
 
         camFocus = Object.FindObjectOfType<CameraFocuser>();
-        camFocus.TargetToFollow = spawnedForms[0].transform;
+        //camFocus.TargetToFollow = spawnedForms[0].transform;
 	}
 	
 	// Update is called once per frame

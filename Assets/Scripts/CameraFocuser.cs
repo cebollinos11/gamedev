@@ -13,6 +13,7 @@ public class CameraFocuser : MonoBehaviour {
     public Transform TargetToFollow;
 
     CameraOrbit cOrbit;
+    float distance = 30f;
 
 	// Use this for initialization
 
@@ -20,7 +21,7 @@ public class CameraFocuser : MonoBehaviour {
     {
         Debug.Log(target);
         target.position = where;
-        Vector3 centerino = transform.position + transform.forward * 30f ;      
+        Vector3 centerino = transform.position + transform.forward * distance ;      
 
         transform.position += (where - centerino);
         
@@ -29,31 +30,34 @@ public class CameraFocuser : MonoBehaviour {
 
 	void Start () {
         cOrbit = GetComponent<CameraOrbit>();
+        GoTo("PhysicalForm");
 	}
+
+    void GoTo(string s) {
+        
+        GameObject form = GameObject.Find(s);
+        if (form != null)
+        {
+            target = form.transform;
+            
+            FocusOn(target.position);
+            cOrbit.referencePointObject = target;
+            
+        }
+    
+    }
 	
 	// Update is called once per frame
 	void Update () {
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            GameObject form = GameObject.Find("PhysicalForm");
-            if (form != null)
-            {
-                target = form.transform;
-                FocusOn(target.position);
-                cOrbit.referencePointObject = target;
-            }
+            GoTo("PhysicalForm");
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            GameObject form = GameObject.Find("DigitalForm(Clone)");
-            if(form != null)
-            {
-                target = form.transform;
-                FocusOn(target.position);
-                cOrbit.referencePointObject = target;
-            }
+            GoTo("DigitalForm(Clone)");            
         }
 
         if (TargetToFollow != null)
