@@ -180,7 +180,6 @@ public class EnemyGuard : Enemy {
         Vector3 rayDirection = player.transform.position - transform.position;
         float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
         RaycastHit hit;
-
         if ((Vector3.Angle(rayDirection, transform.forward)) < fieldOfViewRange)
         {
             if (Physics.Raycast(transform.position, rayDirection, out hit, visionRange))
@@ -193,6 +192,7 @@ public class EnemyGuard : Enemy {
                     }
                     else
                     {
+                        Debug.Log("investigate");
                         state = 2; //if investigate
                         investigatePos = hit.transform.position;
                     }
