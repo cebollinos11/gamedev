@@ -193,7 +193,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.80999994, y: 2.20000005, z: 6.71999979}
+  m_Size: {x: 12.1000004, y: 2.20000005, z: 6.71999979}
   m_Center: {x: 0, y: 0, z: -2.71000004}
 --- !u!65 &6593256
 BoxCollider:
@@ -311,6 +311,10 @@ Prefab:
       propertyPath: openSound
       value: 
       objectReference: {fileID: 8300000, guid: 57e8c3dc34cb5bc45a62dc32a95b0294, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: 12.1000004
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 125644}

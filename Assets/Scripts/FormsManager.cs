@@ -38,6 +38,7 @@ public class FormsManager : MonoBehaviour {
     public GameObject[] spawnedForms;
 
     public AudioClip playerWalkSound;
+    public AudioClip digitalSplitSound;
 
     public enum formState
     {
@@ -256,7 +257,7 @@ public class FormsManager : MonoBehaviour {
 
             foreach (GameObject form in spawnedForms)
             {
-                if (Vector3.Distance(form.transform.position, spawnedForms[0].transform.position) > 5)
+                if (Vector3.Distance(form.transform.position, spawnedForms[0].transform.position) > 8)
                 {
                     allIsClose = false;
                     break;
@@ -265,6 +266,7 @@ public class FormsManager : MonoBehaviour {
 
             if (allIsClose)
             {
+                AudioManager.PlayClip(digitalSplitSound);
                 curForm = 0;
                 curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
                 curAnimator = spawnedForms[curForm].GetComponent<Animator>();
@@ -311,6 +313,7 @@ public class FormsManager : MonoBehaviour {
 
         if (isTerminalClose)
         {
+            AudioManager.PlayClip(digitalSplitSound);
             curAnimator.SetTrigger("split");
             Debug.Log("EXPLODEEEEEE");
             spawnedForms[1] = Instantiate(spawnableForms[1], terminals[terminalID].getSpawnPoint(), Quaternion.identity) as GameObject;
