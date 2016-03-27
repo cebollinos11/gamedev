@@ -4,6 +4,7 @@ using System.Collections;
 public class DoorManager : MonoBehaviour {
 
     public GameObject MovablePart;
+    public AudioClip soundOpen;
 
 
     Vector3 origScale;
@@ -17,7 +18,7 @@ public class DoorManager : MonoBehaviour {
 	}
 
     public void Open() {
-
+        AudioManager.PlayClip(soundOpen);
         transform.localScale = Vector3.zero;
     }
 

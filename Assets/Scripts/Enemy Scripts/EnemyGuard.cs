@@ -25,6 +25,8 @@ public class EnemyGuard : Enemy {
 
     bool playerkilled;
 
+    public AudioClip turnSound;
+
     UIMaster ui;
 
     enum enemyState
@@ -91,6 +93,7 @@ public class EnemyGuard : Enemy {
 
     void playTurn()
     {
+        
         if(actionpointsLeft <= 0)
         {
             actionpointsLeft = maxActionPoints;
@@ -100,6 +103,7 @@ public class EnemyGuard : Enemy {
         }
         else
         {
+            
             switch (eState)
             {
                 case enemyState.stand:

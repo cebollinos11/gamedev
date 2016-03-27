@@ -64,6 +64,7 @@ public class GameMaster : MonoBehaviour {
 
     void enemyTurn()
     {
+        
         if(txtCurTurn.text != "Turn: Enemy")
         {
             txtCurTurn.text = "Turn: Enemy";
@@ -82,6 +83,7 @@ public class GameMaster : MonoBehaviour {
                 }
                 else
                 {
+                    //AudioManager.PlayClip(enemiesOnMap[curEnemy].);
                     curEnemy++;
                     enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
                 }

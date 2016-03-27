@@ -19,6 +19,8 @@ public class DoorSwitch : MonoBehaviour {
     [SerializeField] bool complete, physical, digital = false;
     [SerializeField] Transform btn;
 
+    public AudioClip openSound;
+
 	// Use this for initialization
 	void Start () {
         playerForms = GameObject.FindGameObjectsWithTag("Player");
@@ -49,6 +51,7 @@ public class DoorSwitch : MonoBehaviour {
 
     public void unlockDoor()
     {
+        AudioManager.PlayClip(openSound);
         doorUnlocked = true;
         light.color = enabledColor;
         door.gameObject.SetActive(false);
