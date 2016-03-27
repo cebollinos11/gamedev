@@ -37,6 +37,8 @@ public class FormsManager : MonoBehaviour {
     [SerializeField] GameObject[] spawnableForms;
     public GameObject[] spawnedForms;
 
+    public AudioClip playerWalkSound;
+
     public enum formState
     {
         idle,
@@ -168,6 +170,7 @@ public class FormsManager : MonoBehaviour {
 
             if (Input.GetMouseButtonDown(1) && Vector3.Distance(spawnedForms[curForm].transform.position, lineEndPos) > 2)
             {
+                AudioManager.PlayClip(playerWalkSound);
                 curAgent.Resume();
                 curAgent.SetDestination(lineEndPos);
                 curAnimator.SetBool("move", true);

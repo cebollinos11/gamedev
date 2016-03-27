@@ -11,6 +11,9 @@ public enum AudioClipsType
 public class AudioManager : Singleton<AudioManager>
 {
     AudioSource mainAudioSource;
+
+    public AudioClip DetectSound;
+    public AudioClip gameMusic;
     
 
     public static void PlayClip(AudioClip aClip)
@@ -40,7 +43,7 @@ public class AudioManager : Singleton<AudioManager>
     void Start()
     {
         mainAudioSource = Instance.gameObject.AddComponent<AudioSource>();//"AudioSource"); //Instance.gameObject.AddComponent("AudioSource") as AudioSource;
-
+        PlayBgSong(gameMusic);
 
 
     }

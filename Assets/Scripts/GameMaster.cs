@@ -8,6 +8,10 @@ public class GameMaster : MonoBehaviour {
     Text txtCurTurn;
     Button btnEndTurn;
     //
+
+
+    UIMaster ui;
+
     public enum turns
     {
         player,
@@ -20,6 +24,8 @@ public class GameMaster : MonoBehaviour {
 
     FormsManager formManager;
 
+    public AudioClip soundEndTurn;
+
 	// Use this for initialization
 	void Start () {
         formManager = GetComponent<FormsManager>();
@@ -28,6 +34,9 @@ public class GameMaster : MonoBehaviour {
         txtCurTurn = gameUI.FindChild("txtTurn").GetComponent<Text>();
         btnEndTurn = gameUI.FindChild("btnEndTurn").GetComponent<Button>();
         btnEndTurn.onClick.AddListener(() => endTurnBtnClicked());
+
+        ui =  GameObject.FindObjectOfType<UIMaster>();
+        
 
         //grab all enemies from map
         enemiesOnMap = GameObject.FindObjectsOfType<Enemy>();
@@ -56,6 +65,7 @@ public class GameMaster : MonoBehaviour {
 
     void playerTurn()
     {
+        ui.HideWait();
         if(txtCurTurn.text != "Turn: Player")
         {
             txtCurTurn.text = "Turn: Player";
@@ -98,11 +108,15 @@ public class GameMaster : MonoBehaviour {
 
     void endTurnBtnClicked()
     {
+        AudioManager.PlayClip(soundEndTurn);
+        ui.ShowWait();
+        
         //if the end turn btn is clicked and its currently the players turn, then change turn to enemy
         if (formManager.state == FormsManager.formState.idle && curTurn == turns.player)
         {
             if (enemiesOnMap.Length > 0) 
             { 
+
                 enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn; 
             }
 

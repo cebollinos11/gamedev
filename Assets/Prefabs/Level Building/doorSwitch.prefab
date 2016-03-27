@@ -77,8 +77,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.48, z: -3.81}
-  m_LocalScale: {x: 0.5, y: 2, z: 0.5}
+  m_LocalPosition: {x: 0, y: 1.48000002, z: -3.80999994}
+  m_LocalScale: {x: .5, y: 2, z: .5}
   m_Children:
   - {fileID: 492534}
   - {fileID: 481744}
@@ -91,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.004, y: 0.31105465, z: -1.1660004}
+  m_LocalPosition: {x: .00400000019, y: .311054647, z: -1.16600037}
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 492534}
@@ -103,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.16, z: -0.96}
+  m_LocalPosition: {x: 0, y: 2.16000009, z: -.959999979}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400936}
@@ -115,8 +115,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 184400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.395, z: -0.46}
-  m_LocalScale: {x: 2, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: .395000011, z: -.460000008}
+  m_LocalScale: {x: 2, y: .5, z: 1}
   m_Children:
   - {fileID: 446950}
   m_Father: {fileID: 400936}
@@ -139,10 +139,8 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -165,10 +163,8 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -197,8 +193,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.81, y: 2.2, z: 6.72}
-  m_Center: {x: 0, y: 0, z: -2.71}
+  m_Size: {x: 6.80999994, y: 2.20000005, z: 6.71999979}
+  m_Center: {x: 0, y: 0, z: -2.71000004}
 --- !u!65 &6593256
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -209,7 +205,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 2, z: 0.2}
+  m_Size: {x: 3, y: 2, z: .200000003}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!108 &10864664
 Light:
@@ -229,9 +225,8 @@ Light:
     m_Type: 0
     m_Resolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Bias: .0500000007
+    m_NormalBias: .400000006
   m_Cookie: {fileID: 0}
   m_DrawHalo: 1
   m_Flare: {fileID: 0}
@@ -269,11 +264,12 @@ MonoBehaviour:
   door: {fileID: 0}
   light: {fileID: 10864664}
   disabledColor: {r: 1, g: 0, b: 0, a: 1}
-  enabledColor: {r: 0, g: 1, b: 0.25517225, a: 1}
+  enabledColor: {r: 0, g: 1, b: .255172253, a: 1}
   complete: 0
   physical: 0
   digital: 0
   btn: {fileID: 481744}
+  openSound: {fileID: 8300000, guid: 57e8c3dc34cb5bc45a62dc32a95b0294, type: 3}
 --- !u!212 &21296370
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -292,18 +288,14 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6658751474e826c44a0820832121538c, type: 3}
-  m_Color: {r: 0.11724138, g: 0, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
+  m_Color: {r: .117241383, g: 0, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -315,6 +307,10 @@ Prefab:
       propertyPath: physical
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: openSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 57e8c3dc34cb5bc45a62dc32a95b0294, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 125644}

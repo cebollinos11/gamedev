@@ -26,6 +26,7 @@ public class EnemyGuard : Enemy {
     bool playerkilled;
 
     public AudioClip turnSound;
+    
 
     UIMaster ui;
 
@@ -67,6 +68,8 @@ public class EnemyGuard : Enemy {
             if (!playerkilled)
             {
                 playerkilled = true;
+                AudioManager.PlayClip(AudioManager.Instance.DetectSound);
+
                 StartCoroutine(Die());
             }
 
@@ -193,6 +196,7 @@ public class EnemyGuard : Enemy {
                     if(Vector3.Distance(hit.transform.position, transform.position) < spotRange)
                     {
                         state = 1; //if player spotted
+                        Debug.Log("Player spotteddddddddd!");
                     }
                     else
                     {

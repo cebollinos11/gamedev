@@ -574,6 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovablePart: {fileID: 175674091}
+  soundOpen: {fileID: 0}
 --- !u!208 &175674094
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -767,6 +768,38 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22419038, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456698, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 22431848, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -88.8000031
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430358, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430358, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430358, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430358, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
+      propertyPath: m_Text
+      value: WAIT
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430358, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 11449506, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1738,6 +1771,48 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
   m_PrefabInternal: {fileID: 468710374}
+--- !u!1001 &493589571
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 477098, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477098, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477098, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477098, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477098, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477098, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 477098, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 477098, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &500224342
 Prefab:
   m_ObjectHideFlags: 0
@@ -2598,6 +2673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovablePart: {fileID: 799332654}
+  soundOpen: {fileID: 0}
 --- !u!208 &799332657
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -3289,7 +3365,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 468188, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 11449150, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
       propertyPath: spawnedForms.Array.data[0]
@@ -3342,6 +3418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovablePart: {fileID: 943192381}
+  soundOpen: {fileID: 0}
 --- !u!208 &943192383
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -4851,6 +4928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovablePart: {fileID: 1463859504}
+  soundOpen: {fileID: 0}
 --- !u!208 &1463859507
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -5959,6 +6037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovablePart: {fileID: 1744631594}
+  soundOpen: {fileID: 0}
 --- !u!208 &1744631597
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -7076,6 +7155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MovablePart: {fileID: 1975510770}
+  soundOpen: {fileID: 0}
 --- !u!208 &1975510773
 NavMeshObstacle:
   m_ObjectHideFlags: 0

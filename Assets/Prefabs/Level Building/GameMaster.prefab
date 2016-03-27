@@ -218,15 +218,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gamemaster: {fileID: 0}
+  isSplitted: 0
   pointer: {fileID: 437312}
   pointerText: {fileID: 10287984}
   pointerLine: {fileID: 12049482}
+  curAgent: {fileID: 0}
+  curAnimator: {fileID: 0}
   maxActionPoints: 5
   spawnableForms:
   - {fileID: 136242, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
   - {fileID: 101578, guid: 7620413badb9852488054d304c9bc4a7, type: 2}
   spawnedForms:
   - {fileID: 0}
+  playerWalkSound: {fileID: 8300000, guid: 0af3c41c4a9455b449f0940d8873afab, type: 3}
   state: 0
 --- !u!114 &11477806
 MonoBehaviour:
@@ -243,6 +247,7 @@ MonoBehaviour:
   enemiesOnMap:
   - {fileID: 0}
   curEnemy: 0
+  soundEndTurn: {fileID: 8300000, guid: 8ba5f34bde4b3824b83b16c3a45f6178, type: 3}
 --- !u!120 &12049482
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -286,7 +291,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: soundEndTurn
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ba5f34bde4b3824b83b16c3a45f6178, type: 3}
+    - target: {fileID: 0}
+      propertyPath: playerWalkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0af3c41c4a9455b449f0940d8873afab, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180390}
