@@ -19,50 +19,53 @@ public class EnemyCam : Enemy {
 	
 	// Update is called once per frame
 	void Update () {
-        if(canSeePlayer())
+        if (base.state != Enemy.enemyState.inactive)
         {
-            Debug.Log("cam: player spotted!");
-            if(!alertSent)
+            if (canSeePlayer())
             {
-                EnemyGuard[] enemies = GameObject.FindObjectsOfType<EnemyGuard>();
-                EnemyGuard nearestEnemy = null;
-
-                foreach(EnemyGuard enemy in enemies)
+                Debug.Log("cam: player spotted!");
+                if (!alertSent)
                 {
-                    if(nearestEnemy == null)
-                    {
-                        nearestEnemy = enemy;
-                    }
-                    else if(Vector3.Distance(transform.position, enemy.transform.position) < Vector3.Distance(transform.position, nearestEnemy.transform.position))
-                    {
-                        nearestEnemy = enemy;
-                    }
-                }
+                    EnemyGuard[] enemies = GameObject.FindObjectsOfType<EnemyGuard>();
+                    EnemyGuard nearestEnemy = null;
 
-                if(nearestEnemy != null)
-                {
-                    nearestEnemy.investigate = true;
-                    nearestEnemy.investigatePos = player.transform.position;
-                }
+                    foreach (EnemyGuard enemy in enemies)
+                    {
+                        if (nearestEnemy == null)
+                        {
+                            nearestEnemy = enemy;
+                        }
+                        else if (Vector3.Distance(transform.position, enemy.transform.position) < Vector3.Distance(transform.position, nearestEnemy.transform.position))
+                        {
+                            nearestEnemy = enemy;
+                        }
+                    }
 
-                alertSent = true;
+                    if (nearestEnemy != null)
+                    {
+                        nearestEnemy.investigate = true;
+                        nearestEnemy.investigatePos = player.transform.position;
+                    }
+
+                    alertSent = true;
+                }
             }
-        }
-        else
-        {
-            if (alertSent) alertSent = false;
-        }
+            else
+            {
+                if (alertSent) alertSent = false;
+            }
 
-        switch (base.state)
-        {
-            case Enemy.enemyState.idle:
-                idle();
-                break;
-            case Enemy.enemyState.playTurn:
-                playTurn();
-                break;
-            default:
-                break;
+            switch (base.state)
+            {
+                case Enemy.enemyState.idle:
+                    idle();
+                    break;
+                case Enemy.enemyState.playTurn:
+                    playTurn();
+                    break;
+                default:
+                    break;
+            }
         }
 	}
 

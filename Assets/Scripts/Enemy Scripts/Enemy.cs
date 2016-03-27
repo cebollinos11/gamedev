@@ -8,17 +8,9 @@ public class Enemy : MonoBehaviour {
     public enum enemyState
     {
         idle,
-        playTurn
+        playTurn,
+        inactive
     }
     public enemyState state = enemyState.idle;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
