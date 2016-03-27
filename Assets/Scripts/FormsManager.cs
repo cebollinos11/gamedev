@@ -24,7 +24,8 @@ public class FormsManager : MonoBehaviour {
     [SerializeField] LineRenderer pointerLine;
     
     Vector3 lineEndPos;
-    NavMeshAgent curAgent;
+    [HideInInspector] public NavMeshAgent curAgent;
+    [HideInInspector] public Animator curAnimator;
 
     int moveSpeed = 5;
  
@@ -70,6 +71,7 @@ public class FormsManager : MonoBehaviour {
         //
 
         curAgent = spawnedForms[0].GetComponent<NavMeshAgent>();
+        curAnimator = spawnedForms[0].GetComponent<Animator>();
         pointerLine.SetPosition(0, spawnedForms[0].transform.position);
 
 
@@ -166,7 +168,9 @@ public class FormsManager : MonoBehaviour {
 
             if (Input.GetMouseButtonDown(1) && Vector3.Distance(spawnedForms[curForm].transform.position, lineEndPos) > 2)
             {
+                curAgent.Resume();
                 curAgent.SetDestination(lineEndPos);
+                curAnimator.SetBool("move", true);
                 pointerLine.gameObject.SetActive(false);
                 pointerText.gameObject.SetActive(false);
                 pointer.gameObject.SetActive(false);
@@ -180,8 +184,11 @@ public class FormsManager : MonoBehaviour {
     }
     void move()
     {
-        if (curAgent.remainingDistance < 0.01F)
+        if (curAgent.remainingDistance < 0.1F)
         {
+            curAgent.SetDestination(curAgent.transform.position);
+            curAgent.Stop();
+            curAnimator.SetBool("move", false);
             camFocus.TargetToFollow = null;
             resetPointer();
             state = formState.idle;
@@ -224,6 +231,7 @@ public class FormsManager : MonoBehaviour {
             {
                 curForm = formID;
                 curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
+                curAnimator = spawnedForms[curForm].GetComponent<Animator>();
                 pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
                 
             }
@@ -256,6 +264,7 @@ public class FormsManager : MonoBehaviour {
             {
                 curForm = 0;
                 curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
+                curAnimator = spawnedForms[curForm].GetComponent<Animator>();
                 pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
 
                 for (int i = 1; i < spawnedForms.Length; i++)
@@ -299,12 +308,15 @@ public class FormsManager : MonoBehaviour {
 
         if (isTerminalClose)
         {
+            curAnimator.SetTrigger("split");
             Debug.Log("EXPLODEEEEEE");
             spawnedForms[1] = Instantiate(spawnableForms[1], terminals[terminalID].getSpawnPoint(), Quaternion.identity) as GameObject;
 
             curForm = 1;
             curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
+            curAnimator = spawnedForms[curForm].GetComponent<Animator>();
             pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
+            
             isSplitted = true;
         }
         else

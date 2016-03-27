@@ -5,10 +5,11 @@ using UnityEngine.EventSystems;
 public class DoorSwitchBtn : MonoBehaviour, IPointerClickHandler {
 
     DoorSwitch dw;
+    FormsManager formManager;
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Start () {
+        formManager = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<FormsManager>();
 	}
 
     public void setDoorSwitch(DoorSwitch doorw)
@@ -17,6 +18,8 @@ public class DoorSwitchBtn : MonoBehaviour, IPointerClickHandler {
     }
     public void OnPointerClick(PointerEventData eventData)
     {
+        formManager.curAgent.transform.LookAt(dw.transform.position);
+        formManager.curAnimator.SetTrigger("pressBtn");
         dw.unlockDoor();
         Debug.Log("clickkeeed");
     }
