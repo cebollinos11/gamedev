@@ -57,35 +57,38 @@ public class EnemyGuard : Enemy {
 	// Update is called once per frame
 	void Update () {
 
-        if(canSeePlayer() == 2)
+        if (base.state != Enemy.enemyState.inactive)
         {
-            investigate = true;
-            Debug.Log("investigating");
-        }
-        else if(canSeePlayer() == 1)
-        {
-            //Destroy(player.gameObject);
-            if (!playerkilled)
+            if (canSeePlayer() == 2)
             {
-                playerkilled = true;
-                AudioManager.PlayClip(AudioManager.Instance.DetectSound);
+                investigate = true;
+                Debug.Log("investigating");
+            }
+            else if (canSeePlayer() == 1)
+            {
+                //Destroy(player.gameObject);
+                if (!playerkilled)
+                {
+                    playerkilled = true;
+                    AudioManager.PlayClip(AudioManager.Instance.DetectSound);
 
-                StartCoroutine(Die());
+                    StartCoroutine(Die());
+                }
+
+                Debug.Log("spotted!");
             }
 
-            Debug.Log("spotted!");
-        }
-
-	    switch(base.state)
-        {
-            case Enemy.enemyState.idle:
-                idle();
-                break;
-            case Enemy.enemyState.playTurn:
-                playTurn();
-                break;
-            default:
-                break;
+            switch (base.state)
+            {
+                case Enemy.enemyState.idle:
+                    idle();
+                    break;
+                case Enemy.enemyState.playTurn:
+                    playTurn();
+                    break;
+                default:
+                    break;
+            }
         }
 	}
 

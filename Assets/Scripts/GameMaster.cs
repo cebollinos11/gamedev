@@ -12,6 +12,7 @@ public class GameMaster : MonoBehaviour {
 
     UIMaster ui;
 
+    [HideInInspector] public int turnNumber = 0;
     public enum turns
     {
         player,
@@ -82,7 +83,7 @@ public class GameMaster : MonoBehaviour {
 
         if (enemiesOnMap.Length > 0)
         {
-            if (enemiesOnMap[curEnemy].state == Enemy.enemyState.idle)
+            if (enemiesOnMap[curEnemy].state == Enemy.enemyState.idle || enemiesOnMap[curEnemy].state == Enemy.enemyState.inactive)
             {
                 if (enemiesOnMap.Length - 1 <= curEnemy)
                 {
@@ -95,7 +96,10 @@ public class GameMaster : MonoBehaviour {
                 {
                     //AudioManager.PlayClip(enemiesOnMap[curEnemy].);
                     curEnemy++;
-                    enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
+                    if (enemiesOnMap[curEnemy].state != Enemy.enemyState.inactive)
+                    {
+                        enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
+                    }
                 }
             }
         }
@@ -115,11 +119,14 @@ public class GameMaster : MonoBehaviour {
         if (formManager.state == FormsManager.formState.idle && curTurn == turns.player)
         {
             if (enemiesOnMap.Length > 0) 
-            { 
-
-                enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn; 
+            {
+                if (enemiesOnMap[curEnemy].state != Enemy.enemyState.inactive)
+                {
+                    enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
+                }
             }
 
+            turnNumber++;
             curTurn = turns.enemy;
         }
     }
