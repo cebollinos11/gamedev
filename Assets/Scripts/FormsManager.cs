@@ -128,7 +128,7 @@ public class FormsManager : MonoBehaviour {
 
     void idle()
     {
-        if (actionPointsLeft+1 > 0)
+        if (actionPointsLeft + 1 > 0)
         {
             resetPointer();
 
@@ -184,12 +184,16 @@ public class FormsManager : MonoBehaviour {
                 pointerLine.gameObject.SetActive(false);
                 pointerText.gameObject.SetActive(false);
                 pointer.gameObject.SetActive(false);
-                actionPointsLeft -= pointerDistance+1;
+                actionPointsLeft -= pointerDistance + 1;
                 pointerDistance = 0;
                 state = formState.move;
                 Debug.Log(spawnedForms[curForm]);
                 camFocus.TargetToFollow = spawnedForms[curForm].transform;
             }
+        }
+        else {
+            Debug.Log("no more points left");
+            gamemaster.endTurnBtnClicked();
         }
     }
     void move()
@@ -244,13 +248,17 @@ public class FormsManager : MonoBehaviour {
                 curAnimator = spawnedForms[curForm].GetComponent<Animator>();
                 pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
 
+                AudioManager.PlayClip(AudioManager.Instance.mouseclick);
                 if (formID == 0) {
                     Debug.Log("show real world");
+                    gamemaster.ui.Flash.FlashIt(Color.white);
                     textureHiderManager.ShowPhysicalWorld();
                 }
 
                 if (formID == 1) {
                     Debug.Log("show internet world");
+                    gamemaster.ui.Flash.FlashIt(Color.blue);
+
                     textureHiderManager.HidePhysicalWorld();
                 }
                 

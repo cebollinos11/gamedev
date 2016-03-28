@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DetectSound: {fileID: 8300000, guid: b8640f5c9b8f17941828ef78380cb694, type: 3}
   gameMusic: {fileID: 8300000, guid: 144d0c2ae91b3f841b15e7c2369de357, type: 3}
+  mouseclick: {fileID: 8300000, guid: 7e33fdafd4a0bea4c947ccc15cf7074b, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -127,6 +128,10 @@ Prefab:
       propertyPath: gameMusic
       value: 
       objectReference: {fileID: 8300000, guid: 144d0c2ae91b3f841b15e7c2369de357, type: 3}
+    - target: {fileID: 0}
+      propertyPath: mouseclick
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e33fdafd4a0bea4c947ccc15cf7074b, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 153620}

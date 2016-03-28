@@ -8,11 +8,10 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: m_player_digital
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 1
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -20,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+          m_Texture: {fileID: 10910, guid: 0000000000000000f000000000000000, type: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -87,23 +86,23 @@ Material:
       data:
         first:
           name: _DstBlend
-        second: 10
-      data:
-        first:
-          name: _Cutoff
-        second: 0.5
-      data:
-        first:
-          name: _Parallax
-        second: 0.02
-      data:
-        first:
-          name: _ZWrite
         second: 0
       data:
         first:
-          name: _Glossiness
+          name: _Cutoff
+        second: .5
+      data:
+        first:
+          name: _Parallax
+        second: .0199999996
+      data:
+        first:
+          name: _ZWrite
         second: 1
+      data:
+        first:
+          name: _Glossiness
+        second: .686999977
       data:
         first:
           name: _BumpScale
@@ -123,17 +122,17 @@ Material:
       data:
         first:
           name: _Mode
-        second: 3
+        second: 0
       data:
         first:
           name: _Metallic
-        second: 0.59
+        second: 0
     m_Colors:
       data:
         first:
           name: _EmissionColor
-        second: {r: 0, g: 0, b: 0, a: 1}
+        second: {r: .797705591, g: .443933845, b: .875, a: 1}
       data:
         first:
           name: _Color
-        second: {r: 0.20000029, g: 0, b: 1, a: 1}
+        second: {r: .419726163, g: .153979242, b: .654411793, a: .533999979}

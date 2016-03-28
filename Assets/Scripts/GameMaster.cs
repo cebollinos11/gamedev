@@ -10,7 +10,7 @@ public class GameMaster : MonoBehaviour {
     //
 
 
-    UIMaster ui;
+    [HideInInspector]public UIMaster ui;
 
     [HideInInspector] public int turnNumber = 0;
     public enum turns
@@ -26,6 +26,7 @@ public class GameMaster : MonoBehaviour {
     FormsManager formManager;
 
     public AudioClip soundEndTurn;
+    public AudioClip soundStartTurn;
 
 	// Use this for initialization
 	void Start () {
@@ -66,7 +67,8 @@ public class GameMaster : MonoBehaviour {
 
     void playerTurn()
     {
-        ui.HideWait();
+        
+        //ui.HideWait();
         if(txtCurTurn.text != "Turn: Player")
         {
             txtCurTurn.text = "Turn: Player";
@@ -89,7 +91,10 @@ public class GameMaster : MonoBehaviour {
                 {
                     curEnemy = 0;
                     curTurn = turns.player;
-
+                    Debug.Log("Player turn start");
+                    ui.HideWait();
+                    ui.Flash.FlashIt(Color.white);
+                    AudioManager.PlayClip(soundStartTurn);
                     formManager.resetTurn();
                 }
                 else
@@ -110,10 +115,11 @@ public class GameMaster : MonoBehaviour {
         }
     }
 
-    void endTurnBtnClicked()
+    public void endTurnBtnClicked()
     {
         AudioManager.PlayClip(soundEndTurn);
         ui.ShowWait();
+        ui.Flash.FlashIt(Color.red);
         
         //if the end turn btn is clicked and its currently the players turn, then change turn to enemy
         if (formManager.state == FormsManager.formState.idle && curTurn == turns.player)

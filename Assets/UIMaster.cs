@@ -6,12 +6,17 @@ public class UIMaster : MonoBehaviour {
 
     public GameObject GameOver;
     public GameObject Wait;
+    public FlashPanel Flash;
 
 	// Use this for initialization
 	void Start () {
         GameOver.SetActive(false);
         Wait.SetActive(false);
+        
+        
 	}
+
+    
 
     public void ShowGameOver() {
         GameOver.SetActive(true);

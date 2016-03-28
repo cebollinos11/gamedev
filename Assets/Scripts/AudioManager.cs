@@ -14,6 +14,7 @@ public class AudioManager : Singleton<AudioManager>
 
     public AudioClip DetectSound;
     public AudioClip gameMusic;
+    public AudioClip mouseclick;
     
 
     public static void PlayClip(AudioClip aClip)
@@ -44,8 +45,14 @@ public class AudioManager : Singleton<AudioManager>
     {
         mainAudioSource = Instance.gameObject.AddComponent<AudioSource>();//"AudioSource"); //Instance.gameObject.AddComponent("AudioSource") as AudioSource;
         PlayBgSong(gameMusic);
+    }
 
+    void Update() {
 
+        if (Input.GetMouseButtonDown(1)) {
+            PlayClip(mouseclick);
+        }
+    
     }
 
 

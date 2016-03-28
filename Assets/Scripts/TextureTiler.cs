@@ -18,7 +18,7 @@ public class TextureTiler : MonoBehaviour
     void Update()
     {
         Vector2 currentOffset = mr.material.mainTextureOffset;
-        mr.material.mainTextureOffset = currentOffset + Vector2.up * speed * Time.deltaTime;
+        mr.material.mainTextureOffset = currentOffset + Vector2.right * speed * Time.deltaTime;
 
     }
 }

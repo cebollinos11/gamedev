@@ -2035,6 +2035,10 @@ Prefab:
       propertyPath: EmissionModule.rate.scalar
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 101578}
