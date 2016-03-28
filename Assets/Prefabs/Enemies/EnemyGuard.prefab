@@ -298,7 +298,7 @@ MonoBehaviour:
   moveSpeed: 5
   waypoints: []
   waypointID: 0
-  fieldOfViewRange: 35
+  fieldOfViewRange: 45
   visionRange: 40
   spotRange: 20
   turningEnemy: 1
@@ -350,7 +350,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 484f57b13030dfa4ca5390f8659a582b, type: 3}
-  m_Color: {r: 1, g: .931034446, b: 0, a: .477999985}
+  m_Color: {r: 1, g: .931034446, b: 0, a: .134000003}
 --- !u!212 &21262296
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -376,7 +376,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 484f57b13030dfa4ca5390f8659a582b, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: .477999985}
+  m_Color: {r: 1, g: 0, b: 0, a: .352999985}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -388,6 +388,30 @@ Prefab:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.g
+      value: .931034446
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.a
+      value: .352999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: visionRange
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fieldOfViewRange
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 145084}
