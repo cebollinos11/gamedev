@@ -40,6 +40,8 @@ public class FormsManager : MonoBehaviour {
     public AudioClip playerWalkSound;
     public AudioClip digitalSplitSound;
 
+    public GameObject splitExplosion;
+
     public enum formState
     {
         idle,
@@ -47,12 +49,16 @@ public class FormsManager : MonoBehaviour {
     }
     public formState state = formState.idle;
 
+    TextureHiderManager textureHiderManager;
+
     LayerMask layerMask;
 	// Use this for initialization
 	void Start () {
         actionPointsLeft = maxActionPoints;
+        textureHiderManager = GameObject.FindObjectOfType<TextureHiderManager>();
         gamemaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         layerMask = 1 << LayerMask.NameToLayer("Walkable");
+
 
         
 
@@ -237,6 +243,16 @@ public class FormsManager : MonoBehaviour {
                 curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
                 curAnimator = spawnedForms[curForm].GetComponent<Animator>();
                 pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
+
+                if (formID == 0) {
+                    Debug.Log("show real world");
+                    textureHiderManager.ShowPhysicalWorld();
+                }
+
+                if (formID == 1) {
+                    Debug.Log("show internet world");
+                    textureHiderManager.HidePhysicalWorld();
+                }
                 
             }
             else if (!isSplitted)
@@ -266,6 +282,8 @@ public class FormsManager : MonoBehaviour {
 
             if (allIsClose)
             {
+                Instantiate(splitExplosion, spawnedForms[0].transform.position, Quaternion.identity);
+                textureHiderManager.ShowPhysicalWorld();
                 AudioManager.PlayClip(digitalSplitSound);
                 curForm = 0;
                 curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
@@ -274,6 +292,7 @@ public class FormsManager : MonoBehaviour {
 
                 for (int i = 1; i < spawnedForms.Length; i++)
                 {
+                    Instantiate(splitExplosion, spawnedForms[i].transform.position, Quaternion.identity);
                     Destroy(spawnedForms[i]);
                     spawnedForms[i] = null;
                 }
@@ -314,6 +333,8 @@ public class FormsManager : MonoBehaviour {
         if (isTerminalClose)
         {
             AudioManager.PlayClip(digitalSplitSound);
+            Instantiate(splitExplosion, spawnedForms[curForm].transform.position, Quaternion.identity);
+            Instantiate(splitExplosion, terminals[terminalID].getSpawnPoint(), Quaternion.identity);
             curAnimator.SetTrigger("split");
             Debug.Log("EXPLODEEEEEE");
             spawnedForms[1] = Instantiate(spawnableForms[1], terminals[terminalID].getSpawnPoint(), Quaternion.identity) as GameObject;
@@ -322,6 +343,7 @@ public class FormsManager : MonoBehaviour {
             curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
             curAnimator = spawnedForms[curForm].GetComponent<Animator>();
             pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
+            textureHiderManager.HidePhysicalWorld();
             
             isSplitted = true;
         }

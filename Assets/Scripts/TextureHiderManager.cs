@@ -9,7 +9,7 @@ public class TextureHiderManager : MonoBehaviour {
 	}
 
 
-    void HidePhysicalWorld() {
+    public void HidePhysicalWorld() {
 
         TextureHider[] realwalls = Object.FindObjectsOfType<TextureHider>();
 
@@ -20,7 +20,7 @@ public class TextureHiderManager : MonoBehaviour {
     
     }
 
-    void ShowPhysicalWorld()
+    public void ShowPhysicalWorld()
     {
 
         TextureHider[] realwalls = Object.FindObjectsOfType<TextureHider>();

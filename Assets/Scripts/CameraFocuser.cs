@@ -53,6 +53,7 @@ public class CameraFocuser : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             GoTo("PhysicalForm");
+           
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))

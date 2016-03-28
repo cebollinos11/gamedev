@@ -232,6 +232,7 @@ MonoBehaviour:
   - {fileID: 0}
   playerWalkSound: {fileID: 8300000, guid: 0af3c41c4a9455b449f0940d8873afab, type: 3}
   digitalSplitSound: {fileID: 8300000, guid: 2ea56c0ea49e42a4e91392ffe6cbbd4d, type: 3}
+  splitExplosion: {fileID: 150770, guid: 85b077264f3e8f14c96ba8acf03ba48b, type: 2}
   state: 0
 --- !u!114 &11477806
 MonoBehaviour:
@@ -305,6 +306,10 @@ Prefab:
       propertyPath: digitalSplitSound
       value: 
       objectReference: {fileID: 8300000, guid: 2ea56c0ea49e42a4e91392ffe6cbbd4d, type: 3}
+    - target: {fileID: 0}
+      propertyPath: splitExplosion
+      value: 
+      objectReference: {fileID: 150770, guid: 85b077264f3e8f14c96ba8acf03ba48b, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 180390}

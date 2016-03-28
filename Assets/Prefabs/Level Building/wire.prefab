@@ -11,7 +11,8 @@ GameObject:
   - 33: {fileID: 3320600}
   - 65: {fileID: 6555264}
   - 23: {fileID: 2390082}
-  - 114: {fileID: 11499272}
+  - 114: {fileID: 11481058}
+  - 114: {fileID: 11423690}
   m_Layer: 8
   m_Name: wire
   m_TagString: Untagged
@@ -74,7 +75,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &11499272
+--- !u!114 &11423690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d053d92e63a0a83459451caa3a6caf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+--- !u!114 &11481058
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -85,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02e585eeac163a041a08b97ea50b8c8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isWire: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -103,6 +117,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: isWire
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: speed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
