@@ -5,6 +5,7 @@ public class magneticField : MonoBehaviour {
 
 
     bool active;
+    public GameObject innerSphere;
  
     SphereCollider spCollider;
     TextureTiler tT;
@@ -39,6 +40,8 @@ public class magneticField : MonoBehaviour {
     public void TurnOff() {
         active = false;
 
+        innerSphere.SetActive(false);
+
         spCollider.enabled = false;
         tT.speed /= 10f;
 
@@ -49,6 +52,7 @@ public class magneticField : MonoBehaviour {
         active = true;
         spCollider.enabled = true;
         tT.speed *= 10f;
+        innerSphere.SetActive(true);
     }
 	
 	// Update is called once per frame
