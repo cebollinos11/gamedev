@@ -149,11 +149,13 @@ public class EnemyGuard : Enemy {
             {
                 transform.Rotate(Vector3.up * 90);
                 turnRight = false;
+                actionpointsLeft = 0;
             }
             else
             {
                 transform.Rotate(Vector3.up * -90);
                 turnRight = true;
+                actionpointsLeft = 0;
             }
             actionpointsLeft--;
         }
