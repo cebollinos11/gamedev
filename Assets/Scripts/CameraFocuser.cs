@@ -19,7 +19,7 @@ public class CameraFocuser : MonoBehaviour {
 
     public void FocusOn(Vector3 where)
     {
-        Debug.Log(target);
+        
         target.position = where;
         Vector3 centerino = transform.position + transform.forward * distance ;      
 

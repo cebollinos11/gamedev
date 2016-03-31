@@ -63,7 +63,7 @@ public class DoorSwitch : MonoBehaviour {
     {
         if (!doorUnlocked)
         {
-            Debug.Log("show btn");
+            
             if (!btn.gameObject.activeSelf)
             {
                 btn.gameObject.SetActive(true);
@@ -73,7 +73,7 @@ public class DoorSwitch : MonoBehaviour {
     }
     void hideBtn()
     {
-        Debug.Log("hide btn");
+        
         if (btn.gameObject.activeSelf)
         {
             btn.gameObject.SetActive(false);

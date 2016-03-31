@@ -84,6 +84,7 @@ public class EnemyGuard : Enemy {
                     idle();
                     break;
                 case Enemy.enemyState.playTurn:
+                    
                     playTurn();
                     break;
                 default:

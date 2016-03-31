@@ -245,12 +245,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cb0c5f802db937428f83b7b5e3cdf91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ui: {fileID: 0}
   turnNumber: 0
   curTurn: 0
   enemiesOnMap:
   - {fileID: 0}
   curEnemy: 0
-  soundEndTurn: {fileID: 8300000, guid: 8ba5f34bde4b3824b83b16c3a45f6178, type: 3}
+  soundEndTurn: {fileID: 8300000, guid: 98d2970133c07034ea196c0e7d234137, type: 3}
   soundStartTurn: {fileID: 8300000, guid: 74675033f164e324b9c15777f967d433, type: 3}
 --- !u!120 &12049482
 LineRenderer:

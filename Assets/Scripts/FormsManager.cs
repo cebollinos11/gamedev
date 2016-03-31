@@ -51,6 +51,8 @@ public class FormsManager : MonoBehaviour {
 
     TextureHiderManager textureHiderManager;
 
+    public bool blockMovement1Frame;
+
     LayerMask layerMask;
 	// Use this for initialization
 	void Start () {
@@ -174,9 +176,15 @@ public class FormsManager : MonoBehaviour {
                 //set position of "pointer"
                 pointer.position = spawnedForms[curForm].transform.position + (direction * (pointerDistance * moveSpeed));
             }
+            if(blockMovement1Frame){
 
-            if (Input.GetMouseButtonDown(1) && Vector3.Distance(spawnedForms[curForm].transform.position, lineEndPos) > 2)
+                blockMovement1Frame = false;
+            
+            }
+            
+            else if (Input.GetMouseButtonUp(0) && Vector3.Distance(spawnedForms[curForm].transform.position, lineEndPos) > 2)
             {
+                Debug.Log("click to move");
                 AudioManager.PlayClip(playerWalkSound);
                 curAgent.Resume();
                 curAgent.SetDestination(lineEndPos);
@@ -187,7 +195,7 @@ public class FormsManager : MonoBehaviour {
                 actionPointsLeft -= pointerDistance + 1;
                 pointerDistance = 0;
                 state = formState.move;
-                Debug.Log(spawnedForms[curForm]);
+                
                 camFocus.TargetToFollow = spawnedForms[curForm].transform;
             }
         }

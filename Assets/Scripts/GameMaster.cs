@@ -100,11 +100,13 @@ public class GameMaster : MonoBehaviour {
                 else
                 {
                     //AudioManager.PlayClip(enemiesOnMap[curEnemy].);
+                    
                     curEnemy++;
                     if (enemiesOnMap[curEnemy].state != Enemy.enemyState.inactive)
                     {
                         enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
                     }
+                    //Debug.Log("2curEnemy = " + curEnemy.ToString() + " plays turn = " + enemiesOnMap[curEnemy].gameObject.name);
                 }
             }
         }
@@ -128,8 +130,16 @@ public class GameMaster : MonoBehaviour {
             {
                 if (enemiesOnMap[curEnemy].state != Enemy.enemyState.inactive)
                 {
+                    //Debug.Log("set to playturn for " + enemiesOnMap[curEnemy].gameObject.name);
                     enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
                 }
+
+                //added by pablo
+
+                //for (int i = 0; i < enemiesOnMap.Length; i++)
+                //{
+                //    enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
+                //}
             }
 
             turnNumber++;

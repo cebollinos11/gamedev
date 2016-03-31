@@ -34,9 +34,9 @@ public class CameraOrbit : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetMouseButton(1))
         {
-
+           
             if (refPoint == null)
                 refPoint = referencePointObject;
 

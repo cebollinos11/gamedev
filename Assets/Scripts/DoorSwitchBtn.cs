@@ -20,7 +20,8 @@ public class DoorSwitchBtn : MonoBehaviour, IPointerClickHandler {
     {
         formManager.curAgent.transform.LookAt(dw.transform.position);
         formManager.curAnimator.SetTrigger("pressBtn");
+        formManager.blockMovement1Frame = true;
         dw.unlockDoor();
-        Debug.Log("clickkeeed");
+        Debug.Log("clickkeeed to unlock");
     }
 }
