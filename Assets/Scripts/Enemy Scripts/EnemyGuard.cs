@@ -8,6 +8,8 @@ public class EnemyGuard : Enemy {
     int actionPointLength = 3;
     [SerializeField] int maxActionPoints = 5;
     [SerializeField] int moveSpeed = 5;
+    [SerializeField] float FOVUpdateInterval = 0.5F;
+    [SerializeField] int fieldOfViewRange = 80, visionRange = 30, spotRange = 20;
 
     NavMeshAgent agent;
 
@@ -16,9 +18,7 @@ public class EnemyGuard : Enemy {
 
     Vector3 curPosition = new Vector3(0, 0, 0);
 
-    public float fieldOfViewRange = 52f;
-    public float visionRange = 30;
-    public float spotRange = 20;
+    FOV[] fovs;
 
     public bool turningEnemy = true;
     bool turnRight = false;
@@ -37,7 +37,7 @@ public class EnemyGuard : Enemy {
     }
     enemyState eState = enemyState.stand;
 
-    [HideInInspector] public bool investigate = false;
+    public bool investigate = false;
     [HideInInspector] public Vector3 investigatePos;
 
     void Start()
@@ -46,6 +46,15 @@ public class EnemyGuard : Enemy {
         actionpointsLeft = maxActionPoints;
         player = GameObject.FindGameObjectWithTag("Player");
         ui = GameObject.FindObjectOfType<UIMaster>();
+
+        fovs = GetComponentsInChildren<FOV>();
+
+        foreach(FOV fov in fovs)
+        {
+            fov.init(fieldOfViewRange, visionRange, spotRange);
+        }
+
+        InvokeRepeating("FOVControl", 0, FOVUpdateInterval);
     }
 
     IEnumerator Die() {
@@ -59,12 +68,24 @@ public class EnemyGuard : Enemy {
 
         if (base.state != Enemy.enemyState.inactive)
         {
-            if (canSeePlayer() == 2)
+            int seeState = 0;
+            foreach(FOV fov in fovs)
+            {
+                seeState = fov.canSeePlayer();
+
+                if(seeState != 0)
+                {
+                    break;
+                }
+            }
+
+            if (seeState == 2)
             {
                 investigate = true;
+                investigatePos = player.transform.position;
                 Debug.Log("investigating");
             }
-            else if (canSeePlayer() == 1)
+            else if (seeState == 1)
             {
                 //Destroy(player.gameObject);
                 if (!playerkilled)
@@ -110,7 +131,6 @@ public class EnemyGuard : Enemy {
         }
         else
         {
-            
             switch (eState)
             {
                 case enemyState.stand:
@@ -178,42 +198,29 @@ public class EnemyGuard : Enemy {
             else
             {
                 investigate = false;
+                foreach(FOV fov in fovs)
+                {
+                    fov.alert = FOV.alertState.normal;
+                }
             }
             eState = enemyState.stand;
         }
     }
 
-    public int canSeePlayer()
+    void FOVControl()
     {
-        // 0 = cant see him
-        // 1 = player spotted
-        // 2 = investigate
-        int state = 0;
-
-        Vector3 rayDirection = player.transform.position - transform.position;
-        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        RaycastHit hit;
-        if ((Vector3.Angle(rayDirection, transform.forward)) < fieldOfViewRange)
+        foreach(FOV fov in fovs)
         {
-            if (Physics.Raycast(transform.position, rayDirection, out hit, visionRange))
+            if (state == Enemy.enemyState.inactive)
             {
-                if (hit.transform.tag == "Player")
-                {
-                    if(Vector3.Distance(hit.transform.position, transform.position) < spotRange)
-                    {
-                        state = 1; //if player spotted
-                        Debug.Log("Player spotteddddddddd!");
-                    }
-                    else
-                    {
-                        Debug.Log("investigate");
-                        state = 2; //if investigate
-                        investigatePos = hit.transform.position;
-                    }
-                }
+
+                fov.clearMesh();
+            }
+            else
+            {
+                fov.genFOV();
             }
         }
-
-        return state;
+        
     }
 }

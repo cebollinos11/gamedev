@@ -85,5 +85,11 @@ public class Trap : MonoBehaviour {
             //activate trap
             trapActivated = true;
         }
+        else
+        {
+            this.activeTurns = activeTurns;
+            turnsLeft = activeTurns;
+            turnCheck = gamemaster.turnNumber;
+        }
     }
 }
