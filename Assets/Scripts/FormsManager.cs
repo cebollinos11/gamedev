@@ -42,6 +42,9 @@ public class FormsManager : MonoBehaviour {
 
     public GameObject splitExplosion;
 
+    private float elapsed;
+    private NavMeshPath path;
+
     public enum formState
     {
         idle,
@@ -52,6 +55,7 @@ public class FormsManager : MonoBehaviour {
     TextureHiderManager textureHiderManager;
 
     public bool blockMovement1Frame;
+    
 
     LayerMask layerMask;
 	// Use this for initialization
@@ -88,6 +92,9 @@ public class FormsManager : MonoBehaviour {
 
         camFocus = Object.FindObjectOfType<CameraFocuser>();
         //camFocus.TargetToFollow = spawnedForms[0].transform;
+
+        elapsed = 0f;
+        path = new NavMeshPath();
 	}
 	
 	// Update is called once per frame
@@ -128,6 +135,24 @@ public class FormsManager : MonoBehaviour {
         }
 	}
 
+    float PathLength(NavMeshPath path)
+    {
+        if (path.corners.Length < 2)
+            return 0;
+
+        Vector3 previousCorner = path.corners[0];
+        float lengthSoFar = 0.0F;
+        int i = 1;
+        while (i < path.corners.Length)
+        {
+            Vector3 currentCorner = path.corners[i];
+            lengthSoFar += Vector3.Distance(previousCorner, currentCorner);
+            previousCorner = currentCorner;
+            i++;
+        }
+        return lengthSoFar;
+    }
+
     void idle()
     {
         if (actionPointsLeft + 1 > 0)
@@ -149,7 +174,8 @@ public class FormsManager : MonoBehaviour {
                 {
                     if (hitt.transform.gameObject.layer != LayerMask.NameToLayer("Walkable"))
                     {
-                        hitPoint = hitt.point;
+                        //hitPoint = hitt.point;
+                        //Debug.Log("hitpoint changed!!");
                     }
                 }
 
@@ -157,7 +183,9 @@ public class FormsManager : MonoBehaviour {
                 lineEndPos = hitPoint;
 
                 //distance from point to player
+                
                 pointerDistance = Mathf.FloorToInt(Vector3.Distance(spawnedForms[curForm].transform.position, hitPoint) / moveSpeed);
+
 
                 if (pointerDistance > actionPointsLeft) //don't move more than action points left
                 {
@@ -170,11 +198,66 @@ public class FormsManager : MonoBehaviour {
                 pointerText.transform.LookAt(Camera.main.transform.position);
                 //
 
+                //added by pablo
+               
+                elapsed += Time.deltaTime;
+                if (elapsed > 0.01f)
+                {
+                    elapsed = 0f ;
+                    NavMesh.CalculatePath(spawnedForms[curForm].transform.position, lineEndPos, NavMesh.AllAreas, path);
+                    
+
+                    //resize line renderer
+                    pointerLine.SetVertexCount(path.corners.Length);                  
+
+
+                    for (int i = 0; i < path.corners.Length ; i++)
+                    {
+
+                        pointerLine.SetPosition(i , path.corners[i]);
+
+
+                    }
+
+
+                }
+                
+                    
+                    //Debug.DrawLine(path.corners[i], path.corners[i + 1], Color.red);	
+
                 //set pointer line end pos
-                pointerLine.SetPosition(1, lineEndPos);
+                //Debug.Log(path.corners.Length);
+                //if (path.corners.Length > 1)
+                //{
+                //    //pointerLine.SetPosition(path.corners.Length - 1, lineEndPos);
+                //}
+                    
 
                 //set position of "pointer"
+
+
+                //fix bug of super trip
+
+                pointerDistance = Mathf.FloorToInt( PathLength(path) / moveSpeed);
+
+                Debug.Log("Distance "+pointerDistance.ToString());
+                if (pointerDistance > actionPointsLeft) //don't move more than action points left
+                {
+                    pointerText.text = "";
+                    pointerLine.SetVertexCount(0);  
+                    pointerDistance = 0;
+                    lineEndPos = spawnedForms[curForm].transform.position;
+                }
+
+
+
+                
                 pointer.position = spawnedForms[curForm].transform.position + (direction * (pointerDistance * moveSpeed));
+                if (path.corners.Length-1>0)
+                {
+                    pointer.position = path.corners[path.corners.Length-1];
+                }
+                 
             }
             if(blockMovement1Frame){
 
