@@ -15,6 +15,7 @@ public class PressurePlate : MonoBehaviour {
     int turnCheck;
 
     bool activated = false;
+    bool playerIsOnPlate = false;
 	// Use this for initialization
 	void Start () {
         gamemaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
@@ -36,7 +37,6 @@ public class PressurePlate : MonoBehaviour {
                     obj.SetActive(false);
                 }
 
-                turnsLeft = activeTurns;
                 myRenderer.material.color = disabledColor;
                 activated = false;
             }
@@ -50,29 +50,45 @@ public class PressurePlate : MonoBehaviour {
                 }
             }
         }
-	}
 
-    void OnTriggerEnter(Collider other)
-    {
-        if(!activated)
+        if(playerIsOnPlate)
         {
-            if(other.transform.tag == "Player")
+            turnCheck = gamemaster.turnNumber;
+            turnsLeft = activeTurns;
+            foreach (Trap trap in trapsToActivate)
             {
-                turnCheck = gamemaster.turnNumber;
+                trap.activateMe(activeTurns);
+            }
+
+            if (!activated)
+            {
                 myRenderer.material.color = enabledColor;
 
-                foreach (Trap trap in trapsToActivate)
-                {
-                    trap.activateMe(activeTurns);
-                }
-
-                foreach(GameObject obj in objectsToEnable)
+                foreach (GameObject obj in objectsToEnable)
                 {
                     obj.SetActive(true);
                 }
 
                 activated = true;
             }
+
+
+        }
+	}
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Player")
+        {
+            playerIsOnPlate = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.transform.tag == "Player")
+        {
+            playerIsOnPlate = false;
         }
     }
 }

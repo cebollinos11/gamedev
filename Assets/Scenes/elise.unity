@@ -2286,7 +2286,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
       propertyPath: m_LocalPosition.x
+<<<<<<< HEAD:Assets/Scenes/elise.unity
       value: 9.9
+=======
+      value: -27.6200008
+>>>>>>> f892872fdd507a938eafe1a6cd04b93133bd6153:Assets/Scenes/Tutorial.unity
       objectReference: {fileID: 0}
     - target: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2294,7 +2298,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Assets/Scenes/elise.unity
       value: 167.4
+=======
+      value: -30.8999996
+>>>>>>> f892872fdd507a938eafe1a6cd04b93133bd6153:Assets/Scenes/Tutorial.unity
       objectReference: {fileID: 0}
     - target: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
       propertyPath: m_LocalRotation.x

@@ -6,22 +6,44 @@ public class EnemyCam : Enemy {
     GameObject player;
 
     [SerializeField] bool rotatingCamera = false;
-    [SerializeField] public float fieldOfViewRange = 40f;
-    [SerializeField] public float visionRange = 15;
+    [SerializeField] float FOVUpdateInterval = 0.5F;
+    [SerializeField] int fieldOfViewRange = 40;
+    [SerializeField] int visionRange = 15;
 
-    [SerializeField] Transform cam1, cam2;
+    FOV[] fovs;
+    //[SerializeField] Transform cam1, cam2;
 
     bool alertSent = false;
 	// Use this for initialization
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        fovs = GetComponentsInChildren<FOV>();
+
+        foreach (FOV fov in fovs)
+        {
+            fov.init(fieldOfViewRange, visionRange);
+        }
+
+        InvokeRepeating("FOVControl", 0, FOVUpdateInterval);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (base.state != Enemy.enemyState.inactive)
         {
-            if (canSeePlayer())
+            int seeState = 0;
+            foreach (FOV fov in fovs)
+            {
+                seeState = fov.canSeePlayer();
+
+                if (seeState != 0)
+                {
+                    break;
+                }
+            }
+
+            if (seeState != 0)
             {
                 Debug.Log("cam: player spotted!");
                 if (!alertSent)
@@ -83,25 +105,20 @@ public class EnemyCam : Enemy {
         base.state = Enemy.enemyState.idle;
     }
 
-    public bool canSeePlayer()
+    void FOVControl()
     {
-        bool playerSpotted = false;
-
-        Vector3 rayDirection = player.transform.position - transform.position;
-        float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
-        RaycastHit hit;
-
-        if ((Vector3.Angle(rayDirection, cam1.forward)) < fieldOfViewRange || (Vector3.Angle(rayDirection, cam2.forward)) < fieldOfViewRange)
+        foreach (FOV fov in fovs)
         {
-            if (Physics.Raycast(transform.position, rayDirection, out hit, visionRange))
+            if (state == Enemy.enemyState.inactive)
             {
-                if (hit.transform.tag == "Player")
-                {
-                    playerSpotted = true;
-                }
+
+                fov.clearMesh();
+            }
+            else
+            {
+                fov.genFOV();
             }
         }
 
-        return playerSpotted;
     }
 }
