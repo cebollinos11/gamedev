@@ -84,7 +84,7 @@ NavMeshSettings:
     minRegionArea: 2
     cellSize: 0.20666666
     manualCellSize: 0
-  m_NavMeshData: {fileID: 23800000, guid: e4d94cda3980049209c5ac8eea7a4640, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: aa184f7c40f004b30aee30dcdd3e1484, type: 2}
 --- !u!1001 &967919
 Prefab:
   m_ObjectHideFlags: 0
@@ -3191,6 +3191,10 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 1307650611}
+    - target: {fileID: 11456332, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
+      propertyPath: complete
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
   m_IsPrefabParent: 0
@@ -4520,6 +4524,10 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 438667171}
+    - target: {fileID: 11456332, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
+      propertyPath: complete
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
   m_IsPrefabParent: 0
@@ -5815,6 +5823,10 @@ Prefab:
       propertyPath: door
       value: 
       objectReference: {fileID: 2132864072}
+    - target: {fileID: 11456332, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
+      propertyPath: complete
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
   m_IsPrefabParent: 0
@@ -7444,7 +7456,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 227.4
+      value: 227.39
       objectReference: {fileID: 0}
     - target: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
       propertyPath: m_LocalRotation.x
