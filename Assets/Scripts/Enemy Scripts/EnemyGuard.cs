@@ -180,6 +180,10 @@ public class EnemyGuard : Enemy {
             }
             actionpointsLeft--;
         }
+        else
+        {
+            actionpointsLeft = 0;
+        }
     }
     void patrol()
     {
