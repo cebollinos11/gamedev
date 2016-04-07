@@ -6,6 +6,7 @@ public class PressurePlate : MonoBehaviour {
 
     [SerializeField] Trap[] trapsToActivate;
     [SerializeField] GameObject[] objectsToEnable;
+    [SerializeField] GameObject[] objectsToDisable;
 
     [SerializeField] Color disabledColor, enabledColor;
     MeshRenderer myRenderer;
@@ -35,6 +36,11 @@ public class PressurePlate : MonoBehaviour {
                 foreach (GameObject obj in objectsToEnable)
                 {
                     obj.SetActive(false);
+                }
+
+                foreach(GameObject obj in objectsToDisable)
+                {
+                    obj.SetActive(true);
                 }
 
                 myRenderer.material.color = disabledColor;
@@ -67,6 +73,11 @@ public class PressurePlate : MonoBehaviour {
                 foreach (GameObject obj in objectsToEnable)
                 {
                     obj.SetActive(true);
+                }
+
+                foreach (GameObject obj in objectsToDisable)
+                {
+                    obj.SetActive(false);
                 }
 
                 activated = true;
