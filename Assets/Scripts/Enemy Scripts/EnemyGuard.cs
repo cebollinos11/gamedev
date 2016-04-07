@@ -16,6 +16,9 @@ public class EnemyGuard : Enemy {
     [SerializeField] Transform[] waypoints;
     public int waypointID = 0;
 
+    Vector3 startingPos = new Vector3(0, 0, 0);
+    Quaternion startingRot = new Quaternion(0, 0, 0, 0);
+
     Vector3 curPosition = new Vector3(0, 0, 0);
 
     FOV[] fovs;
@@ -46,6 +49,9 @@ public class EnemyGuard : Enemy {
         actionpointsLeft = maxActionPoints;
         player = GameObject.FindGameObjectWithTag("Player");
         ui = GameObject.FindObjectOfType<UIMaster>();
+
+        startingPos = transform.position;
+        startingRot = transform.rotation;
 
         fovs = GetComponentsInChildren<FOV>();
 
@@ -147,42 +153,56 @@ public class EnemyGuard : Enemy {
 
     void stand()
     {
-        if(investigate)
+        if (!investigate && waypoints.Length <= 0 && Vector3.Distance(transform.position, startingPos) > 1)
         {
-            agent.SetDestination(investigatePos);
-            curPosition = transform.position;
             eState = enemyState.patrol;
-        }
-        else if(waypoints.Length > 0)
-        { 
-            if(waypoints.Length-1 < waypointID)
-            {
-                waypointID = 0;
-            }
-            agent.SetDestination(waypoints[waypointID].position);
-
-            curPosition = transform.position;
-            eState = enemyState.patrol;
-        }
-        else if(turningEnemy)
-        {
-            if(turnRight)
-            {
-                transform.Rotate(Vector3.up * 90);
-                turnRight = false;
-                actionpointsLeft = 0;
-            }
-            else
-            {
-                transform.Rotate(Vector3.up * -90);
-                turnRight = true;
-                actionpointsLeft = 0;
-            }
-            actionpointsLeft--;
         }
         else
         {
-            actionpointsLeft = 0;
+            if (investigate)
+            {
+                agent.SetDestination(investigatePos);
+                curPosition = transform.position;
+                eState = enemyState.patrol;
+            }
+            else if (waypoints.Length > 0)
+            {
+                if (waypoints.Length - 1 < waypointID)
+                {
+                    waypointID = 0;
+                }
+                agent.SetDestination(waypoints[waypointID].position);
+
+                curPosition = transform.position;
+                eState = enemyState.patrol;
+            }
+            else if (turningEnemy)
+            {
+                if (turnRight)
+                {
+                    if (transform.rotation != startingRot)
+                    {
+                        transform.rotation = startingRot;
+                    }
+                    turnRight = false;
+                    actionpointsLeft = 0;
+                }
+                else
+                {
+                    transform.Rotate(Vector3.up * -90);
+                    turnRight = true;
+                    actionpointsLeft = 0;
+                }
+                actionpointsLeft--;
+            }
+            else
+            {
+                if (transform.rotation != startingRot)
+                {
+                    transform.rotation = startingRot;
+                }
+                actionpointsLeft = 0;
+            }
         }
     }
     void patrol()
@@ -195,7 +215,7 @@ public class EnemyGuard : Enemy {
 
         if (agent.remainingDistance <= 0.01F)
         {
-            if (!investigate)
+            if (!investigate && waypoints.Length > 0)
             {
                 waypointID++;
             }
@@ -206,6 +226,8 @@ public class EnemyGuard : Enemy {
                 {
                     fov.alert = FOV.alertState.normal;
                 }
+
+                agent.SetDestination(startingPos);
             }
             eState = enemyState.stand;
         }

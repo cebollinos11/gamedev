@@ -15,6 +15,8 @@ public class Trap : MonoBehaviour {
 
     int turnCheck = 0;
 
+    public GameObject trapEffects;
+
     Enemy[] trappedEnemies;
 	// Use this for initialization
 	void Start () {
@@ -25,12 +27,18 @@ public class Trap : MonoBehaviour {
         myColliderBounds = myCollider.bounds;
 
         turnsLeft = activeTurns;
+
+        trapEffects.SetActive(false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	    if(trapActivated)
         {
+            if (!trapEffects.activeSelf) 
+                trapEffects.SetActive(true);
+            
+            
             if (turnsLeft <= 0)
             {
                 //reenable all enemies in trappedEnemies
@@ -52,6 +60,14 @@ public class Trap : MonoBehaviour {
                     Debug.Log("new turn!");
                 }
             }
+
+
+            
+        }
+        else
+        {
+            if(trapEffects.activeSelf)
+                trapEffects.SetActive(false);
         }
 	}
 
