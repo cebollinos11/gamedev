@@ -205,6 +205,21 @@ public class EnemyGuard : Enemy {
             }
         }
     }
+
+    void OnTriggerEnter(Collider col)
+    {
+        
+        if (col.gameObject.name == "PhysicalForm")
+        {
+
+            transform.LookAt(col.gameObject.transform);
+            Debug.Log("die");
+            AudioManager.PlayClip(AudioManager.Instance.DetectSound);
+
+            StartCoroutine(Die());
+        }
+    }
+
     void patrol()
     {
         if(Vector3.Distance(transform.position, curPosition) >= actionPointLength)
