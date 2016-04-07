@@ -240,7 +240,7 @@ public class FormsManager : MonoBehaviour {
 
                 pointerDistance = Mathf.FloorToInt( PathLength(path) / moveSpeed);
 
-                Debug.Log("Distance "+pointerDistance.ToString());
+               
                 if (pointerDistance > actionPointsLeft) //don't move more than action points left
                 {
                     pointerText.text = "";
