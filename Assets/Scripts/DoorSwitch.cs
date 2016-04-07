@@ -23,8 +23,11 @@ public class DoorSwitch : MonoBehaviour {
 
     public AudioClip openSound;
 
+    GameObject camFocuser;
+
 	// Use this for initialization
 	void Start () {
+        camFocuser = Resources.Load("FocusCamera") as GameObject;
         playerForms = GameObject.FindGameObjectsWithTag("Player");
         gamemaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         formManager = gamemaster.GetComponent<FormsManager>();
@@ -52,12 +55,22 @@ public class DoorSwitch : MonoBehaviour {
         }
 	}
 
-    public void unlockDoor()
-    {
-        AudioManager.PlayClip(openSound);
+    void unLockDelayed() {
+
         doorUnlocked = !doorUnlocked;
         light.color = (doorUnlocked ? enabledColor : disabledColor);
         door.gameObject.SetActive(!doorUnlocked);
+    
+    }
+
+    public void unlockDoor()
+    {
+        Instantiate(camFocuser, door.transform.position, Quaternion.identity);
+        AudioManager.PlayClip(openSound);
+        Invoke("unLockDelayed", 1f);
+        
+
+        
 
         //hideBtn();
     }
