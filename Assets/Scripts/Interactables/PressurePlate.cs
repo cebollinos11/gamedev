@@ -17,8 +17,12 @@ public class PressurePlate : MonoBehaviour {
 
     bool activated = false;
     bool playerIsOnPlate = false;
+
+    GameObject camFocuser;
 	// Use this for initialization
 	void Start () {
+        camFocuser = Resources.Load("FocusCamera") as GameObject;
+
         gamemaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
 
         myRenderer = GetComponent<MeshRenderer>();
@@ -68,11 +72,20 @@ public class PressurePlate : MonoBehaviour {
 
             if (!activated)
             {
+                bool secondCameraActive = false;
+
                 myRenderer.material.color = enabledColor;
 
                 foreach (GameObject obj in objectsToEnable)
                 {
+
                     obj.SetActive(true);
+
+                    if (!secondCameraActive)
+                    {
+                        secondCameraActive = true;
+                        Instantiate(camFocuser, obj.transform.position, Quaternion.identity);
+                    }
                 }
 
                 foreach (GameObject obj in objectsToDisable)
