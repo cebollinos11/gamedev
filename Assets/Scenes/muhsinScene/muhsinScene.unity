@@ -1034,6 +1034,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
   m_PrefabInternal: {fileID: 259997744}
+--- !u!1 &263864484 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125644, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
+  m_PrefabInternal: {fileID: 1552750175}
 --- !u!1 &271747559
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,7 +3104,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11456332, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
       propertyPath: doorUnlocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
@@ -5583,6 +5587,10 @@ Prefab:
       propertyPath: m_Name
       value: doorSwitch (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 125644, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
   m_IsPrefabParent: 0
@@ -6883,6 +6891,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 20.059563
       objectReference: {fileID: 0}
+    - target: {fileID: 11499272, guid: ca089c77d034df84098b6bb47ac74f5c, type: 2}
+      propertyPath: isWire
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca089c77d034df84098b6bb47ac74f5c, type: 2}
   m_IsPrefabParent: 0
@@ -7467,6 +7479,14 @@ Prefab:
       propertyPath: trapsToActivate.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11405426, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
+      propertyPath: objectsToEnable.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11405426, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
+      propertyPath: objectsToDisable.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 456562, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
       propertyPath: m_LocalPosition.x
       value: -27.688316
@@ -7503,6 +7523,14 @@ Prefab:
       propertyPath: trapsToActivate.Array.data[0]
       value: 
       objectReference: {fileID: 857941534}
+    - target: {fileID: 11405426, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
+      propertyPath: objectsToDisable.Array.data[0]
+      value: 
+      objectReference: {fileID: 943192381}
+    - target: {fileID: 11405426, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
+      propertyPath: objectsToEnable.Array.data[0]
+      value: 
+      objectReference: {fileID: 263864484}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
   m_IsPrefabParent: 0
