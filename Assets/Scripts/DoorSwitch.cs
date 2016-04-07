@@ -3,6 +3,8 @@ using System.Collections;
 
 public class DoorSwitch : MonoBehaviour {
 
+    [SerializeField] bool unlock = true;
+
     GameMaster gamemaster;
     FormsManager formManager;
     GameObject[] playerForms;
