@@ -58,7 +58,16 @@ public class FormsManager : MonoBehaviour {
     
 
     LayerMask layerMask;
-	// Use this for initialization
+	
+    //optic form
+    [SerializeField] GameObject opticFormPrefab;
+    GameObject spawnedOpticForm;
+    OpticForm opticFormScript;
+    
+    bool opticControl = false;
+    //
+    
+    // Use this for initialization
 	void Start () {
         actionPointsLeft = maxActionPoints;
         textureHiderManager = GameObject.FindObjectOfType<TextureHiderManager>();
@@ -95,43 +104,108 @@ public class FormsManager : MonoBehaviour {
 
         elapsed = 0f;
         path = new NavMeshPath();
+
+
+        //Optic form
+        if(spawnedOpticForm != null) opticFormScript = spawnedOpticForm.GetComponent<OpticForm>();
+        //
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if (gamemaster.curTurn == GameMaster.turns.player)
+        if (!opticControl)
         {
-            switch (state)
+            if (gamemaster.curTurn == GameMaster.turns.player)
             {
-                case formState.idle:
-                    idle();
-                    break;
-                case formState.move:
-                    move();
-                    break;
-                default:
-                    break;
+                switch (state)
+                {
+                    case formState.idle:
+                        idle();
+                        break;
+                    case formState.move:
+                        move();
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else
+            {
+                if (pointerLine.gameObject.activeSelf) pointerLine.gameObject.SetActive(false);
+                if (pointerText.gameObject.activeSelf) pointerText.gameObject.SetActive(false);
+                if (pointer.gameObject.activeSelf) pointer.gameObject.SetActive(false);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                formBtnClicked(0);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                formBtnClicked(1);
+            }
+            if(Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                opticControl = true;
+            }
+
+            if (txtActionPoints.text != "Actionpoints: " + (actionPointsLeft + 1))
+            {
+                txtActionPoints.text = "Actionpoints: " + (actionPointsLeft + 1);
             }
         }
         else
         {
-            if (pointerLine.gameObject.activeSelf) pointerLine.gameObject.SetActive(false);
-            if (pointerText.gameObject.activeSelf) pointerText.gameObject.SetActive(false);
-            if (pointer.gameObject.activeSelf) pointer.gameObject.SetActive(false);
-        }
+            if(Input.GetMouseButtonUp(0))
+            {
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            formBtnClicked(0);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            formBtnClicked(1);
-        }
+                if (Physics.Raycast(ray, out hit))
+                {
+                    if(LayerMask.LayerToName(hit.transform.gameObject.layer) == "Walkable")
+                    {
+                        RaycastHit hitt;
 
-        if(txtActionPoints.text != "Actionpoints: "+ (actionPointsLeft+1))
-        {
-            txtActionPoints.text = "Actionpoints: " + (actionPointsLeft+1);
+                        Vector3 dir = (hit.point - spawnedForms[0].transform.position).normalized;
+
+                        if(Physics.Raycast(spawnedForms[0].transform.position, dir, out hitt))
+                        {
+                            if(hitt.point == hit.point)
+                            {
+                                Debug.Log("Can call the optic here! yay!");
+                                if(spawnedOpticForm != null)
+                                {
+                                    if(opticFormScript != null)
+                                    {
+                                        opticFormScript.setNewPos(hit.point);
+                                    }
+                                }
+                                else
+                                {
+                                    spawnedOpticForm = Instantiate(opticFormPrefab, spawnedForms[0].transform.position,Quaternion.identity) as GameObject;
+                                    opticFormScript = spawnedOpticForm.GetComponent<OpticForm>();
+                                    opticFormScript.setNewPos(hit.point);
+                                }
+
+                                opticControl = false;
+                            }
+                            else
+                            {
+                                Debug.Log("cant see it");
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("raycast no");
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("Can't call the optic here!");
+                    }
+                }
+            }
         }
 	}
 

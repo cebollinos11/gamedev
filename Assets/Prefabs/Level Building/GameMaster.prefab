@@ -75,7 +75,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 154776}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.20000005, y: 1.37, z: -15}
+  m_LocalPosition: {x: 1.2, y: 1.37, z: -15}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children:
   - {fileID: 489494}
@@ -88,7 +88,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.20000005, y: 1.37, z: -15}
+  m_LocalPosition: {x: 1.2, y: 1.37, z: -15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 468188}
@@ -100,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180390}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84.1999969, y: 0, z: 40.5}
+  m_LocalPosition: {x: 84.2, y: 0, z: 40.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 437312}
@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 103230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: -1, y: .5, z: 1}
+  m_LocalScale: {x: -1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 437312}
   m_RootOrder: 0
@@ -137,8 +137,10 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -161,8 +163,10 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -234,6 +238,8 @@ MonoBehaviour:
   digitalSplitSound: {fileID: 8300000, guid: 3c27580af79f8614791395c007729300, type: 3}
   splitExplosion: {fileID: 150770, guid: 85b077264f3e8f14c96ba8acf03ba48b, type: 2}
   state: 0
+  blockMovement1Frame: 0
+  opticFormPrefab: {fileID: 171880, guid: bb66cfd90c947844d8a1176380d56336, type: 2}
 --- !u!114 &11477806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -271,8 +277,10 @@ LineRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -281,8 +289,8 @@ LineRenderer:
   - {x: 0, y: 1, z: 0}
   - {x: 0, y: 1, z: 0}
   m_Parameters:
-    startWidth: .25
-    endWidth: .25
+    startWidth: 0.25
+    endWidth: 0.25
     m_StartColor:
       serializedVersion: 2
       rgba: 4294967295
