@@ -18,6 +18,7 @@ public class EndOfLevel : MonoBehaviour {
             if (!triggeredAlready) {
                 triggeredAlready = true;
                 Debug.Log("SHOW LEVEL COMPLETE!");
+                Debug.Log(Application.loadedLevel);
                 Invoke("GoToNextLevel", 2f);
 
             

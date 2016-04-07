@@ -42,6 +42,15 @@ public class GameMaster : MonoBehaviour {
 
         //grab all enemies from map
         enemiesOnMap = GameObject.FindObjectsOfType<Enemy>();
+
+
+        //check for checkpoints
+        CheckPointManager.init();
+        if (CheckPointManager.GetLevel() == Application.loadedLevel)
+        {
+            Debug.Log("Using checkpoint");
+            GameObject.FindGameObjectWithTag("Player").transform.position = CheckPointManager.GetPosition();
+        }
 	}
 	
 	// Update is called once per frame

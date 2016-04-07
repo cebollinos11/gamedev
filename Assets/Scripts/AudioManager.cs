@@ -45,6 +45,8 @@ public class AudioManager : Singleton<AudioManager>
     {
         mainAudioSource = Instance.gameObject.AddComponent<AudioSource>();//"AudioSource"); //Instance.gameObject.AddComponent("AudioSource") as AudioSource;
         PlayBgSong(gameMusic);
+
+        
     }
 
     void Update() {
