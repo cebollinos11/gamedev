@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DoorSwitch : MonoBehaviour {
 
-    [SerializeField] bool unlock = true;
+    [SerializeField] bool doorUnlocked = false;
 
     GameMaster gamemaster;
     FormsManager formManager;
@@ -12,7 +12,7 @@ public class DoorSwitch : MonoBehaviour {
 
     [SerializeField] Transform door;
     bool showingBtn = false;
-    bool doorUnlocked = false;
+    
 
     [SerializeField] Light light;
     [SerializeField] Color disabledColor, enabledColor;
@@ -35,6 +35,7 @@ public class DoorSwitch : MonoBehaviour {
         }
 
         light.color = (doorUnlocked ? enabledColor : disabledColor);
+        door.gameObject.SetActive(!doorUnlocked);
 
         btn.GetComponent<DoorSwitchBtn>().setDoorSwitch(this);
 	}
@@ -54,24 +55,20 @@ public class DoorSwitch : MonoBehaviour {
     public void unlockDoor()
     {
         AudioManager.PlayClip(openSound);
-        doorUnlocked = true;
-        light.color = enabledColor;
-        door.gameObject.SetActive(false);
+        doorUnlocked = !doorUnlocked;
+        light.color = (doorUnlocked ? enabledColor : disabledColor);
+        door.gameObject.SetActive(!doorUnlocked);
 
-        hideBtn();
+        //hideBtn();
     }
 
     void showBtn()
     {
-        if (!doorUnlocked)
+        if (!btn.gameObject.activeSelf)
         {
-            
-            if (!btn.gameObject.activeSelf)
-            {
-                btn.gameObject.SetActive(true);
-            }
-            showingBtn = true;
+            btn.gameObject.SetActive(true);
         }
+        showingBtn = true;
     }
     void hideBtn()
     {
