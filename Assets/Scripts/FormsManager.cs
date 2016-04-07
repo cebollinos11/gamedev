@@ -171,7 +171,7 @@ public class FormsManager : MonoBehaviour {
 
                         if(Physics.Raycast(spawnedForms[0].transform.position, dir, out hitt))
                         {
-                            if(hitt.point == hit.point)
+                            if(Vector3.Distance( hitt.point , hit.point)<0.1f)
                             {
                                 Debug.Log("Can call the optic here! yay!");
                                 if(spawnedOpticForm != null)
@@ -193,6 +193,8 @@ public class FormsManager : MonoBehaviour {
                             else
                             {
                                 Debug.Log("cant see it");
+                                Debug.Log(hitt.point);
+                                Debug.Log(hit.point);
                             }
                         }
                         else
