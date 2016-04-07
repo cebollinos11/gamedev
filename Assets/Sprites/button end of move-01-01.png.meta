@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: b66d17ba4cb89454e8fe07e4fd791f6b
-timeCreated: 1459862285
+timeCreated: 1460026744
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: button end of move-01-01_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,7 +39,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +50,51 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: button end of move-01-01_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 885
+        height: 295
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 38, y: 34, z: 39, w: 34}
+      outline:
+      - - {x: 442.5, y: 134.5}
+        - {x: 441.5, y: 136.5}
+        - {x: 434.5, y: 144.5}
+        - {x: 428.5, y: 147.5}
+        - {x: -429.5, y: 147.5}
+        - {x: -431.5, y: 146.5}
+        - {x: -440.5, y: 137.5}
+        - {x: -442.5, y: 133.5}
+        - {x: -442.5, y: -132.5}
+        - {x: -440.5, y: -137.5}
+        - {x: -431.5, y: -146.5}
+        - {x: -428.5, y: -147.5}
+        - {x: 429.5, y: -147.5}
+        - {x: 431.5, y: -146.5}
+        - {x: 439.5, y: -139.5}
+        - {x: 442.5, y: -132.5}
+      - - {x: -414.5, y: -123.5}
+        - {x: -421.5, y: -112.5}
+        - {x: -422.5, y: -111.5}
+        - {x: -422.5, y: 110.5}
+        - {x: -421.5, y: 111.5}
+        - {x: -419.5, y: 117.5}
+        - {x: -409.5, y: 125.5}
+        - {x: 407.5, y: 125.5}
+        - {x: 408.5, y: 124.5}
+        - {x: 413.5, y: 122.5}
+        - {x: 420.5, y: 113.5}
+        - {x: 420.5, y: -114.5}
+        - {x: 413.5, y: -123.5}
+        - {x: 408.5, y: -125.5}
+        - {x: 407.5, y: -126.5}
+        - {x: -409.5, y: -126.5}
+        - {x: -409.5, y: -125.5}
     outline: []
   spritePackingTag: 
   userData: 
