@@ -85,10 +85,12 @@ public class EnemyGuard : Enemy {
                 }
             }
 
-            if (seeState == 2)
+            if (seeState == 2 || seeState == 3)
             {
                 investigate = true;
-                investigatePos = player.transform.position;
+
+                investigatePos = (seeState == 2 ? player.transform.position : GameObject.FindGameObjectWithTag("OpticForm").transform.position);
+                
                 Debug.Log("investigating");
             }
             else if (seeState == 1)

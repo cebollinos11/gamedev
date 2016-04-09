@@ -12,7 +12,7 @@ GameObject:
   - 65: {fileID: 6574338}
   - 23: {fileID: 2302560}
   - 114: {fileID: 11416270}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ GameObject:
   - 4: {fileID: 497670}
   - 198: {fileID: 19899928}
   - 199: {fileID: 19914134}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,7 @@ GameObject:
   - 65: {fileID: 6585728}
   - 23: {fileID: 2326646}
   - 114: {fileID: 11419344}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: subeffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,7 +66,7 @@ GameObject:
   - 33: {fileID: 3389008}
   - 136: {fileID: 13624222}
   - 23: {fileID: 2342478}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   - 33: {fileID: 3379368}
   - 65: {fileID: 6514378}
   - 23: {fileID: 2384514}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BottomCase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - 65: {fileID: 6546776}
   - 23: {fileID: 2376036}
   - 114: {fileID: 11485856}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TrapEffects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   - 33: {fileID: 3392288}
   - 65: {fileID: 6574426}
   - 23: {fileID: 2348508}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Trap Case
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -168,6 +168,7 @@ public class FOV : MonoBehaviour {
         // 0 = cant see him
         // 1 = player spotted
         // 2 = investigate
+        // 3 = opticform
         int state = 0;
 
         foreach(RaycastHit hit in hits)
@@ -185,6 +186,11 @@ public class FOV : MonoBehaviour {
                     alert = alertState.investigate;
                 }
                 break;
+            }
+            else if (hit.transform && hit.transform.tag == "OpticForm")
+            {
+                state = 3;
+                alert = alertState.investigate;
             }
         }
 
