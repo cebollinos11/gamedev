@@ -12,9 +12,17 @@ public class UIMaster : MonoBehaviour {
 	void Start () {
         GameOver.SetActive(false);
         Wait.SetActive(false);
+        SetCursor();
         
         
 	}
+
+    void SetCursor()
+    {
+        Texture2D cursorTexture = Resources.Load("Cursor") as Texture2D;
+        Cursor.SetCursor(cursorTexture, Vector2.zero,CursorMode.Auto);
+
+    }
 
     
 
