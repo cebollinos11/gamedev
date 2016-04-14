@@ -21,7 +21,6 @@ public class GameMaster : MonoBehaviour {
     public turns curTurn = turns.player;
 
     [SerializeField] Enemy[] enemiesOnMap;
-    public int curEnemy = 0;
     bool enemyTurnsPlayed = false;
 
     FormsManager formManager;
@@ -102,7 +101,9 @@ public class GameMaster : MonoBehaviour {
                     if (en.state != Enemy.enemyState.inactive)
                     {
                         en.state = Enemy.enemyState.playTurn;
+                        Debug.Log("really start: " + en.name);
                     }
+                    Debug.Log("start: " + en.name);
                 }
 
                 enemyTurnsPlayed = true;
@@ -122,8 +123,8 @@ public class GameMaster : MonoBehaviour {
 
                 if(everythingGood)
                 {
+                    Debug.Log("my turn");
                     enemyTurnsPlayed = false;
-                    curEnemy = 0;
                     curTurn = turns.player;
                     Debug.Log("Player turn start");
                     ui.HideWait();
@@ -172,12 +173,12 @@ public class GameMaster : MonoBehaviour {
         if (formManager.state == FormsManager.formState.idle && curTurn == turns.player)
         {
             if (enemiesOnMap.Length > 0) 
-            {
+            {/*
                 if (enemiesOnMap[curEnemy].state != Enemy.enemyState.inactive)
                 {
                     //Debug.Log("set to playturn for " + enemiesOnMap[curEnemy].gameObject.name);
                     enemiesOnMap[curEnemy].state = Enemy.enemyState.playTurn;
-                }
+                }*/
 
                 //added by pablo
 
