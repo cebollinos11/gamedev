@@ -31,7 +31,7 @@ public class EndOfLevel : MonoBehaviour {
     {
 
         Debug.Log("GO TO NEXT LEVEL");
-        Application.LoadLevel(NextLevelName);
+        Application.LoadLevel(Application.loadedLevel+1);
 
     }
 }
