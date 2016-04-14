@@ -11,8 +11,13 @@ public class magneticField : MonoBehaviour {
     TextureTiler tT;
     FormsManager fM;
 
+    public GameObject ParticlesToSpawn;
+    public AudioClip ParticleSound;
+
+
 	// Use this for initialization
 	void Start () {
+
         active = true;
         tT = GetComponent<TextureTiler>();
         spCollider = GetComponent<SphereCollider>();
@@ -53,6 +58,39 @@ public class magneticField : MonoBehaviour {
         spCollider.enabled = true;
         tT.speed *= 10f;
         innerSphere.SetActive(true);
+    }
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            fM.gamemaster.ui.Flash.FlashIt(Color.blue);
+            AudioManager.PlayClip(ParticleSound);
+            GameObject par =  Instantiate(ParticlesToSpawn, fM.curAgent.transform.position, Quaternion.identity) as GameObject;
+            par.transform.parent = fM.curAgent.transform;
+        }
+    
+    }
+    void OnTriggerStay(Collider col) {
+
+        if (col.gameObject.tag == "Player")
+        {
+            
+
+            Vector3 vector;
+
+            vector = fM.curAgent.transform.position - transform.position;
+            vector = Vector3.Scale(vector, new Vector3(1f, 0f, 1f));
+            vector = vector.normalized;
+
+            fM.curAgent.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
+
+            fM.curAgent.SetDestination(fM.curAgent.transform.position+vector*2f);
+            
+
+            
+        }
+            
+        
     }
 	
 	
