@@ -59,8 +59,6 @@ public class EnemyGuard : Enemy {
         {
             fov.init(fieldOfViewRange, visionRange, spotRange);
         }
-
-        InvokeRepeating("FOVControl", 0, FOVUpdateInterval);
     }
 
     IEnumerator Die() {
@@ -74,6 +72,8 @@ public class EnemyGuard : Enemy {
 
         if (base.state != Enemy.enemyState.inactive)
         {
+            FOVControl();
+
             int seeState = 0;
             foreach(FOV fov in fovs)
             {

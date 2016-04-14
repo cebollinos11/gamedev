@@ -121,9 +121,12 @@ public class OpticForm : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Enemy")
+        if (state == states.stand)
         {
-            Destroy(gameObject);
+            if (other.gameObject.tag == "Enemy")
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
