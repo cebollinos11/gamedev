@@ -16,17 +16,21 @@ public class PlaySoundOnTriggerEnter : MonoBehaviour {
 	}
 
     void OnTriggerEnter(Collider col) {
-
-        Debug.Log(col);
-        AudioManager.PlayClip(clipOnEnter);
+        if (col.gameObject.tag == "Player")
+        {
+            Debug.Log(col);
+            AudioManager.PlayClip(clipOnEnter);
+        }
+        
     
     }
 
     void OnTriggerExit(Collider col)
     {
-
-        Debug.Log(col);
-        AudioManager.PlayClip(clipOnEnter);
-
+        if (col.gameObject.tag == "Player")
+        {
+            Debug.Log(col);
+            AudioManager.PlayClip(clipOnEnter);
+        }
     }
 }
