@@ -413,6 +413,8 @@ public class FormsManager : MonoBehaviour {
 
     void formBtnClicked(int formID)
     {
+        blockMovement1Frame = true;
+        Debug.Log("UI BUTTON CLICKED");
         if (gamemaster.curTurn == GameMaster.turns.player)
         {
             state = formState.idle;
@@ -451,6 +453,7 @@ public class FormsManager : MonoBehaviour {
 
     void combineFormsBtnClicked()
     {
+        blockMovement1Frame = true;
         if (isSplitted)
         {
             bool allIsClose = true;
@@ -499,13 +502,13 @@ public class FormsManager : MonoBehaviour {
         //try to spawm
         ElectronicUnit[] terminals = GameObject.FindObjectsOfType<ElectronicUnit>();
 
-        Debug.Log("found: "+terminals.Length);
+        //Debug.Log("found: "+terminals.Length);
         bool isTerminalClose = false;
         int terminalID = -1;
 
         for (int i = 0; i < terminals.Length; i++)
         {
-            Debug.Log("dist: " + Vector3.Distance(spawnedForms[0].transform.position, terminals[i].transform.position) + " usable: " + terminals[i].isUsable);
+            //Debug.Log("dist: " + Vector3.Distance(spawnedForms[0].transform.position, terminals[i].transform.position) + " usable: " + terminals[i].isUsable);
             if (Vector3.Distance(spawnedForms[0].transform.position, terminals[i].transform.position) < 4 && terminals[i].isUsable)
             {
                 Debug.Log("can split");
