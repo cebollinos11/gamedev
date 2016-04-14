@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DetectSound: {fileID: 8300000, guid: b8640f5c9b8f17941828ef78380cb694, type: 3}
-  gameMusic: {fileID: 8300000, guid: 5e722b078b12f8b4489e3ec571975dfd, type: 3}
+  gameMusic: {fileID: 8300000, guid: 144d0c2ae91b3f841b15e7c2369de357, type: 3}
   mouseclick: {fileID: 8300000, guid: 7e33fdafd4a0bea4c947ccc15cf7074b, type: 3}
 --- !u!1001 &100100000
 Prefab:
