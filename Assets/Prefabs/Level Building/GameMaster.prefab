@@ -228,7 +228,7 @@ MonoBehaviour:
   pointerLine: {fileID: 12049482}
   curAgent: {fileID: 0}
   curAnimator: {fileID: 0}
-  maxActionPoints: 7
+  maxActionPoints: 5
   spawnableForms:
   - {fileID: 136242, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
   - {fileID: 101578, guid: 7620413badb9852488054d304c9bc4a7, type: 2}
