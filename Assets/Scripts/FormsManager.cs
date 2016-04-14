@@ -231,7 +231,7 @@ public class FormsManager : MonoBehaviour {
 
     void idle()
     {
-        if (actionPointsLeft + 1 > 0)
+        if (curForm == 1 || actionPointsLeft + 1 > 0)
         {
             resetPointer();
 
@@ -263,12 +263,14 @@ public class FormsManager : MonoBehaviour {
                 pointerDistance = Mathf.FloorToInt(Vector3.Distance(spawnedForms[curForm].transform.position, hitPoint) / moveSpeed);
 
 
-                if (pointerDistance > actionPointsLeft) //don't move more than action points left
+                if (curForm != 1)
                 {
-                    pointerDistance = actionPointsLeft;
-                    lineEndPos = spawnedForms[curForm].transform.position + (direction * ((pointerDistance + 1) * moveSpeed));
+                    if (pointerDistance > actionPointsLeft) //don't move more than action points left
+                    {
+                        pointerDistance = actionPointsLeft;
+                        lineEndPos = spawnedForms[curForm].transform.position + (direction * ((pointerDistance + 1) * moveSpeed));
+                    }
                 }
-
                 //show actionpoints used if desiding to move
                 pointerText.text = "" + (pointerDistance + 1);
                 pointerText.transform.LookAt(Camera.main.transform.position);
@@ -316,15 +318,17 @@ public class FormsManager : MonoBehaviour {
 
                 pointerDistance = Mathf.FloorToInt( PathLength(path) / moveSpeed);
 
-               
-                if (pointerDistance > actionPointsLeft) //don't move more than action points left
-                {
-                    pointerText.text = "";
-                    pointerLine.SetVertexCount(0);  
-                    pointerDistance = 0;
-                    lineEndPos = spawnedForms[curForm].transform.position;
-                }
 
+                if (curForm != 1)
+                {
+                    if (pointerDistance > actionPointsLeft) //don't move more than action points left
+                    {
+                        pointerText.text = "";
+                        pointerLine.SetVertexCount(0);
+                        pointerDistance = 0;
+                        lineEndPos = spawnedForms[curForm].transform.position;
+                    }
+                }
 
 
                 
@@ -351,7 +355,12 @@ public class FormsManager : MonoBehaviour {
                 pointerLine.gameObject.SetActive(false);
                 pointerText.gameObject.SetActive(false);
                 pointer.gameObject.SetActive(false);
-                actionPointsLeft -= pointerDistance + 1;
+
+                if (curForm != 1)
+                {
+                    actionPointsLeft -= pointerDistance + 1;
+                }
+
                 pointerDistance = 0;
                 state = formState.move;
                 
