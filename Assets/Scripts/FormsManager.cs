@@ -69,7 +69,7 @@ public class FormsManager : MonoBehaviour {
     
 
     //unstucker
-    int unstuckWait = 150;
+    int unstuckWait = 70;
     int curUnstuckWait;
 
     Vector3 curFormLoc;
