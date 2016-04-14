@@ -1239,6 +1239,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8208860, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: panLevelCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8208860, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11441188, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: gameMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 7fc470730731d974885e0089fec8d106, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
   m_IsPrefabParent: 0
@@ -1547,7 +1559,7 @@ Transform:
   - {fileID: 1657349367}
   - {fileID: 1468187418}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1001 &614108061
 Prefab:
   m_ObjectHideFlags: 0
@@ -1891,7 +1903,7 @@ Transform:
   - {fileID: 640982835}
   - {fileID: 2136619809}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1001 &766034905
 Prefab:
   m_ObjectHideFlags: 0
