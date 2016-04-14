@@ -91,7 +91,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DetectSound: {fileID: 8300000, guid: b8640f5c9b8f17941828ef78380cb694, type: 3}
-  gameMusic: {fileID: 8300000, guid: 7fc470730731d974885e0089fec8d106, type: 3}
+  gameMusic: {fileID: 8300000, guid: 273547ef049e1f847a5adfc838987e24, type: 3}
   mouseclick: {fileID: 8300000, guid: 7e33fdafd4a0bea4c947ccc15cf7074b, type: 3}
 --- !u!1001 &100100000
 Prefab:
