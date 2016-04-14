@@ -24,14 +24,13 @@ public class EnemyCam : Enemy {
         {
             fov.init(fieldOfViewRange, visionRange);
         }
-
-        InvokeRepeating("FOVControl", 0, FOVUpdateInterval);
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (base.state != Enemy.enemyState.inactive)
         {
+            FOVControl();
             int seeState = 0;
             foreach (FOV fov in fovs)
             {
