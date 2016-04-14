@@ -37,7 +37,7 @@ public class GameMaster : MonoBehaviour {
         btnEndTurn = gameUI.FindChild("btnEndTurn").GetComponent<Button>();
         btnEndTurn.onClick.AddListener(() => endTurnBtnClicked());
 
-        ui =  GameObject.FindObjectOfType<UIMaster>();
+        ui = GameObject.FindObjectOfType<UIMaster>();
         
 
         //grab all enemies from map
