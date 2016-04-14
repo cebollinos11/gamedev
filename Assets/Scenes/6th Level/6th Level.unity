@@ -84,7 +84,7 @@ NavMeshSettings:
     minRegionArea: 2
     cellSize: 0.20666666
     manualCellSize: 0
-  m_NavMeshData: {fileID: 23800000, guid: 14d85e1e5cd3c4495aad75ebb179be8c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 13140a7ab2f14f24ca43a87b3e374dec, type: 2}
 --- !u!1001 &55051578
 Prefab:
   m_ObjectHideFlags: 0
