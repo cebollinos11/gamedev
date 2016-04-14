@@ -22,6 +22,7 @@ public class GameMaster : MonoBehaviour {
 
     [SerializeField] Enemy[] enemiesOnMap;
     public int curEnemy = 0;
+    bool enemyTurnsPlayed = false;
 
     FormsManager formManager;
 
@@ -94,10 +95,34 @@ public class GameMaster : MonoBehaviour {
 
         if (enemiesOnMap.Length > 0)
         {
-            if (enemiesOnMap[curEnemy].state == Enemy.enemyState.idle || enemiesOnMap[curEnemy].state == Enemy.enemyState.inactive)
+            if(!enemyTurnsPlayed)
             {
-                if (enemiesOnMap.Length - 1 <= curEnemy)
+                foreach(Enemy en in enemiesOnMap)
                 {
+                    if (en.state != Enemy.enemyState.inactive)
+                    {
+                        en.state = Enemy.enemyState.playTurn;
+                    }
+                }
+
+                enemyTurnsPlayed = true;
+            }
+            else
+            {
+                bool everythingGood = true;
+
+                foreach (Enemy en in enemiesOnMap)
+                {
+                    if(en.state == Enemy.enemyState.playTurn)
+                    {
+                        everythingGood = false;
+                        break;
+                    }
+                }
+
+                if(everythingGood)
+                {
+                    enemyTurnsPlayed = false;
                     curEnemy = 0;
                     curTurn = turns.player;
                     Debug.Log("Player turn start");
@@ -105,6 +130,17 @@ public class GameMaster : MonoBehaviour {
                     ui.Flash.FlashIt(Color.white);
                     AudioManager.PlayClip(soundStartTurn);
                     formManager.resetTurn();
+                }
+            }
+
+
+            /*
+
+            if (enemiesOnMap[curEnemy].state == Enemy.enemyState.idle || enemiesOnMap[curEnemy].state == Enemy.enemyState.inactive)
+            {
+                if (enemiesOnMap.Length - 1 <= curEnemy)
+                {
+                    
                 }
                 else
                 {
@@ -117,7 +153,7 @@ public class GameMaster : MonoBehaviour {
                     }
                     //Debug.Log("2curEnemy = " + curEnemy.ToString() + " plays turn = " + enemiesOnMap[curEnemy].gameObject.name);
                 }
-            }
+            }*/
         }
         else
         {
