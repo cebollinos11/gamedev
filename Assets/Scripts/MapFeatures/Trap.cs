@@ -28,14 +28,16 @@ public class Trap : MonoBehaviour {
 
         turnsLeft = activeTurns;
 
-        trapEffects.SetActive(false);
+		if (trapEffects != null) {
+			trapEffects.SetActive (false);
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	    if(trapActivated)
         {
-            if (!trapEffects.activeSelf) 
+			if (trapEffects != null && !trapEffects.activeSelf) 
                 trapEffects.SetActive(true);
             
             
@@ -66,7 +68,7 @@ public class Trap : MonoBehaviour {
         }
         else
         {
-            if(trapEffects.activeSelf)
+			if(trapEffects != null && trapEffects.activeSelf)
                 trapEffects.SetActive(false);
         }
 	}
