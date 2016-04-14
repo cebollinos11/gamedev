@@ -67,6 +67,15 @@ public class FormsManager : MonoBehaviour {
     bool opticControl = false;
     //
     
+
+    //unstucker
+    int unstuckWait = 70;
+    int curUnstuckWait;
+
+    Vector3 curFormLoc;
+    // /unstucker
+
+
     // Use this for initialization
 	void Start () {
         actionPointsLeft = maxActionPoints;
@@ -109,6 +118,10 @@ public class FormsManager : MonoBehaviour {
         //Optic form
         if(spawnedOpticForm != null) opticFormScript = spawnedOpticForm.GetComponent<OpticForm>();
         //
+
+        //unstucker
+        curUnstuckWait = unstuckWait;
+        // /unstucker
 	}
 	
 	// Update is called once per frame
@@ -382,6 +395,32 @@ public class FormsManager : MonoBehaviour {
             camFocus.TargetToFollow = null;
             resetPointer();
             state = formState.idle;
+        }
+
+        if(Vector3.Distance(curFormLoc,spawnedForms[curForm].transform.position) < 1)
+        {
+            if(curUnstuckWait <= 0)
+            {
+                curUnstuckWait = unstuckWait;
+                curAgent.SetDestination(curAgent.transform.position);
+                curAgent.Stop();
+                curAnimator.SetBool("move", false);
+                camFocus.TargetToFollow = null;
+                resetPointer();
+                state = formState.idle;
+            }
+            else
+            {
+                curUnstuckWait--;
+            }
+        }
+        else
+        {
+            if(curUnstuckWait != unstuckWait)
+            {
+                curUnstuckWait = unstuckWait;
+            }
+            curFormLoc = spawnedForms[curForm].transform.position;
         }
     }
 
