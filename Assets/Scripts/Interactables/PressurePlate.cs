@@ -102,7 +102,7 @@ public class PressurePlate : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == "Player" || other.transform.tag == "Enemy")
         {
             playerIsOnPlate = true;
         }
@@ -110,7 +110,7 @@ public class PressurePlate : MonoBehaviour {
 
     void OnTriggerExit(Collider other)
     {
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == "Player" || other.transform.tag == "Enemy")
         {
             playerIsOnPlate = false;
         }
