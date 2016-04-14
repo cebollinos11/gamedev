@@ -610,7 +610,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
 --- !u!1001 &281774261
 Prefab:
   m_ObjectHideFlags: 0
@@ -719,6 +719,64 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
   m_PrefabInternal: {fileID: 1766507192}
+--- !u!1001 &308117508
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 114.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 33.78906
+      objectReference: {fileID: 0}
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -109.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 111652, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_Name
+      value: CheckPoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 7.7285223
+      objectReference: {fileID: 0}
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 7.7285233
+      objectReference: {fileID: 0}
+    - target: {fileID: 447542, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 7.7285233
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &356812012
 Prefab:
   m_ObjectHideFlags: 0
@@ -895,18 +953,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 8208860, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
-      propertyPath: panLevelCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8208860, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441188, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
-      propertyPath: gameMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 7fc470730731d974885e0089fec8d106, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
   m_IsPrefabParent: 0
@@ -3068,7 +3114,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415732, guid: fe07d8782eaa7f04cb9e4a8c819d1e55, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 247.05
+      value: 252.8
       objectReference: {fileID: 0}
     - target: {fileID: 415732, guid: fe07d8782eaa7f04cb9e4a8c819d1e55, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4778,7 +4824,7 @@ Transform:
   - {fileID: 655954256}
   - {fileID: 150703442}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &2135019607
 GameObject:
   m_ObjectHideFlags: 0
