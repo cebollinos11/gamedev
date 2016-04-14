@@ -505,8 +505,8 @@ MonoBehaviour:
   state: 0
   rotatingCamera: 1
   FOVUpdateInterval: 0.25
-  fieldOfViewRange: 40
-  visionRange: 15
+  fieldOfViewRange: 45
+  visionRange: 20
 --- !u!114 &11456146
 MonoBehaviour:
   m_ObjectHideFlags: 1
