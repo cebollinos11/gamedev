@@ -256,7 +256,6 @@ MonoBehaviour:
   curTurn: 0
   enemiesOnMap:
   - {fileID: 0}
-  curEnemy: 0
   soundEndTurn: {fileID: 8300000, guid: 98d2970133c07034ea196c0e7d234137, type: 3}
   soundStartTurn: {fileID: 8300000, guid: 74675033f164e324b9c15777f967d433, type: 3}
 --- !u!120 &12049482
@@ -269,7 +268,7 @@ LineRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 707c16dbffe94fd4e8b9e1d0225522b9, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -293,10 +292,10 @@ LineRenderer:
     endWidth: 0.25
     m_StartColor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 1276516084
     m_EndColor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 756224822
   m_UseWorldSpace: 1
 --- !u!1001 &100100000
 Prefab:
