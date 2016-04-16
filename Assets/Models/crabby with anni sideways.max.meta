@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: 9a77dce888c9c7c49b78478fa38117cc
+timeCreated: 1460837323
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ChamferBox001
+    100002: Crab
+    100004: cRABBBY MODEL
+    100006: //RootNode
+    100008: CrabEyeL1
+    100010: CrabEyeL2
+    100012: CrabEyeL3
+    100014: CrabEyeL4
+    100016: CrabEyeL5
+    100018: CrabEyeR1
+    100020: CrabEyeR2
+    100022: CrabEyeR3
+    100024: CrabEyeR4
+    100026: CrabEyeR5
+    100028: CrabHub
+    100030: CrabLArm1
+    100032: CrabLArm2
+    100034: CrabLArmDigit1
+    100036: CrabLArmPalm
+    100038: CrabLLeg11
+    100040: CrabLLeg12
+    100042: CrabLLeg13
+    100044: CrabLLeg1Platform
+    100046: CrabLLeg21
+    100048: CrabLLeg22
+    100050: CrabLLeg23
+    100052: CrabLLeg2Platform
+    100054: CrabLLeg31
+    100056: CrabLLeg32
+    100058: CrabLLeg33
+    100060: CrabLLeg3Platform
+    100062: CrabLLeg41
+    100064: CrabLLeg42
+    100066: CrabLLeg43
+    100068: CrabLLeg4Platform
+    100070: CrabRArm1
+    100072: CrabRArm2
+    100074: CrabRLeg1
+    100076: CrabRLeg1 1
+    100078: CrabRLeg1 2
+    100080: CrabRLeg1 3
+    100082: CrabRLeg2
+    100084: CrabRLeg2 1
+    100086: CrabRLeg2 2
+    100088: CrabRLeg2 3
+    100090: CrabRLeg3
+    100092: CrabRLeg3 1
+    100094: CrabRLeg3 2
+    100096: CrabRLeg3 3
+    100098: CrabRLegPlatform
+    100100: CrabRLegPlatform 1
+    100102: CrabRLegPlatform 2
+    100104: CrabRLegPlatform 3
+    100106: Cylinder001
+    100108: Cylinder002
+    100110: Cylinder003
+    100112: Cylinder004
+    100114: Cylinder005
+    100116: Cylinder006
+    100118: Cylinder007
+    100120: Cylinder008
+    100122: Sphere001
+    100124: Sphere002
+    100126: Sphere003
+    100128: Sphere004
+    100130: Sphere005
+    100132: Sphere006
+    100134: Sphere007
+    100136: Sphere008
+    400000: ChamferBox001
+    400002: Crab
+    400004: cRABBBY MODEL
+    400006: //RootNode
+    400008: CrabEyeL1
+    400010: CrabEyeL2
+    400012: CrabEyeL3
+    400014: CrabEyeL4
+    400016: CrabEyeL5
+    400018: CrabEyeR1
+    400020: CrabEyeR2
+    400022: CrabEyeR3
+    400024: CrabEyeR4
+    400026: CrabEyeR5
+    400028: CrabHub
+    400030: CrabLArm1
+    400032: CrabLArm2
+    400034: CrabLArmDigit1
+    400036: CrabLArmPalm
+    400038: CrabLLeg11
+    400040: CrabLLeg12
+    400042: CrabLLeg13
+    400044: CrabLLeg1Platform
+    400046: CrabLLeg21
+    400048: CrabLLeg22
+    400050: CrabLLeg23
+    400052: CrabLLeg2Platform
+    400054: CrabLLeg31
+    400056: CrabLLeg32
+    400058: CrabLLeg33
+    400060: CrabLLeg3Platform
+    400062: CrabLLeg41
+    400064: CrabLLeg42
+    400066: CrabLLeg43
+    400068: CrabLLeg4Platform
+    400070: CrabRArm1
+    400072: CrabRArm2
+    400074: CrabRLeg1
+    400076: CrabRLeg1 1
+    400078: CrabRLeg1 2
+    400080: CrabRLeg1 3
+    400082: CrabRLeg2
+    400084: CrabRLeg2 1
+    400086: CrabRLeg2 2
+    400088: CrabRLeg2 3
+    400090: CrabRLeg3
+    400092: CrabRLeg3 1
+    400094: CrabRLeg3 2
+    400096: CrabRLeg3 3
+    400098: CrabRLegPlatform
+    400100: CrabRLegPlatform 1
+    400102: CrabRLegPlatform 2
+    400104: CrabRLegPlatform 3
+    400106: Cylinder001
+    400108: Cylinder002
+    400110: Cylinder003
+    400112: Cylinder004
+    400114: Cylinder005
+    400116: Cylinder006
+    400118: Cylinder007
+    400120: Cylinder008
+    400122: Sphere001
+    400124: Sphere002
+    400126: Sphere003
+    400128: Sphere004
+    400130: Sphere005
+    400132: Sphere006
+    400134: Sphere007
+    400136: Sphere008
+    4300000: Cylinder001
+    4300002: Cylinder002
+    4300004: Cylinder003
+    4300006: Cylinder004
+    4300008: Cylinder005
+    4300010: Cylinder006
+    4300012: Cylinder007
+    4300014: Cylinder008
+    4300016: Sphere001
+    4300018: Sphere002
+    4300020: Sphere003
+    4300022: Sphere004
+    4300024: Sphere005
+    4300026: Sphere006
+    4300028: Sphere007
+    4300030: Sphere008
+    4300032: ChamferBox001
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: ChamferBox001
+    13700002: Cylinder001
+    13700004: Cylinder002
+    13700006: Cylinder003
+    13700008: Cylinder004
+    13700010: Cylinder005
+    13700012: Cylinder006
+    13700014: Cylinder007
+    13700016: Cylinder008
+    13700018: Sphere001
+    13700020: Sphere002
+    13700022: Sphere003
+    13700024: Sphere004
+    13700026: Sphere005
+    13700028: Sphere006
+    13700030: Sphere007
+    13700032: Sphere008
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
