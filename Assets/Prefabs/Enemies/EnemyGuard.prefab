@@ -14,6 +14,7 @@ GameObject:
   - 195: {fileID: 19513920}
   - 114: {fileID: 11477550}
   - 54: {fileID: 5464534}
+  - 111: {fileID: 11137446}
   m_Layer: 2
   m_Name: EnemyGuard
   m_TagString: Enemy
@@ -246,6 +247,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!111 &11137446
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145084}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &11464266
 MonoBehaviour:
   m_ObjectHideFlags: 1
