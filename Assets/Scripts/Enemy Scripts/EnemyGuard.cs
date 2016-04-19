@@ -241,6 +241,10 @@ public class EnemyGuard : Enemy {
             }
             else
             {
+                if(investigate)
+                {
+                    actionpointsLeft = 0;
+                }
                 investigate = false;
                 foreach(FOV fov in fovs)
                 {
