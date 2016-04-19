@@ -237,6 +237,7 @@ public class EnemyGuard : Enemy {
             if (!investigate && waypoints.Length > 0)
             {
                 waypointID++;
+                actionpointsLeft = 0;
             }
             else
             {
