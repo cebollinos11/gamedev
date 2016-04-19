@@ -71,11 +71,10 @@ public class EnemyGuard : Enemy {
 
 	// Update is called once per frame
 	void Update () {
+        FOVControl();
 
         if (base.state != Enemy.enemyState.inactive)
         {
-            FOVControl();
-
             int seeState = 0;
             foreach(FOV fov in fovs)
             {
