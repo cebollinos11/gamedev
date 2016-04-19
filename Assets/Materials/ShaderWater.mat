@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: ShaderMask
-  m_Shader: {fileID: 4800000, guid: 389ef55302114c84d8eb086e293a7f98, type: 3}
+  m_Name: ShaderWater
+  m_Shader: {fileID: 4800000, guid: 55f78a16ae9df6546ad44d5fedd3f705, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: 3000
@@ -131,6 +131,14 @@ Material:
         first:
           name: _MaskAmount
         second: 1
+      data:
+        first:
+          name: _WaterLevel
+        second: 1
+      data:
+        first:
+          name: _WaterAmplitude
+        second: 0
     m_Colors:
       data:
         first:

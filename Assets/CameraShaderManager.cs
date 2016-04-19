@@ -4,6 +4,7 @@ using System.Collections;
 public class CameraShaderManager : MonoBehaviour {
 
     public Material MaskShader;
+    public Material WaterShader;
 
     Material currentMaterial;
 
@@ -12,7 +13,25 @@ public class CameraShaderManager : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-       // RunDeath();
+        RunStart();
+    }
+
+    IEnumerator StartAnimation()
+    {
+
+        currentMaterial = WaterShader;
+
+        float c = 0.02f;
+
+        do
+        {
+            c -= Time.deltaTime/100;
+            float val = Sin.Evaluate(c);
+            currentMaterial.SetFloat("_WaterAmplitude", val);
+            yield return new WaitForEndOfFrame();
+        } while (c>0.0f);
+
+        currentMaterial = null;
     }
 
     IEnumerator DeathAnimation()
@@ -32,6 +51,13 @@ public class CameraShaderManager : MonoBehaviour {
 
 
     }
+
+    public void RunStart()
+    {
+        StartCoroutine(StartAnimation());
+    }
+
+
     public void RunDeath()
     {
         StartCoroutine(DeathAnimation());
