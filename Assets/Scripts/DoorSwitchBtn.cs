@@ -18,10 +18,14 @@ public class DoorSwitchBtn : MonoBehaviour, IPointerClickHandler {
     }
     public void OnPointerClick(PointerEventData eventData)
     {
-        formManager.curAgent.transform.LookAt(dw.transform.position);
-        formManager.curAnimator.SetTrigger("pressBtn");
         formManager.blockMovement1Frame = true;
-        dw.unlockDoor();
-        Debug.Log("clickkeeed to unlock");
+        if (!dw.doorIsDoingSomething)
+        {
+            formManager.curAgent.transform.LookAt(dw.transform.position);
+            formManager.curAnimator.SetTrigger("pressBtn");
+            
+            dw.unlockDoor();
+            Debug.Log("clickkeeed to unlock");
+        }
     }
 }

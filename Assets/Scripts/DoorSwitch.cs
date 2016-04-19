@@ -4,6 +4,7 @@ using System.Collections;
 public class DoorSwitch : MonoBehaviour {
 
     [SerializeField] bool doorUnlocked = false;
+    [HideInInspector] public bool doorIsDoingSomething = false;
 
     GameMaster gamemaster;
     FormsManager formManager;
@@ -60,13 +61,15 @@ public class DoorSwitch : MonoBehaviour {
         doorUnlocked = !doorUnlocked;
         light.color = (doorUnlocked ? enabledColor : disabledColor);
         door.gameObject.SetActive(!doorUnlocked);
-    
+        doorIsDoingSomething = false;
     }
 
     public void unlockDoor()
     {
         Instantiate(camFocuser, door.transform.position, Quaternion.identity);
         AudioManager.PlayClip(openSound);
+
+        doorIsDoingSomething = true;
         Invoke("unLockDelayed", 1f);
         
 
