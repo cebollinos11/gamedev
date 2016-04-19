@@ -65,10 +65,10 @@
 					{
 						fixed4 c = tex2D(_MainTex, IN.texcoord) * IN.color;
 						float x = _MaskAmount;
-						if (c.r < x)
+						if (c.r < x && IN.texcoord.y<_MaskAmount)
 							//c.rgb = lerp(c.rgb, _MaskColor.rgb , x);
 						{
-							c.r = 1.0;
+							c.r = 0.0;
 							c.b = 0.0;
 							c.g = 0.0;
 						}
