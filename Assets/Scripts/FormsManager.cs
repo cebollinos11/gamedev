@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class FormsManager : MonoBehaviour {
 
+    [HideInInspector] public bool CONTROLS_IS_ON = true;
     //UI elements
     Transform gameUI;
     Text txtActionPoints;
@@ -126,6 +127,7 @@ public class FormsManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        
         if (!opticControl)
         {
             if (gamemaster.curTurn == GameMaster.turns.player)
@@ -149,19 +151,21 @@ public class FormsManager : MonoBehaviour {
                 if (pointer.gameObject.activeSelf) pointer.gameObject.SetActive(false);
             }
 
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (CONTROLS_IS_ON)
             {
-                formBtnClicked(0);
+                if (Input.GetKeyDown(KeyCode.Alpha1))
+                {
+                    formBtnClicked(0);
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha2))
+                {
+                    formBtnClicked(1);
+                }
+                if (Input.GetKeyDown(KeyCode.Alpha3))
+                {
+                    opticControl = true;
+                }
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                formBtnClicked(1);
-            }
-            if(Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                opticControl = true;
-            }
-
             if (txtActionPoints.text != "Actionpoints: " + (actionPointsLeft + 1))
             {
                 txtActionPoints.text = "Actionpoints: " + (actionPointsLeft + 1);
@@ -169,34 +173,34 @@ public class FormsManager : MonoBehaviour {
         }
         else
         {
-            if(Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) && CONTROLS_IS_ON)
             {
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    if(LayerMask.LayerToName(hit.transform.gameObject.layer) == "Walkable")
+                    if (LayerMask.LayerToName(hit.transform.gameObject.layer) == "Walkable")
                     {
                         RaycastHit hitt;
 
                         Vector3 dir = (hit.point - spawnedForms[0].transform.position).normalized;
 
-                        if(Physics.Raycast(spawnedForms[0].transform.position, dir, out hitt))
+                        if (Physics.Raycast(spawnedForms[0].transform.position, dir, out hitt))
                         {
-                            if(Vector3.Distance( hitt.point , hit.point)<0.1f)
+                            if (Vector3.Distance(hitt.point, hit.point) < 0.1f)
                             {
                                 Debug.Log("Can call the optic here! yay!");
-                                if(spawnedOpticForm != null)
+                                if (spawnedOpticForm != null)
                                 {
-                                    if(opticFormScript != null)
+                                    if (opticFormScript != null)
                                     {
                                         opticFormScript.setNewPos(hit.point);
                                     }
                                 }
                                 else
                                 {
-                                    spawnedOpticForm = Instantiate(opticFormPrefab, spawnedForms[0].transform.position,Quaternion.identity) as GameObject;
+                                    spawnedOpticForm = Instantiate(opticFormPrefab, spawnedForms[0].transform.position, Quaternion.identity) as GameObject;
                                     opticFormScript = spawnedOpticForm.GetComponent<OpticForm>();
                                     opticFormScript.setNewPos(hit.point);
                                 }
@@ -244,7 +248,7 @@ public class FormsManager : MonoBehaviour {
 
     void idle()
     {
-        if (curForm == 1 || actionPointsLeft + 1 > 0)
+        if (CONTROLS_IS_ON && (curForm == 1 || actionPointsLeft + 1 > 0))
         {
             resetPointer();
 
@@ -381,14 +385,23 @@ public class FormsManager : MonoBehaviour {
             }
         }
         else {
-            Debug.Log("no more points left");
-            gamemaster.endTurnBtnClicked();
+            if (CONTROLS_IS_ON)
+            {
+                Debug.Log("no more points left");
+                gamemaster.endTurnBtnClicked();
+            }
+            else
+            {
+                resetPointer();
+            }
         }
     }
     void move()
     {
-        if (curAgent.remainingDistance < 0.1F)
+        if (!CONTROLS_IS_ON)
         {
+            actionPointsLeft += (Mathf.FloorToInt(curAgent.remainingDistance) / moveSpeed) + 1;
+
             curAgent.SetDestination(curAgent.transform.position);
             curAgent.Stop();
             curAnimator.SetBool("move", false);
@@ -396,12 +409,10 @@ public class FormsManager : MonoBehaviour {
             resetPointer();
             state = formState.idle;
         }
-
-        if(Vector3.Distance(curFormLoc,spawnedForms[curForm].transform.position) < 1)
+        else
         {
-            if(curUnstuckWait <= 0)
+            if (curAgent.remainingDistance < 0.1F)
             {
-                curUnstuckWait = unstuckWait;
                 curAgent.SetDestination(curAgent.transform.position);
                 curAgent.Stop();
                 curAnimator.SetBool("move", false);
@@ -409,18 +420,32 @@ public class FormsManager : MonoBehaviour {
                 resetPointer();
                 state = formState.idle;
             }
+
+            if (Vector3.Distance(curFormLoc, spawnedForms[curForm].transform.position) < 1)
+            {
+                if (curUnstuckWait <= 0)
+                {
+                    curUnstuckWait = unstuckWait;
+                    curAgent.SetDestination(curAgent.transform.position);
+                    curAgent.Stop();
+                    curAnimator.SetBool("move", false);
+                    camFocus.TargetToFollow = null;
+                    resetPointer();
+                    state = formState.idle;
+                }
+                else
+                {
+                    curUnstuckWait--;
+                }
+            }
             else
             {
-                curUnstuckWait--;
+                if (curUnstuckWait != unstuckWait)
+                {
+                    curUnstuckWait = unstuckWait;
+                }
+                curFormLoc = spawnedForms[curForm].transform.position;
             }
-        }
-        else
-        {
-            if(curUnstuckWait != unstuckWait)
-            {
-                curUnstuckWait = unstuckWait;
-            }
-            curFormLoc = spawnedForms[curForm].transform.position;
         }
     }
 

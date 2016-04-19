@@ -17,6 +17,7 @@ GameObject:
   - 114: {fileID: 11486964}
   - 114: {fileID: 11464820}
   - 114: {fileID: 11481088}
+  - 114: {fileID: 11477552}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -46,8 +47,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144518}
-  m_LocalRotation: {x: -.35677287, y: .334172487, z: -.138418794, w: -.8613258}
-  m_LocalPosition: {x: -82.3430023, y: 29.2890625, z: -50.64431}
+  m_LocalRotation: {x: -0.35677287, y: 0.3341725, z: -0.1384188, w: -0.8613258}
+  m_LocalPosition: {x: -82.343, y: 29.289062, z: -50.64431}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442012}
@@ -74,18 +75,18 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1
     height: 1
-  near clip plane: .300000012
+  near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 0
-  orthographic size: 11.0699997
+  orthographic size: 11.07
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -97,7 +98,7 @@ Camera:
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
-  m_StereoSeparation: .0219999999
+  m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
 --- !u!81 &8125040
 AudioListener:
@@ -123,7 +124,7 @@ Light:
   serializedVersion: 6
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: .270000011
+  m_Intensity: 0.27
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -131,8 +132,9 @@ Light:
     m_Type: 0
     m_Resolution: -1
     m_Strength: 1
-    m_Bias: .0500000007
-    m_NormalBias: .400000006
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -183,6 +185,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 10
   referencePointObject: {fileID: 0}
+--- !u!114 &11477552
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af982f27283ac1848824c215616ea954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaskShader: {fileID: 2100000, guid: 2cc4b1d503892614084341b62d15cc5e, type: 2}
+  WaterShader: {fileID: 2100000, guid: 63077d1e3235bc74ca9cbb3f0676ce95, type: 2}
+  Sin:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 10
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &11481088
 MonoBehaviour:
   m_ObjectHideFlags: 1
