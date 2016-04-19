@@ -62,6 +62,8 @@ public class EnemyGuard : Enemy {
     }
 
     IEnumerator Die() {
+        CameraShaderManager cam = GameObject.FindObjectOfType<CameraShaderManager>();
+        cam.RunDeath();
         ui.ShowGameOver();
         yield return new WaitForSeconds(3f);
         Application.LoadLevel(Application.loadedLevel);
