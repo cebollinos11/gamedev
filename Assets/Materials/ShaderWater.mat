@@ -93,6 +93,18 @@ Material:
         second: 0.5
       data:
         first:
+          name: _MaskAmount
+        second: 1
+      data:
+        first:
+          name: _WaterLevel
+        second: 1
+      data:
+        first:
+          name: _WaterAmplitude
+        second: 0
+      data:
+        first:
           name: _Parallax
         second: 0.02
       data:
@@ -126,18 +138,6 @@ Material:
       data:
         first:
           name: _Metallic
-        second: 0
-      data:
-        first:
-          name: _MaskAmount
-        second: 1
-      data:
-        first:
-          name: _WaterLevel
-        second: 1
-      data:
-        first:
-          name: _WaterAmplitude
         second: 0
     m_Colors:
       data:
