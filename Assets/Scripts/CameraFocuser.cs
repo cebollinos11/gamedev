@@ -50,7 +50,8 @@ public class CameraFocuser : MonoBehaviour {
             target = form.transform;
             
             FocusOn(target.position);
-            cOrbit.referencePointObject = target;
+            if(cOrbit)
+                cOrbit.referencePointObject = target;
             
         }
     
