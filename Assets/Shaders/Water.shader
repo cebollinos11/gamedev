@@ -66,9 +66,9 @@
 
 						if (IN.texcoord.y <= _WaterLevel)
 						{
-							float diff = sin(_Time.x * 45 + IN.texcoord.y * 90) *  _WaterAmplitude;
+							float diff = sin(_Time.x * 45 + IN.texcoord.y * 90) *  _WaterAmplitude*0.5;
 							
-							c = tex2D(_MainTex, float2(IN.texcoord.x - diff, IN.texcoord.y + diff)) * IN.color;
+							c = tex2D(_MainTex, float2(IN.texcoord.x - diff*0, IN.texcoord.y + diff)) * IN.color;
 							//c.b = 1.0;
 							
 						}
