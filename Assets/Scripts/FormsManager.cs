@@ -555,6 +555,7 @@ public class FormsManager : MonoBehaviour {
                 }
 
                 isSplitted = false;
+                actionPointsLeft = -1;
             }
             else
             {
@@ -605,6 +606,8 @@ public class FormsManager : MonoBehaviour {
             isSplitted = true;
             pointerLine.GetComponent<LineRenderer>().material.color = digiLineColor;
             camFocus.GoTo("DigitalForm(Clone)");
+            actionPointsLeft = -1;
+            gamemaster.endTurnBtnClicked();
         }
         else
         {
