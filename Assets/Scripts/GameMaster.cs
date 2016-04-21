@@ -25,6 +25,8 @@ public class GameMaster : MonoBehaviour {
 
     FormsManager formManager;
 
+    CameraFocuser camFocus;
+
     public AudioClip soundEndTurn;
     public AudioClip soundStartTurn;
 
@@ -43,6 +45,7 @@ public class GameMaster : MonoBehaviour {
         //grab all enemies from map
         enemiesOnMap = GameObject.FindObjectsOfType<Enemy>();
 
+        camFocus = Object.FindObjectOfType<CameraFocuser>();
 
         //check for checkpoints
         CheckPointManager.init();
@@ -50,6 +53,8 @@ public class GameMaster : MonoBehaviour {
         {
             Debug.Log("Using checkpoint");
             GameObject.FindGameObjectWithTag("Player").transform.position = CheckPointManager.GetPosition();
+            camFocus.GoTo("PhysicalForm");
+            
         }
 	}
 	
