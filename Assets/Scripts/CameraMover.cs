@@ -10,11 +10,13 @@ public class CameraMover : MonoBehaviour {
 
     Vector2 screenSize;
 
+   
+
 	// Use this for initialization
 	void Start () {
 
         screenSize = new Vector2(Screen.width, Screen.height);
-
+        
 
 	}
 
