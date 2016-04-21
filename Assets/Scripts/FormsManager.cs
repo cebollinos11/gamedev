@@ -494,7 +494,7 @@ public class FormsManager : MonoBehaviour {
 
                 AudioManager.PlayClip(AudioManager.Instance.mouseclick);
                 if (formID == 0) {
-                    pointerLine.GetComponent<Material>().color = physLineColor;
+                    pointerLine.GetComponent<LineRenderer>().material.color = physLineColor;
                     camFocus.GoTo("PhysicalForm");
                     Debug.Log("show real world");
                     gamemaster.ui.Flash.FlashIt(Color.white);
@@ -502,7 +502,7 @@ public class FormsManager : MonoBehaviour {
                 }
 
                 if (formID == 1) {
-                    pointerLine.GetComponent<Material>().color = digiLineColor;
+                    pointerLine.GetComponent<LineRenderer>().material.color = digiLineColor;
                     camFocus.GoTo("DigitalForm(Clone)");
                     Debug.Log("show internet world");
                     gamemaster.ui.Flash.FlashIt(Color.blue);
