@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e637b35f6149124d8b1fdaac06f9972, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CONTROLS_IS_ON: 1
   gamemaster: {fileID: 0}
   isSplitted: 0
   pointer: {fileID: 437312}
@@ -240,6 +241,8 @@ MonoBehaviour:
   state: 0
   blockMovement1Frame: 0
   opticFormPrefab: {fileID: 171880, guid: bb66cfd90c947844d8a1176380d56336, type: 2}
+  physLineColor: {r: 0.38039216, g: 0.11764706, b: 0.60784316, a: 0.5137255}
+  digiLineColor: {r: 1, g: 1, b: 1, a: 0.5137255}
 --- !u!114 &11477806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,7 +271,7 @@ LineRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 707c16dbffe94fd4e8b9e1d0225522b9, type: 2}
+  - {fileID: 2100000, guid: 06593fb65ca031b4f93d51be3878ce20, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1

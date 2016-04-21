@@ -76,6 +76,8 @@ public class FormsManager : MonoBehaviour {
     Vector3 curFormLoc;
     // /unstucker
 
+    [SerializeField] Color physLineColor, digiLineColor;
+
 
     // Use this for initialization
 	void Start () {
@@ -492,6 +494,7 @@ public class FormsManager : MonoBehaviour {
 
                 AudioManager.PlayClip(AudioManager.Instance.mouseclick);
                 if (formID == 0) {
+                    pointerLine.GetComponent<Material>().color = physLineColor;
                     camFocus.GoTo("PhysicalForm");
                     Debug.Log("show real world");
                     gamemaster.ui.Flash.FlashIt(Color.white);
@@ -499,6 +502,7 @@ public class FormsManager : MonoBehaviour {
                 }
 
                 if (formID == 1) {
+                    pointerLine.GetComponent<Material>().color = digiLineColor;
                     camFocus.GoTo("DigitalForm(Clone)");
                     Debug.Log("show internet world");
                     gamemaster.ui.Flash.FlashIt(Color.blue);
@@ -599,7 +603,7 @@ public class FormsManager : MonoBehaviour {
             textureHiderManager.HidePhysicalWorld();
             
             isSplitted = true;
-
+            pointerLine.GetComponent<LineRenderer>().material.color = digiLineColor;
             camFocus.GoTo("DigitalForm(Clone)");
         }
         else

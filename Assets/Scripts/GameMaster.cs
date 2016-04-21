@@ -128,8 +128,8 @@ public class GameMaster : MonoBehaviour {
                     curTurn = turns.player;
                     Debug.Log("Player turn start");
                     ui.HideWait();
-                    ui.Flash.FlashIt(Color.white);
-                    AudioManager.PlayClip(soundStartTurn);
+                    //ui.Flash.FlashIt(Color.white);
+                    //AudioManager.PlayClip(soundStartTurn);
                     formManager.resetTurn();
                 }
             }
@@ -167,7 +167,7 @@ public class GameMaster : MonoBehaviour {
     {
         AudioManager.PlayClip(soundEndTurn);
         ui.ShowWait();
-        ui.Flash.FlashIt(Color.red);
+        //ui.Flash.FlashIt(Color.red);
         
         //if the end turn btn is clicked and its currently the players turn, then change turn to enemy
         if (formManager.state == FormsManager.formState.idle && curTurn == turns.player)
