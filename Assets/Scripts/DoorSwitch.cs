@@ -39,8 +39,11 @@ public class DoorSwitch : MonoBehaviour {
         }
 
         light.color = (doorUnlocked ? enabledColor : disabledColor);
-        door.gameObject.SetActive(!doorUnlocked);
 
+        if (door.GetComponent<Trap>() == null)
+        {
+            door.gameObject.SetActive(!doorUnlocked);
+        }
         btn.GetComponent<DoorSwitchBtn>().setDoorSwitch(this);
 	}
 	
@@ -60,7 +63,25 @@ public class DoorSwitch : MonoBehaviour {
 
         doorUnlocked = !doorUnlocked;
         light.color = (doorUnlocked ? enabledColor : disabledColor);
-        door.gameObject.SetActive(!doorUnlocked);
+
+        if(door.GetComponent<Trap>() != null)
+        {
+            Trap tr = door.GetComponent<Trap>();
+
+            if (!tr.trapActivated)
+            {
+                door.GetComponent<Trap>().activateMe(9999);
+            }
+            else
+            {
+                door.GetComponent<Trap>().turnsLeft = -99;
+            }
+        }
+        else
+        {
+            door.gameObject.SetActive(!doorUnlocked);
+        }
+        
         doorIsDoingSomething = false;
     }
 

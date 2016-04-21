@@ -9,9 +9,9 @@ public class Trap : MonoBehaviour {
     Bounds myColliderBounds;
 
     int activeTurns = 1;
-    int turnsLeft;
+    public int turnsLeft;
 
-    bool trapActivated = false;
+    public bool trapActivated = false;
 
     int turnCheck = 0;
 
@@ -49,6 +49,7 @@ public class Trap : MonoBehaviour {
                     enemy.state = Enemy.enemyState.idle;
                 }
 
+                Debug.Log("geggegegegegeg");
                 turnsLeft = activeTurns;
                 trapActivated = false;
             }
