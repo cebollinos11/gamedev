@@ -33,7 +33,7 @@ public class CameraFocuser : MonoBehaviour {
         GoTo("PhysicalForm");
 	}
 
-    void GoTo(string s) {
+    public void GoTo(string s) {
         
         GameObject form = GameObject.Find(s);
         if (form != null)

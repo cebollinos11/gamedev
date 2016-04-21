@@ -492,12 +492,14 @@ public class FormsManager : MonoBehaviour {
 
                 AudioManager.PlayClip(AudioManager.Instance.mouseclick);
                 if (formID == 0) {
+                    camFocus.GoTo("PhysicalForm");
                     Debug.Log("show real world");
                     gamemaster.ui.Flash.FlashIt(Color.white);
                     textureHiderManager.ShowPhysicalWorld();
                 }
 
                 if (formID == 1) {
+                    camFocus.GoTo("DigitalForm(Clone)");
                     Debug.Log("show internet world");
                     gamemaster.ui.Flash.FlashIt(Color.blue);
 
@@ -597,6 +599,8 @@ public class FormsManager : MonoBehaviour {
             textureHiderManager.HidePhysicalWorld();
             
             isSplitted = true;
+
+            camFocus.GoTo("DigitalForm(Clone)");
         }
         else
         {
