@@ -10,6 +10,8 @@ public class EnemyCam : Enemy {
     [SerializeField] int fieldOfViewRange = 40;
     [SerializeField] int visionRange = 15;
 
+    EnemyGuard nearestEnemy = null;
+
     FOV[] fovs;
     //[SerializeField] Transform cam1, cam2;
 
@@ -48,7 +50,6 @@ public class EnemyCam : Enemy {
                 if (!alertSent)
                 {
                     EnemyGuard[] enemies = GameObject.FindObjectsOfType<EnemyGuard>();
-                    EnemyGuard nearestEnemy = null;
 
                     foreach (EnemyGuard enemy in enemies)
                     {
@@ -74,6 +75,15 @@ public class EnemyCam : Enemy {
             else
             {
                 if (alertSent) alertSent = false;
+
+                if(nearestEnemy != null && !nearestEnemy.investigate)
+                {
+                    foreach (FOV fov in fovs)
+                    {
+                        fov.alert = FOV.alertState.normal;
+                    }
+                    nearestEnemy = null;
+                }
             }
 
             switch (base.state)
