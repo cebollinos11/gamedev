@@ -31,7 +31,7 @@ public class FormsManager : MonoBehaviour {
     int moveSpeed = 5;
  
     [SerializeField] int maxActionPoints = 5;
-    int actionPointsLeft = 5;
+    public int actionPointsLeft = 5;
     int pointerDistance = 0;
 
     public int curForm = 0;

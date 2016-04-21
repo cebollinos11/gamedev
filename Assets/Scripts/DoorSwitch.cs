@@ -83,6 +83,10 @@ public class DoorSwitch : MonoBehaviour {
         }
         
         doorIsDoingSomething = false;
+
+        formManager.actionPointsLeft = -1;
+        
+
     }
 
     public void unlockDoor()
