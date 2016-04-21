@@ -24,6 +24,7 @@ public class EnemyGuard : Enemy {
     FOV[] fovs;
 
     public bool turningEnemy = true;
+    public float prefTurnAngle = 90;
     bool turnRight = false;
 
     bool playerkilled;
@@ -192,7 +193,7 @@ public class EnemyGuard : Enemy {
                 }
                 else
                 {
-                    transform.Rotate(Vector3.up * -90);
+                    transform.Rotate(Vector3.up * -prefTurnAngle);
                     turnRight = true;
                     actionpointsLeft = 0;
                 }
