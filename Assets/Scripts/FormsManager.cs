@@ -34,7 +34,7 @@ public class FormsManager : MonoBehaviour {
     int actionPointsLeft = 5;
     int pointerDistance = 0;
 
-    int curForm = 0;
+    public int curForm = 0;
     [SerializeField] GameObject[] spawnableForms;
     public GameObject[] spawnedForms;
 

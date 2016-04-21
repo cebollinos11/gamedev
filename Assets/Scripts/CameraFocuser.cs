@@ -15,7 +15,15 @@ public class CameraFocuser : MonoBehaviour {
     CameraOrbit cOrbit;
     float distance = 30f;
 
+    FormsManager fm;
+
 	// Use this for initialization
+
+    public void FocusOnCurrentForm()
+    {
+        Vector3 pos = fm.spawnedForms[fm.curForm].transform.position;
+        FocusOn(pos);
+    }
 
     public void FocusOn(Vector3 where)
     {
@@ -31,6 +39,7 @@ public class CameraFocuser : MonoBehaviour {
 	void Start () {
         cOrbit = GetComponent<CameraOrbit>();
         GoTo("PhysicalForm");
+        fm = GameObject.FindObjectOfType<FormsManager>();
 	}
 
     public void GoTo(string s) {
@@ -49,6 +58,8 @@ public class CameraFocuser : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {

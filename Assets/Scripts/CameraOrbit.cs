@@ -15,6 +15,8 @@ public class CameraOrbit : MonoBehaviour {
 
     Vector3 originalAngles;
 
+    CameraFocuser camFocus;
+
 
 
 	// Use this for initialization
@@ -25,6 +27,8 @@ public class CameraOrbit : MonoBehaviour {
         originalAngles = transform.rotation.eulerAngles;
 
         refPoint = null;
+
+        camFocus = GameObject.FindObjectOfType<CameraFocuser>();
 	}
 	
 	// Update is called once per frame
@@ -36,9 +40,13 @@ public class CameraOrbit : MonoBehaviour {
     {
         if (Input.GetMouseButton(1))
         {
-           
+
             if (refPoint == null)
+            {
                 refPoint = referencePointObject;
+                camFocus.FocusOnCurrentForm();
+            }
+               
 
             //Debug.Log(refPoint.position);
             //transform.LookAt(refPoint);
