@@ -736,7 +736,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 484914, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -24.7
+      value: -23.2
       objectReference: {fileID: 0}
     - target: {fileID: 484914, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
       propertyPath: m_LocalPosition.y
@@ -764,7 +764,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484914, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
@@ -1776,6 +1776,151 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 618ec60ca8580ea4b8a7087d892cff8f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &928892930
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1679514106}
+    m_Modifications:
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.5136223
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 16.130135
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 6.622183
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5.083077
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 18.780348
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogWindow
+      value: 
+      objectReference: {fileID: 2101142255}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 2037766969}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogBtnText
+      value: 
+      objectReference: {fileID: 1807713804}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogBtn
+      value: 
+      objectReference: {fileID: 1879585810}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &928892931 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_PrefabInternal: {fileID: 928892930}
+--- !u!1 &928892932 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_PrefabInternal: {fileID: 928892930}
+--- !u!114 &928892933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 928892932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 5
+  dialogText: One of Animo Corps' mascots. They must be security bots - stay away
+    from their vision cones!
+  dialogTalker: 0
+--- !u!114 &928892934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 928892932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 0
+  dialogText: I see an enemy up ahead. It's a...crab?
+  dialogTalker: 1
+--- !u!114 &928892935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 928892932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 20
+  dialogText: Never mind, Omega.
+  dialogTalker: 1
+--- !u!114 &928892936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 928892932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 15
+  dialogText: '...'
+  dialogTalker: 0
+--- !u!114 &928892937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 928892932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 10
+  dialogText: Roger that. Wouldn't want to make them crabby, would we?
+  dialogTalker: 1
 --- !u!1001 &942870921
 Prefab:
   m_ObjectHideFlags: 0
@@ -1888,6 +2033,117 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
   m_PrefabInternal: {fileID: 956663489}
+--- !u!1001 &965076521
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1679514106}
+    m_Modifications:
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -58.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 15.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -21.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5.083077
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 15.867583
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogWindow
+      value: 
+      objectReference: {fileID: 2101142255}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 2037766969}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogBtnText
+      value: 
+      objectReference: {fileID: 1807713804}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogBtn
+      value: 
+      objectReference: {fileID: 1879585810}
+    - target: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_Name
+      value: DialogTrigger (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 7.6396794
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &965076522 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_PrefabInternal: {fileID: 965076521}
+--- !u!1 &965076523 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_PrefabInternal: {fileID: 965076521}
+--- !u!114 &965076524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965076523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 0
+  dialogText: As your digital form, you can move without using Action Points, but
+    performing actions still ends your turn.
+  dialogTalker: 0
+--- !u!114 &965076525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965076523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 5
+  dialogText: Also, CLICK the physical button or Press 1 to access your physical form.
+  dialogTalker: 0
 --- !u!1001 &969490543
 Prefab:
   m_ObjectHideFlags: 0
@@ -2466,7 +2722,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400936, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -90.69
+      value: -64.408
       objectReference: {fileID: 0}
     - target: {fileID: 400936, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2474,23 +2730,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400936, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -55
+      value: -24.75
       objectReference: {fileID: 0}
     - target: {fileID: 400936, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0.0000006365763
+      value: 0.00000174533
       objectReference: {fileID: 0}
     - target: {fileID: 400936, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.7037805
+      value: -0.00000032583833
       objectReference: {fileID: 0}
     - target: {fileID: 400936, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.0000013950586
+      value: 0.0000017453289
       objectReference: {fileID: 0}
     - target: {fileID: 400936, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.7104176
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 400936, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
       propertyPath: m_RootOrder
@@ -2676,7 +2932,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 413858, guid: 49b00be037b98c1448e0943295b957b7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -84.99
+      value: -64.35
       objectReference: {fileID: 0}
     - target: {fileID: 413858, guid: 49b00be037b98c1448e0943295b957b7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2684,23 +2940,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413858, guid: 49b00be037b98c1448e0943295b957b7, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -55.06
+      value: -27.05
       objectReference: {fileID: 0}
     - target: {fileID: 413858, guid: 49b00be037b98c1448e0943295b957b7, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.7070991
+      value: 0.49999985
       objectReference: {fileID: 0}
     - target: {fileID: 413858, guid: 49b00be037b98c1448e0943295b957b7, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.0033190697
+      value: -0.50000024
       objectReference: {fileID: 0}
     - target: {fileID: 413858, guid: 49b00be037b98c1448e0943295b957b7, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0.00331888
+      value: -0.49999994
       objectReference: {fileID: 0}
     - target: {fileID: 413858, guid: 49b00be037b98c1448e0943295b957b7, type: 2}
       propertyPath: m_LocalRotation.w
-      value: -0.70709896
+      value: -0.5000001
       objectReference: {fileID: 0}
     - target: {fileID: 413858, guid: 49b00be037b98c1448e0943295b957b7, type: 2}
       propertyPath: m_RootOrder
@@ -2708,7 +2964,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413858, guid: 49b00be037b98c1448e0943295b957b7, type: 2}
       propertyPath: m_LocalScale.x
-      value: 11.915107
+      value: 5.38957
       objectReference: {fileID: 0}
     - target: {fileID: 114790, guid: 49b00be037b98c1448e0943295b957b7, type: 2}
       propertyPath: m_Name
@@ -3299,6 +3555,37 @@ MonoBehaviour:
   m_EventMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &1679514105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1679514106}
+  m_Layer: 0
+  m_Name: Dialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1679514106
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1679514105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.856379, y: 15.699864, z: -31.810595}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 928892931}
+  - {fileID: 1752564822}
+  - {fileID: 965076522}
+  - {fileID: 1852424819}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
 --- !u!1001 &1707923327
 Prefab:
   m_ObjectHideFlags: 0
@@ -3481,6 +3768,147 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 413858, guid: ca089c77d034df84098b6bb47ac74f5c, type: 2}
   m_PrefabInternal: {fileID: 1743986393}
+--- !u!1001 &1752564821
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1679514106}
+    m_Modifications:
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -37.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 16.130135
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -38.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5.083077
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 25.063835
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogWindow
+      value: 
+      objectReference: {fileID: 2101142255}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 2037766969}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogBtnText
+      value: 
+      objectReference: {fileID: 1807713804}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogBtn
+      value: 
+      objectReference: {fileID: 1879585810}
+    - target: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_Name
+      value: DialogTrigger (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 7.6396794
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1752564822 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_PrefabInternal: {fileID: 1752564821}
+--- !u!1 &1752564823 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_PrefabInternal: {fileID: 1752564821}
+--- !u!114 &1752564824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752564823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 10
+  dialogText: Time to split into my digital form then. I should be able to access
+    the network through that terminal there.
+  dialogTalker: 1
+--- !u!114 &1752564825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752564823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 5
+  dialogText: Intel says that some doors can only be hacked through Eden's electrical
+    network.
+  dialogTalker: 0
+--- !u!114 &1752564826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752564823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 0
+  dialogText: Omega, the door ahead doesn't have a visible switch.
+  dialogTalker: 1
+--- !u!114 &1752564827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1752564823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 15
+  dialogText: To access your digital form, CLICK the digital button or Press 2 when
+    near a terminal. This ends your turn.
+  dialogTalker: 0
 --- !u!1 &1764907643
 GameObject:
   m_ObjectHideFlags: 0
@@ -3508,6 +3936,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2136619809}
   m_RootOrder: 1
+--- !u!114 &1807713804 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11467336, guid: 0b4f47753a6f13346b76a4cb6cefaaa7,
+    type: 2}
+  m_PrefabInternal: {fileID: 178772503}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1812419292
 Prefab:
   m_ObjectHideFlags: 0
@@ -3632,6 +4066,103 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
   m_PrefabInternal: {fileID: 1841822932}
+--- !u!1001 &1852424818
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1679514106}
+    m_Modifications:
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -34.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 15.089999
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -16.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 5.083077
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 32.178905
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogWindow
+      value: 
+      objectReference: {fileID: 2101142255}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 2037766969}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogBtnText
+      value: 
+      objectReference: {fileID: 1807713804}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogBtn
+      value: 
+      objectReference: {fileID: 1879585810}
+    - target: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_Name
+      value: DialogTrigger (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 7.6396794
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1852424819 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_PrefabInternal: {fileID: 1852424818}
+--- !u!1 &1852424820 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_PrefabInternal: {fileID: 1852424818}
+--- !u!114 &1852424821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852424820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 0
+  dialogText: Your forms must be combined to hack into switches. When both forms are
+    near a terminal, CLICK the combine icon or Press 3 to merge. This ends your turn.
+  dialogTalker: 0
 --- !u!1 &1854629842
 GameObject:
   m_ObjectHideFlags: 0
@@ -3779,6 +4310,12 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 413858, guid: ca089c77d034df84098b6bb47ac74f5c, type: 2}
   m_PrefabInternal: {fileID: 1874255861}
+--- !u!114 &1879585810 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11469750, guid: 0b4f47753a6f13346b76a4cb6cefaaa7,
+    type: 2}
+  m_PrefabInternal: {fileID: 178772503}
+  m_Script: {fileID: 1392445389, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1921395936
 Prefab:
   m_ObjectHideFlags: 0
@@ -3980,6 +4517,16 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9579b7c42508fa4aaf9f782a74c36f9, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &2037766969 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11428176, guid: 0b4f47753a6f13346b76a4cb6cefaaa7,
+    type: 2}
+  m_PrefabInternal: {fileID: 178772503}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &2101142255 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 182808, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
+  m_PrefabInternal: {fileID: 178772503}
 --- !u!1 &2123578306
 GameObject:
   m_ObjectHideFlags: 0

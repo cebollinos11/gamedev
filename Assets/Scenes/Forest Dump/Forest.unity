@@ -680,8 +680,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 0
-  dialogText: Base, this is Sigma. I'm approaching the location, but there's only
-    trees and more trees here. Nothing else.
+  dialogText: Omega Base, this is Sigma. I'm approaching the location, but there's
+    only trees and more trees here. Nothing else.
   dialogTalker: 1
 --- !u!114 &199863267
 MonoBehaviour:
@@ -2610,7 +2610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 5
-  dialogText: Excellent. You shpuld be able to hack the switch to open the door. LEFT
+  dialogText: Excellent. You should be able to hack the switch to open the door. LEFT
     CLICK the icon that appears when you are near it.
   dialogTalker: 0
 --- !u!114 &522238273
