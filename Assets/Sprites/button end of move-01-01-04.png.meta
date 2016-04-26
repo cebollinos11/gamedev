@@ -1,9 +1,10 @@
 fileFormatVersion: 2
 guid: 52161d2be88ebf04bb9ae6a8151c3710
-timeCreated: 1460634276
+timeCreated: 1461077405
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: button end of move-01-01-04_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,26 +31,63 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
-  nPOTScale: 1
+    wrapMode: 1
+  nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
-  alphaIsTransparency: 0
-  textureType: -1
+  alphaIsTransparency: 1
+  textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: button end of move-01-01-04_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 582
+        height: 294
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 24, y: 28, z: 20, w: 27}
+      outline:
+      - - {x: 284, y: 147}
+        - {x: -285, y: 147}
+        - {x: -291, y: 142}
+        - {x: -291, y: -138}
+        - {x: -284, y: -147}
+        - {x: 283, y: -147}
+        - {x: 287, y: -145}
+        - {x: 291, y: -140}
+        - {x: 291, y: 138}
+      - - {x: -267, y: -125}
+        - {x: -269, y: -119}
+        - {x: -269, y: -22}
+        - {x: -270, y: -21}
+        - {x: -270, y: 124}
+        - {x: -268, y: 125}
+        - {x: -262, y: 126}
+        - {x: -261, y: 127}
+        - {x: 261, y: 127}
+        - {x: 262, y: 126}
+        - {x: 270, y: 125}
+        - {x: 270, y: -116}
+        - {x: 269, y: -117}
+        - {x: 262, y: -125}
+        - {x: 261, y: -126}
+        - {x: -112, y: -126}
+        - {x: -113, y: -125}
     outline: []
   spritePackingTag: 
   userData: 
