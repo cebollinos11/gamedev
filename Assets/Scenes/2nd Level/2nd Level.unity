@@ -1922,7 +1922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 10
-  dialogText: Clearly. You'd think they could shell out more funds to their research
+  dialogText: Clearly. You'd think they could SHELL out more funds to their research
     department.
   dialogTalker: 1
 --- !u!114 &708671922
@@ -4625,16 +4625,16 @@ Transform:
   - {fileID: 1058264720}
   - {fileID: 1535337754}
   - {fileID: 1017425545}
+  - {fileID: 1873290301}
   - {fileID: 74157757}
   - {fileID: 127494150}
   - {fileID: 1521723858}
   - {fileID: 544765922}
   - {fileID: 2124300586}
-  - {fileID: 842088672}
-  - {fileID: 140384736}
-  - {fileID: 1873290301}
   - {fileID: 1140176180}
   - {fileID: 1941515671}
+  - {fileID: 842088672}
+  - {fileID: 140384736}
   - {fileID: 64784808}
   m_Father: {fileID: 0}
   m_RootOrder: 5

@@ -83,8 +83,8 @@ public class DoorSwitch : MonoBehaviour {
         }
         
         doorIsDoingSomething = false;
-
-        formManager.gamemaster.endTurnBtnClicked();
+        if(formManager.curForm>0) //checking if current form is digital
+            formManager.gamemaster.endTurnBtnClicked();
         
 
     }
