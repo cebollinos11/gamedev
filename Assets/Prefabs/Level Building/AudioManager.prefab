@@ -117,6 +117,10 @@ MonoBehaviour:
   DetectSound: {fileID: 8300000, guid: b8640f5c9b8f17941828ef78380cb694, type: 3}
   gameMusic: {fileID: 8300000, guid: 35c31ef6d287cef428c942f668c520c8, type: 3}
   mouseclick: {fileID: 8300000, guid: 7e33fdafd4a0bea4c947ccc15cf7074b, type: 3}
+  music_bassline: {fileID: 8300000, guid: 35c31ef6d287cef428c942f668c520c8, type: 3}
+  music_physical: {fileID: 8300000, guid: e8c8a3cbc2738b7479e367a353f90898, type: 3}
+  music_digital: {fileID: 8300000, guid: 1d25823ce40a4194fbddb5beffdd4b67, type: 3}
+  music_alert: {fileID: 8300000, guid: db54cb68e53b40c4482655ee541be174, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
