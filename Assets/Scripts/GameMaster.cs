@@ -129,7 +129,6 @@ public class GameMaster : MonoBehaviour {
                 if(everythingGood)
                 {
                     Debug.Log("my turn");
-                    AudioManager.HandleBackgroundMusic();
                     enemyTurnsPlayed = false;
                     curTurn = turns.player;
                     Debug.Log("Player turn start");

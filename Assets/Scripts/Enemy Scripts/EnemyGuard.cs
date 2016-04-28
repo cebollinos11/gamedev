@@ -63,7 +63,6 @@ public class EnemyGuard : Enemy {
     }
 
     IEnumerator Die() {
-        AudioManager.TurnOffAll();
         transform.LookAt(player.transform);
         agent.SetDestination(Vector3.Lerp(player.transform.position, transform.position, 0.7f));
         agent.speed = 0f;
@@ -104,7 +103,6 @@ public class EnemyGuard : Enemy {
             if (seeState == 2 || seeState == 3)
             {
                 investigate = true;
-                AudioManager.HandleBackgroundMusic();
 
                 investigatePos = (seeState == 2 ? player.transform.position : GameObject.FindGameObjectWithTag("OpticForm").transform.position);
                 
@@ -261,7 +259,6 @@ public class EnemyGuard : Enemy {
                     actionpointsLeft = 0;
                 }
                 investigate = false;
-                AudioManager.HandleBackgroundMusic();
                 foreach(FOV fov in fovs)
                 {
                     fov.alert = FOV.alertState.normal;

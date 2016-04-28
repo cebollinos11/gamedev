@@ -27,10 +27,10 @@ public class TextureHider : MonoBehaviour {
 	}
 
     public void Hide() {
-        
+        Debug.Log("hiding");
         //rend.material.SetFloat("_Mode", 3);
         //rend.material.color = Color.black;
-       
+        Debug.Log(gameObject);
         rend.material = hiddenMat;
     }
 
