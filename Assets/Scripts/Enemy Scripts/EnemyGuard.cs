@@ -63,6 +63,10 @@ public class EnemyGuard : Enemy {
     }
 
     IEnumerator Die() {
+        transform.LookAt(player.transform);
+        agent.SetDestination(Vector3.Lerp(player.transform.position, transform.position, 0.7f));
+        agent.speed = 0f;
+        
         CameraShaderManager cam = GameObject.FindObjectOfType<CameraShaderManager>();
         cam.RunDeath();
         ui.ShowGameOver();
@@ -73,6 +77,15 @@ public class EnemyGuard : Enemy {
 	// Update is called once per frame
 	void Update () {
         FOVControl();
+
+        if (playerkilled)
+        {
+            
+            
+            
+            return;
+        }
+            
 
         if (base.state != Enemy.enemyState.inactive)
         {
