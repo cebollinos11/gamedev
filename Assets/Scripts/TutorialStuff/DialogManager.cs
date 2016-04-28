@@ -13,9 +13,17 @@ public class DialogManager : MonoBehaviour {
     bool dialogShown = false;
     int curDialogID = 0;
 
+
+    [SerializeField]
+        Sprite PlayerSprite;
+    [SerializeField]
+        Sprite BossSprite;
+
     [SerializeField] GameObject dialogWindow;
     [SerializeField] Text dialogText, dialogBtnText;
     [SerializeField] Button dialogBtn;
+
+
 	// Use this for initialization
 	void Start () {
         GetComponent<MeshRenderer>().enabled = false;
@@ -61,11 +69,17 @@ public class DialogManager : MonoBehaviour {
                 if (!dialogWindow.activeSelf)
                 {
                     dialogWindow.SetActive(true);
+                    
                 }
 
                 if (dialogText.text != dialogs[curDialogID].dialogText)
                 {
                     dialogText.text = dialogs[curDialogID].dialogText;
+                    Image img = GameObject.Find("talker").GetComponent<Image>();
+                    if (dialogs[curDialogID].dialogTalker == Dialog.talker.player)
+                        img.sprite = PlayerSprite;
+                    if (dialogs[curDialogID].dialogTalker == Dialog.talker.boss)
+                        img.sprite = BossSprite;
                 }
             }
         }
