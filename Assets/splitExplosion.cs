@@ -8,7 +8,7 @@ public class splitExplosion : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        Debug.Log("explo nigga");
+      
 	
 	}
 	
