@@ -102,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 101978}
   m_LocalRotation: {x: -0.00000023040464, y: -0.7071067, z: 1.4210855e-14, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 2.43}
+  m_LocalPosition: {x: -0, y: -4.12, z: 2.43}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 492800}
@@ -113,8 +113,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123204}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 67.37283, y: 20.6, z: -148.3003}
+  m_LocalRotation: {x: 0, y: 0.7063973, z: 0, w: 0.70781565}
+  m_LocalPosition: {x: 26.9, y: 6.8, z: 53.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 423576}
@@ -260,8 +260,8 @@ MonoBehaviour:
   state: 0
   rotatingCamera: 1
   FOVUpdateInterval: 0.25
-  fieldOfViewRange: 45
-  visionRange: 20
+  fieldOfViewRange: 50
+  visionRange: 25
 --- !u!114 &11456146
 MonoBehaviour:
   m_ObjectHideFlags: 1
