@@ -12,6 +12,7 @@ GameObject:
   - 65: {fileID: 6500014}
   - 23: {fileID: 2327680}
   - 114: {fileID: 11442758}
+  - 114: {fileID: 11464584}
   m_Layer: 0
   m_Name: wall
   m_TagString: wall
@@ -88,6 +89,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isWire: 0
+--- !u!114 &11464584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b157cea2f4e4377498bd12bd878438a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
