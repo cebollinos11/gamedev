@@ -87,6 +87,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb9d6b5fb1715842be49185ff57680e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerSprite: {fileID: 21300000, guid: 5007b2b65684f4e1486428fa9f5ad54d, type: 3}
+  BossSprite: {fileID: 21300000, guid: f3db2a20d24034d4fb5d817177656fd3, type: 3}
   dialogWindow: {fileID: 0}
   dialogText: {fileID: 0}
   dialogBtnText: {fileID: 0}
