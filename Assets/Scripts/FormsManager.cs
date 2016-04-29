@@ -519,6 +519,7 @@ public class FormsManager : MonoBehaviour {
                 }
             }
         }
+        AudioManager.HandleBackgroundMusic();
     }
 
     void combineFormsBtnClicked()
@@ -547,6 +548,8 @@ public class FormsManager : MonoBehaviour {
                 curAnimator = spawnedForms[curForm].GetComponent<Animator>();
                 pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
 
+                AudioManager.HandleBackgroundMusic();
+
                 for (int i = 1; i < spawnedForms.Length; i++)
                 {
                     Instantiate(splitExplosion, spawnedForms[i].transform.position, Quaternion.identity);
@@ -556,6 +559,7 @@ public class FormsManager : MonoBehaviour {
 
                 isSplitted = false;
                 actionPointsLeft = -1;
+                
             }
             else
             {
@@ -595,8 +599,9 @@ public class FormsManager : MonoBehaviour {
             Instantiate(splitExplosion, terminals[terminalID].getSpawnPoint(), Quaternion.identity);
             curAnimator.SetTrigger("split");
             Debug.Log("EXPLODEEEEEE");
-            spawnedForms[1] = Instantiate(spawnableForms[1], terminals[terminalID].getSpawnPoint(), Quaternion.identity) as GameObject;
 
+            spawnedForms[1] = Instantiate(spawnableForms[1], terminals[terminalID].getSpawnPoint(), Quaternion.identity) as GameObject;
+            AudioManager.HandleBackgroundMusic();
             curForm = 1;
             curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
             curAnimator = spawnedForms[curForm].GetComponent<Animator>();
