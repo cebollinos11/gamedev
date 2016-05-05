@@ -10,6 +10,7 @@ public class FormsManager : MonoBehaviour {
     Text txtActionPoints;
     Button btnForm0;
     Button btnForm1;
+    Button btnForm2;
     Button btnCombine;
     //
 
@@ -92,13 +93,18 @@ public class FormsManager : MonoBehaviour {
         //ui
         gameUI = GameObject.FindGameObjectWithTag("gameUI").transform;
 
+        
         txtActionPoints = gameUI.FindChild("txtActionPoints").GetComponent<Text>();
         btnForm0 = gameUI.FindChild("btnPhysical").GetComponent<Button>();
         btnForm1 = gameUI.FindChild("btnDigital").GetComponent<Button>();
+        btnForm2 = gameUI.FindChild("btnOptic").GetComponent<Button>();
         btnCombine = gameUI.FindChild("btnCombine").GetComponent<Button>();
+
+        btnForm2.gameObject.SetActive(gamemaster.opticFormIsAvailable); 
 
         btnForm0.onClick.AddListener(() => formBtnClicked(0));
         btnForm1.onClick.AddListener(() => formBtnClicked(1));
+        btnForm2.onClick.AddListener(() => opticControl = true);
         btnCombine.onClick.AddListener(() => combineFormsBtnClicked());
 
         GameObject physical = spawnedForms[0];
@@ -163,7 +169,7 @@ public class FormsManager : MonoBehaviour {
                 {
                     formBtnClicked(1);
                 }
-                if (Input.GetKeyDown(KeyCode.Alpha3))
+                if (gamemaster.opticFormIsAvailable && Input.GetKeyDown(KeyCode.Alpha3))
                 {
                     opticControl = true;
                 }
