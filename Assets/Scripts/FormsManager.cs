@@ -10,7 +10,7 @@ public class FormsManager : MonoBehaviour {
     Text txtActionPoints;
     Button btnForm0;
     Button btnForm1;
-    Button btnForm2;
+    Button btnForm2; GameObject txtOptic;
     Button btnCombine;
     //
 
@@ -97,7 +97,7 @@ public class FormsManager : MonoBehaviour {
         txtActionPoints = gameUI.FindChild("txtActionPoints").GetComponent<Text>();
         btnForm0 = gameUI.FindChild("btnPhysical").GetComponent<Button>();
         btnForm1 = gameUI.FindChild("btnDigital").GetComponent<Button>();
-        btnForm2 = gameUI.FindChild("btnOptic").GetComponent<Button>();
+        btnForm2 = gameUI.FindChild("btnOptic").GetComponent<Button>(); txtOptic = gameUI.FindChild("txtOpticControl").gameObject;
         btnCombine = gameUI.FindChild("btnCombine").GetComponent<Button>();
 
         btnForm2.gameObject.SetActive(gamemaster.opticFormIsAvailable); 
@@ -136,6 +136,12 @@ public class FormsManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
+        if(txtOptic.activeSelf != opticControl)
+        {
+            txtOptic.SetActive(opticControl);
+            Debug.Log("yippi kay ey");
+        }
+
         if (!opticControl)
         {
             if (gamemaster.curTurn == GameMaster.turns.player)
