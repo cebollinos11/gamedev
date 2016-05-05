@@ -1,0 +1,383 @@
+fileFormatVersion: 2
+guid: 146f70b52b013b24c8e2b064f9f269cc
+timeCreated: 1462442266
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ChamferBox001
+    100002: Crab
+    100004: //RootNode
+    100006: cRABBBY MODEL
+    100008: CrabEyeL1
+    100010: CrabEyeL2
+    100012: CrabEyeL3
+    100014: CrabEyeL4
+    100016: CrabEyeL5
+    100018: CrabEyeR1
+    100020: CrabEyeR2
+    100022: CrabEyeR3
+    100024: CrabEyeR4
+    100026: CrabEyeR5
+    100028: CrabHub
+    100030: CrabLArm1
+    100032: CrabLArm2
+    100034: CrabLArmDigit1
+    100036: CrabLArmPalm
+    100038: CrabLLeg11
+    100040: CrabLLeg12
+    100042: CrabLLeg13
+    100044: CrabLLeg1Platform
+    100046: CrabLLeg21
+    100048: CrabLLeg22
+    100050: CrabLLeg23
+    100052: CrabLLeg2Platform
+    100054: CrabLLeg31
+    100056: CrabLLeg32
+    100058: CrabLLeg33
+    100060: CrabLLeg3Platform
+    100062: CrabLLeg41
+    100064: CrabLLeg42
+    100066: CrabLLeg43
+    100068: CrabLLeg4Platform
+    100070: CrabRArm1
+    100072: CrabRArm2
+    100074: CrabRLeg1
+    100076: CrabRLeg1 1
+    100078: CrabRLeg1 2
+    100080: CrabRLeg1 3
+    100082: CrabRLeg2
+    100084: CrabRLeg2 1
+    100086: CrabRLeg2 2
+    100088: CrabRLeg2 3
+    100090: CrabRLeg3
+    100092: CrabRLeg3 1
+    100094: CrabRLeg3 2
+    100096: CrabRLeg3 3
+    100098: CrabRLegPlatform
+    100100: CrabRLegPlatform 1
+    100102: CrabRLegPlatform 2
+    100104: CrabRLegPlatform 3
+    100106: Cylinder001
+    100108: Cylinder002
+    100110: Cylinder003
+    100112: Cylinder004
+    100114: Cylinder005
+    100116: Cylinder006
+    100118: Cylinder007
+    100120: Cylinder008
+    100122: Sphere001
+    100124: Sphere002
+    100126: Sphere003
+    100128: Sphere004
+    100130: Sphere005
+    100132: Sphere006
+    100134: Sphere007
+    100136: Sphere008
+    400000: ChamferBox001
+    400002: Crab
+    400004: //RootNode
+    400006: cRABBBY MODEL
+    400008: CrabEyeL1
+    400010: CrabEyeL2
+    400012: CrabEyeL3
+    400014: CrabEyeL4
+    400016: CrabEyeL5
+    400018: CrabEyeR1
+    400020: CrabEyeR2
+    400022: CrabEyeR3
+    400024: CrabEyeR4
+    400026: CrabEyeR5
+    400028: CrabHub
+    400030: CrabLArm1
+    400032: CrabLArm2
+    400034: CrabLArmDigit1
+    400036: CrabLArmPalm
+    400038: CrabLLeg11
+    400040: CrabLLeg12
+    400042: CrabLLeg13
+    400044: CrabLLeg1Platform
+    400046: CrabLLeg21
+    400048: CrabLLeg22
+    400050: CrabLLeg23
+    400052: CrabLLeg2Platform
+    400054: CrabLLeg31
+    400056: CrabLLeg32
+    400058: CrabLLeg33
+    400060: CrabLLeg3Platform
+    400062: CrabLLeg41
+    400064: CrabLLeg42
+    400066: CrabLLeg43
+    400068: CrabLLeg4Platform
+    400070: CrabRArm1
+    400072: CrabRArm2
+    400074: CrabRLeg1
+    400076: CrabRLeg1 1
+    400078: CrabRLeg1 2
+    400080: CrabRLeg1 3
+    400082: CrabRLeg2
+    400084: CrabRLeg2 1
+    400086: CrabRLeg2 2
+    400088: CrabRLeg2 3
+    400090: CrabRLeg3
+    400092: CrabRLeg3 1
+    400094: CrabRLeg3 2
+    400096: CrabRLeg3 3
+    400098: CrabRLegPlatform
+    400100: CrabRLegPlatform 1
+    400102: CrabRLegPlatform 2
+    400104: CrabRLegPlatform 3
+    400106: Cylinder001
+    400108: Cylinder002
+    400110: Cylinder003
+    400112: Cylinder004
+    400114: Cylinder005
+    400116: Cylinder006
+    400118: Cylinder007
+    400120: Cylinder008
+    400122: Sphere001
+    400124: Sphere002
+    400126: Sphere003
+    400128: Sphere004
+    400130: Sphere005
+    400132: Sphere006
+    400134: Sphere007
+    400136: Sphere008
+    2300000: ChamferBox001
+    2300002: CrabEyeL1
+    2300004: CrabEyeL2
+    2300006: CrabEyeL3
+    2300008: CrabEyeL4
+    2300010: CrabEyeL5
+    2300012: CrabEyeR1
+    2300014: CrabEyeR2
+    2300016: CrabEyeR3
+    2300018: CrabEyeR4
+    2300020: CrabEyeR5
+    2300022: CrabHub
+    2300024: CrabLArm1
+    2300026: CrabLArm2
+    2300028: CrabLArmDigit1
+    2300030: CrabLArmPalm
+    2300032: CrabLLeg11
+    2300034: CrabLLeg12
+    2300036: CrabLLeg13
+    2300038: CrabLLeg21
+    2300040: CrabLLeg22
+    2300042: CrabLLeg23
+    2300044: CrabLLeg31
+    2300046: CrabLLeg32
+    2300048: CrabLLeg33
+    2300050: CrabLLeg41
+    2300052: CrabLLeg42
+    2300054: CrabLLeg43
+    2300056: CrabRArm1
+    2300058: CrabRArm2
+    2300060: CrabRLeg1
+    2300062: CrabRLeg1 1
+    2300064: CrabRLeg1 2
+    2300066: CrabRLeg1 3
+    2300068: CrabRLeg2
+    2300070: CrabRLeg2 1
+    2300072: CrabRLeg2 2
+    2300074: CrabRLeg2 3
+    2300076: CrabRLeg3
+    2300078: CrabRLeg3 1
+    2300080: CrabRLeg3 2
+    2300082: CrabRLeg3 3
+    2300084: Cylinder001
+    2300086: Cylinder002
+    2300088: Cylinder003
+    2300090: Cylinder004
+    2300092: Cylinder005
+    2300094: Cylinder006
+    2300096: Cylinder007
+    2300098: Cylinder008
+    2300100: Sphere001
+    2300102: Sphere002
+    2300104: Sphere003
+    2300106: Sphere004
+    2300108: Sphere005
+    2300110: Sphere006
+    2300112: Sphere007
+    2300114: Sphere008
+    3300000: ChamferBox001
+    3300002: CrabEyeL1
+    3300004: CrabEyeL2
+    3300006: CrabEyeL3
+    3300008: CrabEyeL4
+    3300010: CrabEyeL5
+    3300012: CrabEyeR1
+    3300014: CrabEyeR2
+    3300016: CrabEyeR3
+    3300018: CrabEyeR4
+    3300020: CrabEyeR5
+    3300022: CrabHub
+    3300024: CrabLArm1
+    3300026: CrabLArm2
+    3300028: CrabLArmDigit1
+    3300030: CrabLArmPalm
+    3300032: CrabLLeg11
+    3300034: CrabLLeg12
+    3300036: CrabLLeg13
+    3300038: CrabLLeg21
+    3300040: CrabLLeg22
+    3300042: CrabLLeg23
+    3300044: CrabLLeg31
+    3300046: CrabLLeg32
+    3300048: CrabLLeg33
+    3300050: CrabLLeg41
+    3300052: CrabLLeg42
+    3300054: CrabLLeg43
+    3300056: CrabRArm1
+    3300058: CrabRArm2
+    3300060: CrabRLeg1
+    3300062: CrabRLeg1 1
+    3300064: CrabRLeg1 2
+    3300066: CrabRLeg1 3
+    3300068: CrabRLeg2
+    3300070: CrabRLeg2 1
+    3300072: CrabRLeg2 2
+    3300074: CrabRLeg2 3
+    3300076: CrabRLeg3
+    3300078: CrabRLeg3 1
+    3300080: CrabRLeg3 2
+    3300082: CrabRLeg3 3
+    3300084: Cylinder001
+    3300086: Cylinder002
+    3300088: Cylinder003
+    3300090: Cylinder004
+    3300092: Cylinder005
+    3300094: Cylinder006
+    3300096: Cylinder007
+    3300098: Cylinder008
+    3300100: Sphere001
+    3300102: Sphere002
+    3300104: Sphere003
+    3300106: Sphere004
+    3300108: Sphere005
+    3300110: Sphere006
+    3300112: Sphere007
+    3300114: Sphere008
+    4300000: CrabHub
+    4300002: CrabLLeg11
+    4300004: CrabLLeg12
+    4300006: CrabLLeg13
+    4300008: CrabRLeg1
+    4300010: CrabRLeg2
+    4300012: CrabRLeg3
+    4300014: CrabLLeg21
+    4300016: CrabLLeg22
+    4300018: CrabLLeg23
+    4300020: CrabRLeg1
+    4300022: CrabRLeg2
+    4300024: CrabRLeg3
+    4300026: CrabLLeg31
+    4300028: CrabLLeg32
+    4300030: CrabLLeg33
+    4300032: CrabRLeg1
+    4300034: CrabRLeg2
+    4300036: CrabRLeg3
+    4300038: CrabLLeg41
+    4300040: CrabLLeg42
+    4300042: CrabLLeg43
+    4300044: CrabRLeg1
+    4300046: CrabRLeg2
+    4300048: CrabRLeg3
+    4300050: CrabLArm1
+    4300052: CrabLArm2
+    4300054: CrabLArmPalm
+    4300056: CrabLArmDigit1
+    4300058: CrabRArm1
+    4300060: CrabRArm2
+    4300062: CrabEyeL1
+    4300064: CrabEyeL2
+    4300066: CrabEyeL3
+    4300068: CrabEyeL4
+    4300070: CrabEyeL5
+    4300072: CrabEyeR1
+    4300074: CrabEyeR2
+    4300076: CrabEyeR3
+    4300078: CrabEyeR4
+    4300080: CrabEyeR5
+    4300082: Cylinder001
+    4300084: Cylinder002
+    4300086: Cylinder003
+    4300088: Cylinder004
+    4300090: Cylinder005
+    4300092: Cylinder006
+    4300094: Cylinder007
+    4300096: Cylinder008
+    4300098: Sphere001
+    4300100: Sphere002
+    4300102: Sphere003
+    4300104: Sphere004
+    4300106: Sphere005
+    4300108: Sphere006
+    4300110: Sphere007
+    4300112: Sphere008
+    4300114: ChamferBox001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
