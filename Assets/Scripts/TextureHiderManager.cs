@@ -32,17 +32,6 @@ public class TextureHiderManager : MonoBehaviour {
 
     }
 
-    void Update()
-    {
+   
 
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            HidePhysicalWorld();
-        }
-
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            ShowPhysicalWorld();
-        }
-    }
 }

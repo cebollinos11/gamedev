@@ -514,18 +514,20 @@ public class FormsManager : MonoBehaviour {
                 if (formID == 0) {
                     pointerLine.GetComponent<LineRenderer>().material.color = physLineColor;
                     camFocus.GoTo("PhysicalForm");
-                    Debug.Log("show real world");
+                    Debug.Log("show real world*******************************************************");
                     gamemaster.ui.Flash.FlashIt(Color.white);
-                    textureHiderManager.ShowPhysicalWorld();
+                    //textureHiderManager.ShowPhysicalWorld();
+                    Camera.main.GetComponent<CameraShaderManager>().RemoveDigital();
                 }
 
                 if (formID == 1) {
                     pointerLine.GetComponent<LineRenderer>().material.color = digiLineColor;
                     camFocus.GoTo("DigitalForm(Clone)");
-                    Debug.Log("show internet world");
+                    Debug.Log("show internet world*****************************************************");
                     gamemaster.ui.Flash.FlashIt(Color.blue);
+                    Camera.main.GetComponent<CameraShaderManager>().SetDigital();
 
-                    textureHiderManager.HidePhysicalWorld();
+                    //textureHiderManager.HidePhysicalWorld();
                 }
                 
             }
@@ -559,7 +561,9 @@ public class FormsManager : MonoBehaviour {
             if (allIsClose)
             {
                 Instantiate(splitExplosion, spawnedForms[0].transform.position, Quaternion.identity);
-                textureHiderManager.ShowPhysicalWorld();
+                //textureHiderManager.ShowPhysicalWorld();
+
+                Camera.main.GetComponent<CameraShaderManager>().SetDigital();
                 AudioManager.PlayClip(digitalSplitSound);
                 curForm = 0;
                 curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
@@ -624,7 +628,8 @@ public class FormsManager : MonoBehaviour {
             curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
             curAnimator = spawnedForms[curForm].GetComponent<Animator>();
             pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
-            textureHiderManager.HidePhysicalWorld();
+            //textureHiderManager.HidePhysicalWorld();
+            Camera.main.GetComponent<CameraShaderManager>().SetDigital();
             
             isSplitted = true;
             pointerLine.GetComponent<LineRenderer>().material.color = digiLineColor;

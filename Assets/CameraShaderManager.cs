@@ -6,6 +6,7 @@ public class CameraShaderManager : MonoBehaviour {
     public Material MaskShader;
     public Material WaterShader;
     public Material NegativeShader;
+    public Material DigitalShader;
 
     Material currentMaterial;
 
@@ -14,7 +15,10 @@ public class CameraShaderManager : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+
+        
         RunStart();
+        //currentMaterial = DigitalShader;
     }
 
     IEnumerator StartAnimation()
@@ -51,6 +55,17 @@ public class CameraShaderManager : MonoBehaviour {
         } while (true);
 
 
+    }
+
+    public void SetDigital() {
+
+        currentMaterial = DigitalShader;
+
+    }
+
+    public void RemoveDigital() {
+
+        currentMaterial = null;
     }
 
     public void SetOptic()
