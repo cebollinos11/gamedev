@@ -163,7 +163,7 @@ public class FormsManager : MonoBehaviour {
                 {
                     formBtnClicked(1);
                 }
-                if (Input.GetKeyDown(KeyCode.Alpha3))
+                if (gamemaster.opticFormIsAvailable && Input.GetKeyDown(KeyCode.Alpha3))
                 {
                     opticControl = true;
                 }
