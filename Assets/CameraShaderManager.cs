@@ -5,6 +5,7 @@ public class CameraShaderManager : MonoBehaviour {
 
     public Material MaskShader;
     public Material WaterShader;
+    public Material NegativeShader;
 
     Material currentMaterial;
 
@@ -50,6 +51,17 @@ public class CameraShaderManager : MonoBehaviour {
         } while (true);
 
 
+    }
+
+    public void SetOptic()
+    {
+
+        currentMaterial = NegativeShader;
+    }
+
+    public void RemoveOptic()
+    {
+        currentMaterial = null;
     }
 
     public void RunStart()
