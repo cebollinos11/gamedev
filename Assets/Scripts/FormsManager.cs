@@ -563,7 +563,7 @@ public class FormsManager : MonoBehaviour {
                 Instantiate(splitExplosion, spawnedForms[0].transform.position, Quaternion.identity);
                 //textureHiderManager.ShowPhysicalWorld();
 
-                Camera.main.GetComponent<CameraShaderManager>().SetDigital();
+                Camera.main.GetComponent<CameraShaderManager>().RemoveDigital();
                 AudioManager.PlayClip(digitalSplitSound);
                 curForm = 0;
                 curAgent = spawnedForms[curForm].GetComponent<NavMeshAgent>();
