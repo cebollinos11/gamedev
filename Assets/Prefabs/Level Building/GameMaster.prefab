@@ -230,6 +230,8 @@ MonoBehaviour:
   curAgent: {fileID: 0}
   curAnimator: {fileID: 0}
   maxActionPoints: 5
+  actionPointsLeft: 5
+  curForm: 0
   spawnableForms:
   - {fileID: 136242, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
   - {fileID: 101578, guid: 7620413badb9852488054d304c9bc4a7, type: 2}
@@ -259,8 +261,9 @@ MonoBehaviour:
   curTurn: 0
   enemiesOnMap:
   - {fileID: 0}
-  soundEndTurn: {fileID: 8300000, guid: 98d2970133c07034ea196c0e7d234137, type: 3}
-  soundStartTurn: {fileID: 8300000, guid: 74675033f164e324b9c15777f967d433, type: 3}
+  soundEndTurn: {fileID: 8300000, guid: 2145d1fb321c3f94b844d41d6a1e5417, type: 3}
+  soundStartTurn: {fileID: 8300000, guid: 2145d1fb321c3f94b844d41d6a1e5417, type: 3}
+  opticFormIsAvailable: 0
 --- !u!120 &12049482
 LineRenderer:
   m_ObjectHideFlags: 1
