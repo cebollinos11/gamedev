@@ -3267,14 +3267,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 21
       objectReference: {fileID: 0}
-    - target: {fileID: 11456332, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
-      propertyPath: complete
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11456332, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
-      propertyPath: door
-      value: 
-      objectReference: {fileID: 2133061204}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
   m_IsPrefabParent: 0
@@ -8042,7 +8034,7 @@ Transform:
   - {fileID: 598585694}
   - {fileID: 1453121105}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1001 &2133061203
 Prefab:
   m_ObjectHideFlags: 0
