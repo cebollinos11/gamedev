@@ -13,7 +13,6 @@ public class AudioManager : Singleton<AudioManager>
     AudioSource mainAudioSource;
 
     public AudioClip DetectSound;
-    public AudioClip gameMusic;
     public AudioClip mouseclick;
 
     public AudioClip music_bassline;
@@ -108,13 +107,21 @@ public class AudioManager : Singleton<AudioManager>
         Debug.Log("HANDLING MUSIC");
         FormsManager fm = GameObject.FindObjectOfType<FormsManager>();
 
-        if (fm.curForm == 1)
+        
+
+        if(!fm.isSplitted)
+        {
             Instance.turnOn(Instance.a_digital);
+        }
         else
         {
-            Instance.turnOff(Instance.a_digital);
+            if (fm.curForm == 1)
+                Instance.turnOn(Instance.a_digital);
+            else
+            {
+                Instance.turnOff(Instance.a_digital);
+            }
         }
-
 
         if (fm.curForm == 0)
             Instance.turnOn(Instance.a_physical);
