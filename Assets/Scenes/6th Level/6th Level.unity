@@ -2228,6 +2228,10 @@ Prefab:
       propertyPath: soundEndTurn
       value: 
       objectReference: {fileID: 8300000, guid: 98d2970133c07034ea196c0e7d234137, type: 3}
+    - target: {fileID: 11477806, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
+      propertyPath: opticFormIsAvailable
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
   m_IsPrefabParent: 0

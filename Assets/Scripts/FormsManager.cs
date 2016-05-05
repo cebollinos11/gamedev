@@ -139,11 +139,13 @@ public class FormsManager : MonoBehaviour {
         if(txtOptic.activeSelf != opticControl)
         {
             txtOptic.SetActive(opticControl);
+            
             Debug.Log("yippi kay ey");
         }
 
         if (!opticControl)
         {
+            
             if (gamemaster.curTurn == GameMaster.turns.player)
             {
                 switch (state)
@@ -187,6 +189,7 @@ public class FormsManager : MonoBehaviour {
         }
         else
         {
+            Camera.main.GetComponent<CameraShaderManager>().SetOptic();
             if (Input.GetMouseButtonUp(0) && CONTROLS_IS_ON)
             {
                 RaycastHit hit;
@@ -210,6 +213,8 @@ public class FormsManager : MonoBehaviour {
                                     if (opticFormScript != null)
                                     {
                                         opticFormScript.setNewPos(hit.point);
+                                        Camera.main.GetComponent<CameraShaderManager>().RemoveOptic();
+                                        
                                     }
                                 }
                                 else
@@ -217,6 +222,7 @@ public class FormsManager : MonoBehaviour {
                                     spawnedOpticForm = Instantiate(opticFormPrefab, spawnedForms[0].transform.position, Quaternion.identity) as GameObject;
                                     opticFormScript = spawnedOpticForm.GetComponent<OpticForm>();
                                     opticFormScript.setNewPos(hit.point);
+                                    Camera.main.GetComponent<CameraShaderManager>().RemoveOptic();
                                 }
 
                                 opticControl = false;

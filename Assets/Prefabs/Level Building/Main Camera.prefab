@@ -198,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaskShader: {fileID: 2100000, guid: 2cc4b1d503892614084341b62d15cc5e, type: 2}
   WaterShader: {fileID: 2100000, guid: 63077d1e3235bc74ca9cbb3f0676ce95, type: 2}
+  NegativeShader: {fileID: 2100000, guid: 0ca6b7f9b265acf4e9bdc1f430b49aea, type: 2}
   Sin:
     serializedVersion: 2
     m_Curve:
