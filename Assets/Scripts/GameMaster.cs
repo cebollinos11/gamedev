@@ -30,6 +30,8 @@ public class GameMaster : MonoBehaviour {
     public AudioClip soundEndTurn;
     public AudioClip soundStartTurn;
 
+    public bool opticFormIsAvailable = false;
+
 	// Use this for initialization
 	void Start () {
         formManager = GetComponent<FormsManager>();

@@ -10,6 +10,7 @@ public class FormsManager : MonoBehaviour {
     Text txtActionPoints;
     Button btnForm0;
     Button btnForm1;
+    Button btnForm2; GameObject txtOptic;
     Button btnCombine;
     //
 
@@ -92,13 +93,18 @@ public class FormsManager : MonoBehaviour {
         //ui
         gameUI = GameObject.FindGameObjectWithTag("gameUI").transform;
 
+        
         txtActionPoints = gameUI.FindChild("txtActionPoints").GetComponent<Text>();
         btnForm0 = gameUI.FindChild("btnPhysical").GetComponent<Button>();
         btnForm1 = gameUI.FindChild("btnDigital").GetComponent<Button>();
+        btnForm2 = gameUI.FindChild("btnOptic").GetComponent<Button>(); txtOptic = gameUI.FindChild("txtOpticControl").gameObject;
         btnCombine = gameUI.FindChild("btnCombine").GetComponent<Button>();
+
+        btnForm2.gameObject.SetActive(gamemaster.opticFormIsAvailable); 
 
         btnForm0.onClick.AddListener(() => formBtnClicked(0));
         btnForm1.onClick.AddListener(() => formBtnClicked(1));
+        btnForm2.onClick.AddListener(() => opticControl = true);
         btnCombine.onClick.AddListener(() => combineFormsBtnClicked());
 
         GameObject physical = spawnedForms[0];
@@ -130,8 +136,16 @@ public class FormsManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         
+        if(txtOptic.activeSelf != opticControl)
+        {
+            txtOptic.SetActive(opticControl);
+            
+            Debug.Log("yippi kay ey");
+        }
+
         if (!opticControl)
         {
+            
             if (gamemaster.curTurn == GameMaster.turns.player)
             {
                 switch (state)
@@ -163,7 +177,7 @@ public class FormsManager : MonoBehaviour {
                 {
                     formBtnClicked(1);
                 }
-                if (Input.GetKeyDown(KeyCode.Alpha3))
+                if (gamemaster.opticFormIsAvailable && Input.GetKeyDown(KeyCode.Alpha3))
                 {
                     opticControl = true;
                 }
@@ -175,6 +189,7 @@ public class FormsManager : MonoBehaviour {
         }
         else
         {
+            Camera.main.GetComponent<CameraShaderManager>().SetOptic();
             if (Input.GetMouseButtonUp(0) && CONTROLS_IS_ON)
             {
                 RaycastHit hit;
@@ -198,6 +213,8 @@ public class FormsManager : MonoBehaviour {
                                     if (opticFormScript != null)
                                     {
                                         opticFormScript.setNewPos(hit.point);
+                                        Camera.main.GetComponent<CameraShaderManager>().RemoveOptic();
+                                        
                                     }
                                 }
                                 else
@@ -205,6 +222,7 @@ public class FormsManager : MonoBehaviour {
                                     spawnedOpticForm = Instantiate(opticFormPrefab, spawnedForms[0].transform.position, Quaternion.identity) as GameObject;
                                     opticFormScript = spawnedOpticForm.GetComponent<OpticForm>();
                                     opticFormScript.setNewPos(hit.point);
+                                    Camera.main.GetComponent<CameraShaderManager>().RemoveOptic();
                                 }
 
                                 opticControl = false;
