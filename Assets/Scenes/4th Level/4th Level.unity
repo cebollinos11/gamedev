@@ -4053,7 +4053,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447542, guid: 335db3d7a466ab04b93bea0a5a5b1770, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 447542, guid: 335db3d7a466ab04b93bea0a5a5b1770, type: 2}
       propertyPath: m_LocalRotation.z
@@ -4061,7 +4061,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447542, guid: 335db3d7a466ab04b93bea0a5a5b1770, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.00000016292068
       objectReference: {fileID: 0}
     - target: {fileID: 447542, guid: 335db3d7a466ab04b93bea0a5a5b1770, type: 2}
       propertyPath: m_RootOrder
@@ -4467,7 +4467,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 485630, guid: 715eed86f488c374b9b55384c8bcdfb1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -127.2
+      value: -126.47
       objectReference: {fileID: 0}
     - target: {fileID: 485630, guid: 715eed86f488c374b9b55384c8bcdfb1, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4504,6 +4504,10 @@ Prefab:
     - target: {fileID: 189372, guid: 715eed86f488c374b9b55384c8bcdfb1, type: 2}
       propertyPath: m_Name
       value: door4
+      objectReference: {fileID: 0}
+    - target: {fileID: 485630, guid: 715eed86f488c374b9b55384c8bcdfb1, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 7.0079155
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 715eed86f488c374b9b55384c8bcdfb1, type: 2}
