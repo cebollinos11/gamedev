@@ -19,6 +19,6 @@ public class splitExplosion : MonoBehaviour {
         if (timeToLive < 0)
             Destroy(gameObject);
 
-        transform.localScale += Vector3.Scale(transform.localScale * Time.deltaTime , new Vector3(0.5f,1f,0.5f));
+        transform.localScale += Vector3.Scale(transform.localScale * Time.deltaTime , new Vector3(0.5f,1f,0.5f)*2f);
 	}
 }
