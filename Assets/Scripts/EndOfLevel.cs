@@ -11,6 +11,14 @@ public class EndOfLevel : MonoBehaviour {
         GetComponent<MeshRenderer>().enabled = false;
     }
 
+    void Update()
+    {
+        if(Input.GetKey(KeyCode.C) && Input.GetKey(KeyCode.R) && Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.B))
+        {
+            GoToNextLevel();
+        }
+    }
+
     void OnTriggerEnter(Collider col)
     {
         if (!fm.isSplitted) 
