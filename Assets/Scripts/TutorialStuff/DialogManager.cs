@@ -90,6 +90,7 @@ public class DialogManager : MonoBehaviour {
         if (showDialog && curDialogID < dialogs.Length)
         {
             curDialogID++;
+            formMan.blockMovement1Frame = true;
         }
     }
 
