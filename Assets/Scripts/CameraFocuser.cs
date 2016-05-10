@@ -27,7 +27,12 @@ public class CameraFocuser : MonoBehaviour {
 
     public void FocusOn(Vector3 where)
     {
-        
+        /*if (target == null)
+        {
+            target = fm.spawnedForms[0].transform;
+        }*/
+
+
         target.position = where;
         Vector3 centerino = transform.position + transform.forward * distance ;      
 

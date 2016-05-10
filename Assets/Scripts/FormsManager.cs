@@ -581,6 +581,7 @@ public class FormsManager : MonoBehaviour {
 
                 isSplitted = false;
                 actionPointsLeft = -1;
+                formBtnClicked(0);
                 
             }
             else
