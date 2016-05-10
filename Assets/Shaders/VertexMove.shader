@@ -10,7 +10,7 @@
           float2 uv_MainTex;
       };
       void vert (inout appdata_full v) {
-          v.vertex.xyz += v.normal * (sin(_Time.w*2)*0.08-0.07);
+          v.vertex.xyz += v.normal * (sin(_Time.w*3)*0.08-0.07);
 		  
       }
       sampler2D _MainTex;
