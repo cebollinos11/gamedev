@@ -130,7 +130,7 @@ Material:
       data:
         first:
           name: _MaskAmount
-        second: 1
+        second: 0.06626618
     m_Colors:
       data:
         first:

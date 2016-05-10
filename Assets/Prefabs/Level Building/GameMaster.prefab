@@ -234,7 +234,7 @@ MonoBehaviour:
   curForm: 0
   spawnableForms:
   - {fileID: 136242, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
-  - {fileID: 101578, guid: 7620413badb9852488054d304c9bc4a7, type: 2}
+  - {fileID: 136242, guid: 1e9b0b83bd5e9e741a87888f77144264, type: 2}
   spawnedForms:
   - {fileID: 0}
   playerWalkSound: {fileID: 8300000, guid: 0af3c41c4a9455b449f0940d8873afab, type: 3}
