@@ -87,7 +87,7 @@ public class FormsManager : MonoBehaviour {
         gamemaster = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         layerMask = 1 << LayerMask.NameToLayer("Walkable");
 
-
+        spawnedForms[0] = GameObject.FindGameObjectWithTag("Player");
         
 
         //ui
