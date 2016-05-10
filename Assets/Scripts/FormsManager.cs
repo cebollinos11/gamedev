@@ -42,7 +42,7 @@ public class FormsManager : MonoBehaviour {
     public AudioClip playerWalkSound;
     public AudioClip digitalSplitSound;
 
-    public GameObject splitExplosion;
+    //public GameObject splitExplosion;
 
     private float elapsed;
     private NavMeshPath path;
@@ -563,7 +563,7 @@ public class FormsManager : MonoBehaviour {
 
             if (allIsClose)
             {
-                Instantiate(splitExplosion, spawnedForms[0].transform.position, Quaternion.identity);
+                //Instantiate(splitExplosion, spawnedForms[0].transform.position, Quaternion.identity);
                 //textureHiderManager.ShowPhysicalWorld();
 
                 Camera.main.GetComponent<CameraShaderManager>().RemoveDigital();
@@ -577,7 +577,7 @@ public class FormsManager : MonoBehaviour {
 
                 for (int i = 1; i < spawnedForms.Length; i++)
                 {
-                    Instantiate(splitExplosion, spawnedForms[i].transform.position, Quaternion.identity);
+                    //Instantiate(splitExplosion, spawnedForms[i].transform.position, Quaternion.identity);
                     Destroy(spawnedForms[i]);
                     spawnedForms[i] = null;
                 }
@@ -621,8 +621,8 @@ public class FormsManager : MonoBehaviour {
         if (isTerminalClose)
         {
             AudioManager.PlayClip(digitalSplitSound);
-            Instantiate(splitExplosion, spawnedForms[curForm].transform.position, Quaternion.identity);
-            Instantiate(splitExplosion, terminals[terminalID].getSpawnPoint(), Quaternion.identity);
+            //Instantiate(splitExplosion, spawnedForms[curForm].transform.position, Quaternion.identity);
+            //Instantiate(splitExplosion, terminals[terminalID].getSpawnPoint(), Quaternion.identity);
             curAnimator.SetTrigger("split");
             //Debug.Log("EXPLODEEEEEE");
 

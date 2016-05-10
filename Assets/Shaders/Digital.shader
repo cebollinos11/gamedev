@@ -70,7 +70,7 @@
 
 						//c.rgb = lerp(c.rgb, crt.rgb, 0.2);
 
-						c.g = lerp(c.g,crt.g,0.15);
+						c.g = lerp(c.g,crt.g,0.1);
 
 						c.rgb *= c.a;
 						return c;

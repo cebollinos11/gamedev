@@ -1,4 +1,4 @@
-﻿Shader "Example/Normal Extrusion" {
+﻿Shader "Custom/Digi Extrusion" {
     Properties {
       _MainTex ("Texture", 2D) = "white" {}
     }
