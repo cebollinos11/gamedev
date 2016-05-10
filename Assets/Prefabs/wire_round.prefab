@@ -10,6 +10,8 @@ GameObject:
   - 4: {fileID: 469620}
   - 33: {fileID: 3393930}
   - 23: {fileID: 2314006}
+  - 114: {fileID: 11427132}
+  - 114: {fileID: 11482306}
   m_Layer: 0
   m_Name: wire_round
   m_TagString: Untagged
@@ -23,8 +25,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141820}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: -51.34, y: 34.5, z: -109.02}
+  m_LocalRotation: {x: -0.6531686, y: 0.27064484, z: 0.27055132, w: 0.6533944}
+  m_LocalPosition: {x: -42.247738, y: 55.47763, z: -39.400784}
   m_LocalScale: {x: 0.0254, y: 0.0254, z: 0.0254}
   m_Children: []
   m_Father: {fileID: 0}
@@ -39,7 +41,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7978d69a868744aa098ea7f5f5f423ca, type: 2}
+  - {fileID: 2100000, guid: 69f6b311b2161104aa40874f3c3525bc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -61,7 +63,32 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 141820}
-  m_Mesh: {fileID: 4300000, guid: a080f75d6493c6848ba3e2e9c3097541, type: 3}
+  m_Mesh: {fileID: 4300004, guid: 0cccccc8acb3b464caf5cbc518b52e7f, type: 3}
+--- !u!114 &11427132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e585eeac163a041a08b97ea50b8c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isWire: 0
+--- !u!114 &11482306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d053d92e63a0a83459451caa3a6caf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skinnedMeshRenderer: 0
+  speed: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
