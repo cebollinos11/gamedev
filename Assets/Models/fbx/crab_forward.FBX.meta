@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: eeec53cad8096c64f8bbdaa19e7ec4dd
-timeCreated: 1462456810
+guid: 964422d3e5aa2e84da95ed1f7b4367d6
+timeCreated: 1462881079
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -143,48 +143,48 @@ ModelImporter:
     400132: Sphere006
     400134: Sphere007
     400136: Sphere008
-    2300000: ChamferBox001
-    2300002: CrabEyeL1
-    2300004: CrabEyeL2
-    2300006: CrabEyeL3
-    2300008: CrabEyeL4
-    2300010: CrabEyeL5
-    2300012: CrabEyeR1
-    2300014: CrabEyeR2
-    2300016: CrabEyeR3
-    2300018: CrabEyeR4
-    2300020: CrabEyeR5
-    2300022: CrabHub
-    2300024: CrabLArm1
-    2300026: CrabLArm2
-    2300028: CrabLArmDigit1
-    2300030: CrabLArmPalm
-    2300032: CrabLLeg11
-    2300034: CrabLLeg12
-    2300036: CrabLLeg13
-    2300038: CrabLLeg21
-    2300040: CrabLLeg22
-    2300042: CrabLLeg23
-    2300044: CrabLLeg31
-    2300046: CrabLLeg32
-    2300048: CrabLLeg33
-    2300050: CrabLLeg41
-    2300052: CrabLLeg42
-    2300054: CrabLLeg43
-    2300056: CrabRArm1
-    2300058: CrabRArm2
-    2300060: CrabRLeg1
-    2300062: CrabRLeg1 1
-    2300064: CrabRLeg1 2
-    2300066: CrabRLeg1 3
-    2300068: CrabRLeg2
-    2300070: CrabRLeg2 1
-    2300072: CrabRLeg2 2
-    2300074: CrabRLeg2 3
-    2300076: CrabRLeg3
-    2300078: CrabRLeg3 1
-    2300080: CrabRLeg3 2
-    2300082: CrabRLeg3 3
+    2300000: CrabEyeL1
+    2300002: CrabEyeL2
+    2300004: CrabEyeL3
+    2300006: CrabEyeL4
+    2300008: CrabEyeL5
+    2300010: CrabEyeR1
+    2300012: CrabEyeR2
+    2300014: CrabEyeR3
+    2300016: CrabEyeR4
+    2300018: CrabEyeR5
+    2300020: CrabHub
+    2300022: CrabLArm1
+    2300024: CrabLArm2
+    2300026: CrabLArmDigit1
+    2300028: CrabLArmPalm
+    2300030: CrabLLeg11
+    2300032: CrabLLeg12
+    2300034: CrabLLeg13
+    2300036: CrabLLeg21
+    2300038: CrabLLeg22
+    2300040: CrabLLeg23
+    2300042: CrabLLeg31
+    2300044: CrabLLeg32
+    2300046: CrabLLeg33
+    2300048: CrabLLeg41
+    2300050: CrabLLeg42
+    2300052: CrabLLeg43
+    2300054: CrabRArm1
+    2300056: CrabRArm2
+    2300058: CrabRLeg1
+    2300060: CrabRLeg1 1
+    2300062: CrabRLeg1 2
+    2300064: CrabRLeg1 3
+    2300066: CrabRLeg2
+    2300068: CrabRLeg2 1
+    2300070: CrabRLeg2 2
+    2300072: CrabRLeg2 3
+    2300074: CrabRLeg3
+    2300076: CrabRLeg3 1
+    2300078: CrabRLeg3 2
+    2300080: CrabRLeg3 3
+    2300082: ChamferBox001
     2300084: Cylinder001
     2300086: Cylinder002
     2300088: Cylinder003
@@ -201,48 +201,48 @@ ModelImporter:
     2300110: Sphere006
     2300112: Sphere007
     2300114: Sphere008
-    3300000: ChamferBox001
-    3300002: CrabEyeL1
-    3300004: CrabEyeL2
-    3300006: CrabEyeL3
-    3300008: CrabEyeL4
-    3300010: CrabEyeL5
-    3300012: CrabEyeR1
-    3300014: CrabEyeR2
-    3300016: CrabEyeR3
-    3300018: CrabEyeR4
-    3300020: CrabEyeR5
-    3300022: CrabHub
-    3300024: CrabLArm1
-    3300026: CrabLArm2
-    3300028: CrabLArmDigit1
-    3300030: CrabLArmPalm
-    3300032: CrabLLeg11
-    3300034: CrabLLeg12
-    3300036: CrabLLeg13
-    3300038: CrabLLeg21
-    3300040: CrabLLeg22
-    3300042: CrabLLeg23
-    3300044: CrabLLeg31
-    3300046: CrabLLeg32
-    3300048: CrabLLeg33
-    3300050: CrabLLeg41
-    3300052: CrabLLeg42
-    3300054: CrabLLeg43
-    3300056: CrabRArm1
-    3300058: CrabRArm2
-    3300060: CrabRLeg1
-    3300062: CrabRLeg1 1
-    3300064: CrabRLeg1 2
-    3300066: CrabRLeg1 3
-    3300068: CrabRLeg2
-    3300070: CrabRLeg2 1
-    3300072: CrabRLeg2 2
-    3300074: CrabRLeg2 3
-    3300076: CrabRLeg3
-    3300078: CrabRLeg3 1
-    3300080: CrabRLeg3 2
-    3300082: CrabRLeg3 3
+    3300000: CrabEyeL1
+    3300002: CrabEyeL2
+    3300004: CrabEyeL3
+    3300006: CrabEyeL4
+    3300008: CrabEyeL5
+    3300010: CrabEyeR1
+    3300012: CrabEyeR2
+    3300014: CrabEyeR3
+    3300016: CrabEyeR4
+    3300018: CrabEyeR5
+    3300020: CrabHub
+    3300022: CrabLArm1
+    3300024: CrabLArm2
+    3300026: CrabLArmDigit1
+    3300028: CrabLArmPalm
+    3300030: CrabLLeg11
+    3300032: CrabLLeg12
+    3300034: CrabLLeg13
+    3300036: CrabLLeg21
+    3300038: CrabLLeg22
+    3300040: CrabLLeg23
+    3300042: CrabLLeg31
+    3300044: CrabLLeg32
+    3300046: CrabLLeg33
+    3300048: CrabLLeg41
+    3300050: CrabLLeg42
+    3300052: CrabLLeg43
+    3300054: CrabRArm1
+    3300056: CrabRArm2
+    3300058: CrabRLeg1
+    3300060: CrabRLeg1 1
+    3300062: CrabRLeg1 2
+    3300064: CrabRLeg1 3
+    3300066: CrabRLeg2
+    3300068: CrabRLeg2 1
+    3300070: CrabRLeg2 2
+    3300072: CrabRLeg2 3
+    3300074: CrabRLeg3
+    3300076: CrabRLeg3 1
+    3300078: CrabRLeg3 2
+    3300080: CrabRLeg3 3
+    3300082: ChamferBox001
     3300084: Cylinder001
     3300086: Cylinder002
     3300088: Cylinder003
@@ -319,6 +319,23 @@ ModelImporter:
     4300114: ChamferBox001
     7400000: Take 001
     9500000: //RootNode
+    13700000: ChamferBox001
+    13700002: Cylinder001
+    13700004: Cylinder002
+    13700006: Cylinder003
+    13700008: Cylinder004
+    13700010: Cylinder005
+    13700012: Cylinder006
+    13700014: Cylinder007
+    13700016: Cylinder008
+    13700018: Sphere001
+    13700020: Sphere002
+    13700022: Sphere003
+    13700024: Sphere004
+    13700026: Sphere005
+    13700028: Sphere006
+    13700030: Sphere007
+    13700032: Sphere008
   materials:
     importMaterials: 1
     materialName: 0
@@ -327,7 +344,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleRotations: 1
-    optimizeGameObjects: 0
+    optimizeGameObjects: 1
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -343,7 +360,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
