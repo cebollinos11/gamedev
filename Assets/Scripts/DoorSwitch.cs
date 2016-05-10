@@ -81,7 +81,7 @@ public class DoorSwitch : MonoBehaviour {
         {
             door.gameObject.SetActive(!doorUnlocked);
         }
-        
+        AudioManager.PlayClip(openSound);
         doorIsDoingSomething = false;
         if(formManager.curForm>0) //checking if current form is digital
             formManager.gamemaster.endTurnBtnClicked();
@@ -92,7 +92,7 @@ public class DoorSwitch : MonoBehaviour {
     public void unlockDoor()
     {
         Instantiate(camFocuser, door.transform.position, Quaternion.identity);
-        AudioManager.PlayClip(openSound);
+        
 
         doorIsDoingSomething = true;
         Invoke("unLockDelayed", 1f);
