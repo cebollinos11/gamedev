@@ -2024,6 +2024,20 @@ MonoBehaviour:
   dialogID: 0
   dialogText: It's...me. A clone of me.
   dialogTalker: 1
+--- !u!114 &1811513720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1811513712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 30
+  dialogText: Got it. Hmmm, it looks like there must be a trigger on the floor somewhere...
+  dialogTalker: 1
 --- !u!1001 &1822391699
 Prefab:
   m_ObjectHideFlags: 0
