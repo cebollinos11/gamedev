@@ -107,7 +107,7 @@ public class EnemyGuard : Enemy {
                 AudioManager.HandleBackgroundMusic();
                 investigatePos = (seeState == 2 ? player.transform.position : GameObject.FindGameObjectWithTag("OpticForm").transform.position);
                 
-                Debug.Log("investigating");
+                //Debug.Log("investigating");
             }
             else if (seeState == 1)
             {
@@ -120,7 +120,7 @@ public class EnemyGuard : Enemy {
                     StartCoroutine(Die());
                 }
 
-                Debug.Log("spotted!");
+                //Debug.Log("spotted!");
             }
 
             switch (base.state)
@@ -231,7 +231,7 @@ public class EnemyGuard : Enemy {
         {
 
             transform.LookAt(col.gameObject.transform);
-            Debug.Log("die");
+            //Debug.Log("die");
             AudioManager.PlayClip(AudioManager.Instance.DetectSound);
 
             StartCoroutine(Die());

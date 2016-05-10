@@ -104,7 +104,7 @@ public class AudioManager : Singleton<AudioManager>
 
     public static void HandleBackgroundMusic()
     {
-        Debug.Log("HANDLING MUSIC");
+        //Debug.Log("HANDLING MUSIC");
         FormsManager fm = GameObject.FindObjectOfType<FormsManager>();
 
         

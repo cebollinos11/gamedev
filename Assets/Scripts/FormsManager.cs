@@ -139,8 +139,6 @@ public class FormsManager : MonoBehaviour {
         if(txtOptic.activeSelf != opticControl)
         {
             txtOptic.SetActive(opticControl);
-            
-            Debug.Log("yippi kay ey");
         }
 
         if (!opticControl)
@@ -207,7 +205,7 @@ public class FormsManager : MonoBehaviour {
                         {
                             if (Vector3.Distance(hitt.point, hit.point) < 0.1f)
                             {
-                                Debug.Log("Can call the optic here! yay!");
+                                //Debug.Log("Can call the optic here! yay!");
                                 if (spawnedOpticForm != null)
                                 {
                                     if (opticFormScript != null)
@@ -229,19 +227,19 @@ public class FormsManager : MonoBehaviour {
                             }
                             else
                             {
-                                Debug.Log("cant see it");
-                                Debug.Log(hitt.point);
-                                Debug.Log(hit.point);
+                                //Debug.Log("cant see it");
+                                //Debug.Log(hitt.point);
+                                //Debug.Log(hit.point);
                             }
                         }
                         else
                         {
-                            Debug.Log("raycast no");
+                            //Debug.Log("raycast no");
                         }
                     }
                     else
                     {
-                        Debug.Log("Can't call the optic here!");
+                        //Debug.Log("Can't call the optic here!");
                     }
                 }
             }
@@ -384,7 +382,7 @@ public class FormsManager : MonoBehaviour {
             
             else if (Input.GetMouseButtonUp(0) && Vector3.Distance(spawnedForms[curForm].transform.position, lineEndPos) > 2)
             {
-                Debug.Log("click to move");
+                //Debug.Log("click to move");
                 AudioManager.PlayClip(playerWalkSound);
                 curAgent.Resume();
                 curAgent.SetDestination(lineEndPos);
@@ -407,7 +405,7 @@ public class FormsManager : MonoBehaviour {
         else {
             if (CONTROLS_IS_ON)
             {
-                Debug.Log("no more points left");
+                //Debug.Log("no more points left");
                 gamemaster.endTurnBtnClicked();
             }
             else
@@ -498,7 +496,7 @@ public class FormsManager : MonoBehaviour {
     void formBtnClicked(int formID)
     {
         blockMovement1Frame = true;
-        Debug.Log("UI BUTTON CLICKED");
+        //Debug.Log("UI BUTTON CLICKED");
         if (gamemaster.curTurn == GameMaster.turns.player)
         {
             state = formState.idle;
@@ -514,7 +512,7 @@ public class FormsManager : MonoBehaviour {
                 if (formID == 0) {
                     pointerLine.GetComponent<LineRenderer>().material.color = physLineColor;
                     camFocus.GoTo("PhysicalForm");
-                    Debug.Log("show real world*******************************************************");
+                    //Debug.Log("show real world*******************************************************");
                     gamemaster.ui.Flash.FlashIt(Color.white);
                     //textureHiderManager.ShowPhysicalWorld();
                     Camera.main.GetComponent<CameraShaderManager>().RemoveDigital();
@@ -523,7 +521,7 @@ public class FormsManager : MonoBehaviour {
                 if (formID == 1) {
                     pointerLine.GetComponent<LineRenderer>().material.color = digiLineColor;
                     camFocus.GoTo("DigitalForm(Clone)");
-                    Debug.Log("show internet world*****************************************************");
+                    //Debug.Log("show internet world*****************************************************");
                     gamemaster.ui.Flash.FlashIt(Color.blue);
                     Camera.main.GetComponent<CameraShaderManager>().SetDigital();
 
@@ -586,12 +584,12 @@ public class FormsManager : MonoBehaviour {
             }
             else
             {
-                Debug.Log("all forms are not close to each other!");
+                //Debug.Log("all forms are not close to each other!");
             }
         }
         else
         {
-            Debug.Log("you need to split before you can combine!");
+            //Debug.Log("you need to split before you can combine!");
         }
     }
 
@@ -609,7 +607,7 @@ public class FormsManager : MonoBehaviour {
             //Debug.Log("dist: " + Vector3.Distance(spawnedForms[0].transform.position, terminals[i].transform.position) + " usable: " + terminals[i].isUsable);
             if (Vector3.Distance(spawnedForms[0].transform.position, terminals[i].transform.position) < 4 && terminals[i].isUsable)
             {
-                Debug.Log("can split");
+                //Debug.Log("can split");
                 isTerminalClose = true;
                 terminalID = i;
             }
@@ -621,7 +619,7 @@ public class FormsManager : MonoBehaviour {
             Instantiate(splitExplosion, spawnedForms[curForm].transform.position, Quaternion.identity);
             Instantiate(splitExplosion, terminals[terminalID].getSpawnPoint(), Quaternion.identity);
             curAnimator.SetTrigger("split");
-            Debug.Log("EXPLODEEEEEE");
+            //Debug.Log("EXPLODEEEEEE");
 
             spawnedForms[1] = Instantiate(spawnableForms[1], terminals[terminalID].getSpawnPoint(), Quaternion.identity) as GameObject;
             AudioManager.HandleBackgroundMusic();
@@ -640,7 +638,7 @@ public class FormsManager : MonoBehaviour {
         }
         else
         {
-            Debug.Log("cannot split now into terminal form");
+            //Debug.Log("cannot split now into terminal form");
         }
     }
 

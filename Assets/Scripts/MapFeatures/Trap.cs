@@ -49,7 +49,7 @@ public class Trap : MonoBehaviour {
                     enemy.state = Enemy.enemyState.idle;
                 }
 
-                Debug.Log("geggegegegegeg");
+                //Debug.Log("geggegegegegeg");
                 turnsLeft = activeTurns;
                 trapActivated = false;
             }
@@ -60,7 +60,7 @@ public class Trap : MonoBehaviour {
                 {
                     turnsLeft--;
                     turnCheck = gamemaster.turnNumber;
-                    Debug.Log("new turn!");
+                    //Debug.Log("new turn!");
                 }
             }
 
@@ -99,7 +99,7 @@ public class Trap : MonoBehaviour {
 
             trappedEnemies = enemiesTrapped.ToArray();
 
-            Debug.Log("trapped:" + trappedEnemies.Length);
+            //Debug.Log("trapped:" + trappedEnemies.Length);
 
             //activate trap
             trapActivated = true;
