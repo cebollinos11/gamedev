@@ -183,6 +183,10 @@ public class FormsManager : MonoBehaviour {
                 {
                     formBtnClicked(1);
                 }
+                if(Input.GetKeyDown(KeyCode.Tab))
+                {
+                    combineFormsBtnClicked();
+                }
                 if (gamemaster.opticFormIsAvailable && Input.GetKeyDown(KeyCode.Alpha3))
                 {
                     opticControl = true;
@@ -217,9 +221,11 @@ public class FormsManager : MonoBehaviour {
                     {
                         RaycastHit hitt;
 
-                        Vector3 dir = (hit.point - spawnedForms[0].transform.position).normalized;
+                        Vector3 startPos = new Vector3(spawnedForms[0].transform.position.x, spawnedForms[0].transform.position.y+5, spawnedForms[0].transform.position.z);
 
-                        if (Physics.Raycast(spawnedForms[0].transform.position, dir, out hitt))
+                        Vector3 dir = (hit.point - startPos).normalized;
+
+                        if (Physics.Raycast(startPos, dir, out hitt))
                         {
                             if (Vector3.Distance(hitt.point, hit.point) < 0.1f)
                             {
@@ -551,14 +557,30 @@ public class FormsManager : MonoBehaviour {
             pointerLine.gameObject.SetActive(true);
             pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
         }
-        if (!pointerAPIndic.gameObject.activeSelf)
+
+        if (curForm == 0)
         {
-            pointerAPIndic.gameObject.SetActive(true);
-            pointerAPIndic.fillAmount = 0;
+            if (!pointerAPIndic.gameObject.activeSelf)
+            {
+                pointerAPIndic.gameObject.SetActive(true);
+                pointerAPIndic.fillAmount = 0;
+            }
+            if (!pointerAPLeftIndic.gameObject.activeSelf)
+            {
+                pointerAPLeftIndic.gameObject.SetActive(true);
+            }
         }
-        if (!pointerAPLeftIndic.gameObject.activeSelf)
+        else
         {
-            pointerAPLeftIndic.gameObject.SetActive(true);
+            if (pointerAPIndic.gameObject.activeSelf)
+            {
+                pointerAPIndic.gameObject.SetActive(false);
+                pointerAPIndic.fillAmount = 0;
+            }
+            if (pointerAPLeftIndic.gameObject.activeSelf)
+            {
+                pointerAPLeftIndic.gameObject.SetActive(false);
+            }
         }
     }
 

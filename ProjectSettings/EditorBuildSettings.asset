@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/5th Level/5th Level.unity
   - enabled: 1
     path: Assets/Scenes/6th Level/6th Level.unity
+  - enabled: 1
+    path: Assets/Scenes/EndGameLevel/EndGame Level.unity

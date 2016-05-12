@@ -17,6 +17,9 @@ public class Trap : MonoBehaviour {
 
     public GameObject trapEffects;
 
+    [SerializeField]
+    AudioClip TrapSound;
+
     Enemy[] trappedEnemies;
 	// Use this for initialization
 	void Start () {
@@ -94,6 +97,7 @@ public class Trap : MonoBehaviour {
                 {
                     enemiesTrapped.Add(enemy);
                     enemy.state = Enemy.enemyState.inactive;
+                    AudioManager.PlayClip(TrapSound);
                 }
             }
 

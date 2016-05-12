@@ -60,9 +60,11 @@ public class OpticForm : MonoBehaviour {
             {
                 RaycastHit hit;
 
-                Vector3 dir = (fm.spawnedForms[0].transform.position - transform.position).normalized;
+                Vector3 startPos = new Vector3(transform.position.x, transform.position.y + 5, transform.position.z);
 
-                if (Physics.Raycast(transform.position, dir, out hit))
+                Vector3 dir = (fm.spawnedForms[0].transform.position - startPos).normalized;
+
+                if (Physics.Raycast(startPos, dir, out hit))
                 {
                     if (hit.transform.gameObject != fm.spawnedForms[0])
                     {
@@ -102,7 +104,8 @@ public class OpticForm : MonoBehaviour {
             }
 
             myTransform.LookAt(requestedPos);
-            myTransform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            myTransform.position = Vector3.Lerp(myTransform.position, requestedPos, 0.3F);
+            //myTransform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
     }
 

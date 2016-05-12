@@ -138,7 +138,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1676046041}
-  - {fileID: 859886244}
   - {fileID: 1336582805}
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -3242,80 +3241,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
   m_PrefabInternal: {fileID: 701721989}
---- !u!1001 &705022377
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 41203484}
-    m_Modifications:
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -96.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -5.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 66.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 7.6052427
-      objectReference: {fileID: 0}
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 10.55361
-      objectReference: {fileID: 0}
-    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 2.3456628
-      objectReference: {fileID: 0}
-    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: dialogWindow
-      value: 
-      objectReference: {fileID: 915532698}
-    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: dialogText
-      value: 
-      objectReference: {fileID: 1970798974}
-    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: dialogBtnText
-      value: 
-      objectReference: {fileID: 347726135}
-    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: dialogBtn
-      value: 
-      objectReference: {fileID: 2000238353}
-    - target: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
-      propertyPath: m_Name
-      value: DialogTrigger (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: a73084775068226479cc650aaf2046fb, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &706234090
 Prefab:
   m_ObjectHideFlags: 0
@@ -3827,57 +3752,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
   m_PrefabInternal: {fileID: 850833381}
---- !u!1 &859886243 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
-  m_PrefabInternal: {fileID: 705022377}
---- !u!4 &859886244 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
-  m_PrefabInternal: {fileID: 705022377}
---- !u!114 &859886245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 859886243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogID: 10
-  dialogText: Good to know!
-  dialogTalker: 1
---- !u!114 &859886246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 859886243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogID: 0
-  dialogText: The security's stepping up. I must be getting closer.
-  dialogTalker: 1
---- !u!114 &859886247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 859886243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogID: 5
-  dialogText: The blueprints we have show you are two levels away from where the project
-    is most likely to be housed.
-  dialogTalker: 0
 --- !u!1001 &903457132
 Prefab:
   m_ObjectHideFlags: 0
@@ -5940,7 +5814,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
       propertyPath: m_LocalScale.y

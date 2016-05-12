@@ -10409,7 +10409,11 @@ Prefab:
     - target: {fileID: 11441188, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
       propertyPath: music_bassline
       value: 
-      objectReference: {fileID: 8300000, guid: 7776b84a779685c4481db6909bdaa00b, type: 3}
+      objectReference: {fileID: 8300000, guid: 0b612a449572a1547b059c0423433830, type: 3}
+    - target: {fileID: 8208860, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 38c8eb44ebeef7748b7d061cd997ba71, type: 2}
   m_IsPrefabParent: 0

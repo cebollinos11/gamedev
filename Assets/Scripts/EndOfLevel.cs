@@ -26,6 +26,8 @@ public class EndOfLevel : MonoBehaviour {
         if (!fm.isSplitted) 
         {
             if (!triggeredAlready) {
+                AudioManager.StopAll();
+                AudioManager.TurnOffAll();
                 AudioManager.PlayClip(ElevatorSound);
                 triggeredAlready = true;
                 Debug.Log("SHOW LEVEL COMPLETE!");
@@ -44,7 +46,14 @@ public class EndOfLevel : MonoBehaviour {
     {
 
         Debug.Log("GO TO NEXT LEVEL");
-        Application.LoadLevel(Application.loadedLevel+1);
+        AudioManager.StopAll();
+        AudioManager.TurnOffAll();
+        Invoke("GoToNextLevelForReal", 1f);
 
+    }
+
+    void GoToNextLevelForReal()
+    {
+        Application.LoadLevel(Application.loadedLevel + 1);
     }
 }

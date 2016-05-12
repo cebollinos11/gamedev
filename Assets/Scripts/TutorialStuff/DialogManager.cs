@@ -7,6 +7,8 @@ public class DialogManager : MonoBehaviour {
 
     [SerializeField]
     AudioClip ClickSound;
+    [SerializeField]
+    AudioClip ShowDialogSound;
 
     FormsManager formMan;
 
@@ -114,6 +116,7 @@ public class DialogManager : MonoBehaviour {
         {
             if (other.transform.tag == "Player")
             {
+                AudioManager.PlayClip(ShowDialogSound);
                 showDialog = true;
             }
         }
