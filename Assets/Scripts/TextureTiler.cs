@@ -11,6 +11,9 @@ public class TextureTiler : MonoBehaviour
     MeshRenderer mr;
     SkinnedMeshRenderer smr;
 
+    [SerializeField]
+    bool otherAxis;
+
     void Start()
     {
         if (skinnedMeshRenderer)
@@ -26,15 +29,21 @@ public class TextureTiler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        Vector2 v = Vector2.right;
+        if(otherAxis)
+        {
+            v = Vector2.up;
+        }
         if (!skinnedMeshRenderer)
         {
             Vector2 currentOffset = mr.material.mainTextureOffset;
-            mr.material.mainTextureOffset = currentOffset + Vector2.right * speed * Time.deltaTime;
+            mr.material.mainTextureOffset = currentOffset + v * speed * Time.deltaTime;
         }
         else
         {
             Vector2 currentOffset = smr.material.mainTextureOffset;
-            smr.material.mainTextureOffset = currentOffset + Vector2.right * speed * Time.deltaTime;
+            smr.material.mainTextureOffset = currentOffset + v * speed * Time.deltaTime;
         }
     }
 }
