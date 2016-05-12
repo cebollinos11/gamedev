@@ -87,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb9d6b5fb1715842be49185ff57680e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClickSound: {fileID: 8300000, guid: dbdbdb580f1d26f47bc1e7fd7189bcb6, type: 3}
   PlayerSprite: {fileID: 21300000, guid: b2bbbfe087c194f2dbe5cb374c31153f, type: 3}
   BossSprite: {fileID: 21300000, guid: 1fcc3a318728d4ea39bd3287ce3a823d, type: 3}
   dialogWindow: {fileID: 0}

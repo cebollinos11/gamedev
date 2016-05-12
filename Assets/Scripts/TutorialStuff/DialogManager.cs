@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour {
 
+    [SerializeField]
+    AudioClip ClickSound;
+
     FormsManager formMan;
 
     Dialog[] dialogs;
@@ -91,6 +94,7 @@ public class DialogManager : MonoBehaviour {
         {
             curDialogID++;
             formMan.blockMovement1Frame = true;
+            AudioManager.PlayClip(ClickSound);
         }
     }
 
