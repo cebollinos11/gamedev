@@ -25,6 +25,15 @@ public class CameraShaderManager : MonoBehaviour {
         //currentMaterial = DigitalShader;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            RunWin();
+        }
+
+    }
+
     IEnumerator StartAnimation()
     {
 
@@ -64,19 +73,30 @@ public class CameraShaderManager : MonoBehaviour {
     IEnumerator WinAnimation()
     {
 
+        //GetComponent<CameraFocuser>().FocusOnCurrentForm();
         currentMaterial = ShaderWin;
 
-        float c = 0.0f;
+        
+        float t = 1f;
 
         do
         {
-            c += Time.deltaTime;
-            float val = Sin.Evaluate(c);
-            currentMaterial.SetFloat("_MaskAmount", val);
+            t -= Time.deltaTime;
             transform.Rotate(new Vector3(Time.deltaTime * 20f,0.0f,0.0f));
+            //transform.position = (transform.position + new Vector3(0.0f, -Time.deltaTime * 20f, 0.0f));
+            
+            yield return new WaitForEndOfFrame();
+        } while (t>0f);
+
+        t = 1f;
+
+        do
+        {
+           t-=Time.deltaTime;
+            //transform.Rotate(new Vector3(Time.deltaTime * 20f,0.0f,0.0f));
             transform.position = (transform.position + new Vector3(0.0f, -Time.deltaTime * 20f, 0.0f));
             yield return new WaitForEndOfFrame();
-        } while (true);
+        } while (t>0f);
 
 
     }
