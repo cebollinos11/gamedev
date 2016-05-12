@@ -5,6 +5,8 @@ public class EndOfLevel : MonoBehaviour {
     FormsManager fm;
     public string NextLevelName;
     bool triggeredAlready;
+    [SerializeField]
+    AudioClip ElevatorSound;
     void Start() {
 
         fm = GameObject.FindObjectOfType<FormsManager>();
@@ -24,6 +26,7 @@ public class EndOfLevel : MonoBehaviour {
         if (!fm.isSplitted) 
         {
             if (!triggeredAlready) {
+                AudioManager.PlayClip(ElevatorSound);
                 triggeredAlready = true;
                 Debug.Log("SHOW LEVEL COMPLETE!");
                 Debug.Log(Application.loadedLevel);
