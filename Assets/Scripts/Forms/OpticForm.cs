@@ -104,7 +104,8 @@ public class OpticForm : MonoBehaviour {
             }
 
             myTransform.LookAt(requestedPos);
-            myTransform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            myTransform.position = Vector3.Lerp(myTransform.position, requestedPos, 0.3F);
+            //myTransform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
         }
     }
 
