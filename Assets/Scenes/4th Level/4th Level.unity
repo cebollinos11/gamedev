@@ -3214,6 +3214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 863307836}
+  - {fileID: 1900337838}
   m_Father: {fileID: 0}
   m_RootOrder: 23
 --- !u!1001 &1339724648
@@ -4273,6 +4274,131 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0739b5f7e3982458094c47f3b1ebb925, type: 3}
   m_IsPrefabParent: 0
+--- !u!1001 &1900337837
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1333406907}
+    m_Modifications:
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -122.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -7.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.0031449378
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.7103287
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.0033891222
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.703855
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.6734948
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 20.050592
+      objectReference: {fileID: 0}
+    - target: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 10.151994
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogWindow
+      value: 
+      objectReference: {fileID: 1512207056}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 155632187}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogBtnText
+      value: 
+      objectReference: {fileID: 132418551}
+    - target: {fileID: 11460628, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: dialogBtn
+      value: 
+      objectReference: {fileID: 1086254404}
+    - target: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
+      propertyPath: m_Name
+      value: DialogTrigger (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1900337838 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 408774, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_PrefabInternal: {fileID: 1900337837}
+--- !u!1 &1900337839 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125362, guid: a73084775068226479cc650aaf2046fb, type: 2}
+  m_PrefabInternal: {fileID: 1900337837}
+--- !u!114 &1900337840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1900337839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 0
+  dialogText: Security's stepping up. I must be getting closer.
+  dialogTalker: 1
+--- !u!114 &1900337841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1900337839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 5
+  dialogText: The blueprints we have show you are three levels away from where the
+    project is most likely to be housed.
+  dialogTalker: 0
+--- !u!114 &1900337842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1900337839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 10
+  dialogText: Good to know!
+  dialogTalker: 1
 --- !u!1001 &1936247497
 Prefab:
   m_ObjectHideFlags: 0
