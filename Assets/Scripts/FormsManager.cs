@@ -397,7 +397,7 @@ public class FormsManager : MonoBehaviour {
                 
                 pointer.position = spawnedForms[curForm].transform.position + (direction * (pointerDistance * moveSpeed));
 
-                pointer.rotation = hit.transform.rotation;
+                //pointer.rotation = hit.transform.rotation;
 
                 if (path.corners.Length - 1 > 0)
                 {
