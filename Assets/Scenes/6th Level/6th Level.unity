@@ -3183,6 +3183,20 @@ MonoBehaviour:
   dialogText: There's a magnetic field up ahead, but I can't split into my digital
     form here.
   dialogTalker: 1
+--- !u!114 &1103237595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103237591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 0
+  dialogText: Hmm, maybe that pressure plate up ahead will do it?
+  dialogTalker: 1
 --- !u!1 &1151905362 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 182808, guid: 0b4f47753a6f13346b76a4cb6cefaaa7, type: 2}
