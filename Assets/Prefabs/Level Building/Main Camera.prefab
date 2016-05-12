@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaskShader: {fileID: 2100000, guid: 2cc4b1d503892614084341b62d15cc5e, type: 2}
+  ShaderWin: {fileID: 2100000, guid: b48f2e5554bc02a4faf7884fa4eb4ccc, type: 2}
   WaterShader: {fileID: 2100000, guid: 63077d1e3235bc74ca9cbb3f0676ce95, type: 2}
   NegativeShader: {fileID: 2100000, guid: 0ca6b7f9b265acf4e9bdc1f430b49aea, type: 2}
   DigitalShader: {fileID: 2100000, guid: f184c389ee48c334587e5e8dd04931f8, type: 2}
@@ -216,6 +217,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+  isOptic: 0
 --- !u!114 &11481088
 MonoBehaviour:
   m_ObjectHideFlags: 1
