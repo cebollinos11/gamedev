@@ -24,10 +24,30 @@ public class AudioManager : Singleton<AudioManager>
     AudioSource a_physical;
     AudioSource a_digital;
     AudioSource a_alert;
+    [SerializeField] AudioClip crabStep;
+
+    bool crabSoundEnabled;
 
     public static void PlayClip(AudioClip aClip)
     {
         Instance.mainAudioSource.PlayOneShot(aClip);
+
+    }
+
+    static IEnumerator EnableCrabSound()
+    {
+        yield return new WaitForSeconds(1f);
+        Instance.crabSoundEnabled = true;
+    }
+
+    public static void PlayCraberino()
+    {
+        if (Instance.crabSoundEnabled)
+        {
+            Instance.mainAudioSource.PlayOneShot(Instance.crabStep);
+            Instance.crabSoundEnabled = false;
+            Instance.StartCoroutine(EnableCrabSound());
+        }            
 
     }
 
@@ -178,6 +198,8 @@ public class AudioManager : Singleton<AudioManager>
         a_bassline.Play();
 
         HandleBackgroundMusic();
+
+        crabSoundEnabled = true;
 
     }
 

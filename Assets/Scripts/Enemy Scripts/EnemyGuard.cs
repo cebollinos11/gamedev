@@ -3,6 +3,8 @@ using System.Collections;
 
 public class EnemyGuard : Enemy {
 
+
+
     GameObject player;
     
     int actionPointLength = 3;
@@ -143,6 +145,8 @@ public class EnemyGuard : Enemy {
 
     }
 
+    
+
     void playTurn()
     {
         
@@ -155,6 +159,11 @@ public class EnemyGuard : Enemy {
         }
         else
         {
+            if (actionpointsLeft == maxActionPoints)
+            {
+                if (Vector3.Distance(transform.position, player.transform.position) < 50)
+                    AudioManager.PlayCraberino();
+            }
             switch (eState)
             {
                 case enemyState.stand:

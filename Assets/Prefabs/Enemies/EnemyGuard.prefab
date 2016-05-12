@@ -298,6 +298,7 @@ MonoBehaviour:
   waypoints: []
   waypointID: 0
   turningEnemy: 1
+  prefTurnAngle: 90
   turnSound: {fileID: 0}
   investigate: 0
   investigatePos: {x: 0, y: 0, z: 0}
