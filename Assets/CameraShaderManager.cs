@@ -92,18 +92,7 @@ public class CameraShaderManager : MonoBehaviour {
     {
         StartCoroutine(DeathAnimation());
     }
-    // Update is called once per frame
-    void Update()
-    {
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            RunDeath();
-
-        }
-
-
-    }
 
 
     // Postprocess the image
