@@ -44,7 +44,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         if (Instance.crabSoundEnabled)
         {
-            Instance.mainAudioSource.PlayOneShot(Instance.crabStep);
+            Instance.mainAudioSource.PlayOneShot(Instance.crabStep,0.25f);
             Instance.crabSoundEnabled = false;
             Instance.StartCoroutine(EnableCrabSound());
         }            
