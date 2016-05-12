@@ -79,6 +79,9 @@ public class FormsManager : MonoBehaviour {
 
     [SerializeField] Color physLineColor, digiLineColor;
 
+    [SerializeField]
+    AudioClip OpticCastSound,OpticCastedSound;
+
 
     // Use this for initialization
 	void Start () {
@@ -187,7 +190,17 @@ public class FormsManager : MonoBehaviour {
         }
         else
         {
-            Camera.main.GetComponent<CameraShaderManager>().SetOptic();
+
+            CameraShaderManager csm = Camera.main.GetComponent<CameraShaderManager>();
+
+            if (!csm.isOptic)
+            {
+                Debug.Log("OPTICCCCCCCCCCCCCCCCCCC");
+                AudioManager.PlayClip(OpticCastSound);
+            }
+            csm.SetOptic();
+               
+            
             if (Input.GetMouseButtonUp(0) && CONTROLS_IS_ON)
             {
                 RaycastHit hit;
@@ -205,6 +218,7 @@ public class FormsManager : MonoBehaviour {
                         {
                             if (Vector3.Distance(hitt.point, hit.point) < 0.1f)
                             {
+                                AudioManager.PlayClip(OpticCastedSound);
                                 //Debug.Log("Can call the optic here! yay!");
                                 if (spawnedOpticForm != null)
                                 {

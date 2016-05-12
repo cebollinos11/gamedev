@@ -12,6 +12,8 @@ public class CameraShaderManager : MonoBehaviour {
 
     public AnimationCurve Sin;
 
+    public bool isOptic;
+
     // Use this for initialization
     void Start()
     {
@@ -70,12 +72,13 @@ public class CameraShaderManager : MonoBehaviour {
 
     public void SetOptic()
     {
-
+        isOptic = true;
         currentMaterial = NegativeShader;
     }
 
     public void RemoveOptic()
     {
+        isOptic = false;
         currentMaterial = null;
     }
 
