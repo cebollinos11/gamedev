@@ -350,6 +350,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11448602, guid: 335db3d7a466ab04b93bea0a5a5b1770, type: 2}
+      propertyPath: ElevatorSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7e8b19c2e69af50499ed773ee4c7995d, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 335db3d7a466ab04b93bea0a5a5b1770, type: 2}
   m_IsPrefabParent: 0
