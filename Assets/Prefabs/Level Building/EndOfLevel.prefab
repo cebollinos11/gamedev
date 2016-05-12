@@ -472,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NextLevelName: 
-  ElevatorSound: {fileID: 8300000, guid: e5489f6df190c564691ced472fc05690, type: 3}
+  ElevatorSound: {fileID: 8300000, guid: 2f0eb5a66e4f32345ac04b744d830a85, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
