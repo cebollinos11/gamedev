@@ -518,7 +518,7 @@ MonoBehaviour:
   turnsLeft: 0
   trapActivated: 0
   trapEffects: {fileID: 171756}
-  TrapSound: {fileID: 8300000, guid: a7911785340069f4aae7db4853592367, type: 3}
+  TrapSound: {fileID: 8300000, guid: 2e18936d2b43ed342b67776c0eca30ed, type: 3}
 --- !u!114 &11419344
 MonoBehaviour:
   m_ObjectHideFlags: 1
