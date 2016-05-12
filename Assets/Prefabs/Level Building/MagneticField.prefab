@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d053d92e63a0a83459451caa3a6caf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinnedMeshRenderer: 0
   speed: 0.1
 --- !u!114 &11419388
 MonoBehaviour:
@@ -249,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d053d92e63a0a83459451caa3a6caf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinnedMeshRenderer: 0
   speed: -2
 --- !u!114 &11429874
 MonoBehaviour:
@@ -261,7 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c19102bd5f93d3743adec53688e6e912, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipOnEnter: {fileID: 8300000, guid: da5f73d7a215b4141887571fe2c7a663, type: 3}
+  clipOnEnter: {fileID: 8300000, guid: 67de52758ca16be4f8122afb42be514c, type: 3}
 --- !u!114 &11461004
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -120,7 +120,7 @@ MonoBehaviour:
   music_physical: {fileID: 8300000, guid: e8c8a3cbc2738b7479e367a353f90898, type: 3}
   music_digital: {fileID: 8300000, guid: 1d25823ce40a4194fbddb5beffdd4b67, type: 3}
   music_alert: {fileID: 8300000, guid: db54cb68e53b40c4482655ee541be174, type: 3}
-  crabStep: {fileID: 8300000, guid: 6c6bdbe3850b7c848b105bd30d202a9d, type: 3}
+  crabStep: {fileID: 8300000, guid: 17637cd0f8aedbc46a87879c92a21147, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
