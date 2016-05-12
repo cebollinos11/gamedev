@@ -882,7 +882,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495218, guid: 070d857c74da944a98588a011475e2ac, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 150092, guid: 070d857c74da944a98588a011475e2ac, type: 2}
       propertyPath: m_Name
@@ -932,7 +932,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489074, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_RootOrder
-      value: 29
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 177070, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_Name
@@ -1036,7 +1036,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495218, guid: 070d857c74da944a98588a011475e2ac, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 150092, guid: 070d857c74da944a98588a011475e2ac, type: 2}
       propertyPath: m_Name
@@ -1256,7 +1256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495218, guid: 070d857c74da944a98588a011475e2ac, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 495218, guid: 070d857c74da944a98588a011475e2ac, type: 2}
       propertyPath: m_LocalScale.x
@@ -1600,7 +1600,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489074, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_RootOrder
-      value: 30
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 177070, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_Name
@@ -1770,7 +1770,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489074, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
@@ -1948,7 +1948,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489074, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_RootOrder
-      value: 33
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 177070, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_Name
@@ -2445,8 +2445,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 10
-  dialogText: When both forms are near a terminal, CLICK the Combine button to merge.
-    This ends your turn.
+  dialogText: When both forms are near a terminal, CLICK the Combine button or Press
+    TAB to merge. This ends your turn.
   dialogTalker: 0
 --- !u!1001 &981392840
 Prefab:
@@ -2757,7 +2757,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489074, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_RootOrder
-      value: 31
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 177070, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_Name
@@ -3177,7 +3177,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495218, guid: 070d857c74da944a98588a011475e2ac, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 150092, guid: 070d857c74da944a98588a011475e2ac, type: 2}
       propertyPath: m_Name
@@ -3788,7 +3788,7 @@ Transform:
   - {fileID: 1752564822}
   - {fileID: 965076522}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
 --- !u!1001 &1718862086
 Prefab:
   m_ObjectHideFlags: 0
@@ -4596,7 +4596,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489074, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_RootOrder
-      value: 32
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 177070, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_Name
