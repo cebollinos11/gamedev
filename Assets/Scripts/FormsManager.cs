@@ -22,8 +22,10 @@ public class FormsManager : MonoBehaviour {
     [HideInInspector] public bool isSplitted = false;
 
     [SerializeField] Transform pointer;
-    [SerializeField] TextMesh pointerText;
+    [SerializeField] Image pointerAPIndic, pointerAPLeftIndic;
     [SerializeField] LineRenderer pointerLine;
+
+    MeshRenderer pointerRenderer;
     
     Vector3 lineEndPos;
     [HideInInspector] public NavMeshAgent curAgent;
@@ -134,11 +136,13 @@ public class FormsManager : MonoBehaviour {
         //unstucker
         curUnstuckWait = unstuckWait;
         // /unstucker
+
+
+        pointerRenderer = pointer.GetComponent<MeshRenderer>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        
         if(txtOptic.activeSelf != opticControl)
         {
             txtOptic.SetActive(opticControl);
@@ -164,7 +168,8 @@ public class FormsManager : MonoBehaviour {
             else
             {
                 if (pointerLine.gameObject.activeSelf) pointerLine.gameObject.SetActive(false);
-                if (pointerText.gameObject.activeSelf) pointerText.gameObject.SetActive(false);
+                if (pointerAPIndic.gameObject.activeSelf) pointerAPIndic.gameObject.SetActive(false);
+                if (pointerAPLeftIndic.gameObject.activeSelf) pointerAPLeftIndic.gameObject.SetActive(false);
                 if (pointer.gameObject.activeSelf) pointer.gameObject.SetActive(false);
             }
 
@@ -321,8 +326,16 @@ public class FormsManager : MonoBehaviour {
                     }
                 }
                 //show actionpoints used if desiding to move
-                pointerText.text = "" + (pointerDistance + 1);
-                pointerText.transform.LookAt(Camera.main.transform.position);
+                //pointerAPIndic.text = "" + (pointerDistance + 1);
+
+                //Debug.Log("yyy:" + ((pointerDistance + 1) / (float)(maxActionPoints + 1)));
+                pointerAPLeftIndic.fillAmount = ((actionPointsLeft + 1) / (float)(maxActionPoints + 1));
+
+                pointerAPIndic.fillAmount = ((pointerDistance + 1) / (float)(maxActionPoints + 1));
+
+
+                //pointerAPIndic.fillAmount = (((actionPointsLeft + 1) / (float)(maxActionPoints + 1)) - ((pointerDistance-1) / (float)(actionPointsLeft + 1)));
+                //pointerText.transform.LookAt(Camera.main.transform.position);
                 //
 
                 //added by pablo
@@ -372,7 +385,8 @@ public class FormsManager : MonoBehaviour {
                 {
                     if (pointerDistance > actionPointsLeft) //don't move more than action points left
                     {
-                        pointerText.text = "";
+                        pointerAPIndic.fillAmount = 0;
+                        //pointerText.text = "";
                         pointerLine.SetVertexCount(0);
                         pointerDistance = 0;
                         lineEndPos = spawnedForms[curForm].transform.position;
@@ -382,9 +396,43 @@ public class FormsManager : MonoBehaviour {
 
                 
                 pointer.position = spawnedForms[curForm].transform.position + (direction * (pointerDistance * moveSpeed));
-                if (path.corners.Length-1>0)
+
+                //pointer.rotation = hit.transform.rotation;
+
+                if (path.corners.Length - 1 > 0)
                 {
-                    pointer.position = path.corners[path.corners.Length-1];
+                    pointer.position = path.corners[path.corners.Length - 1];
+
+                    if (!pointerRenderer.enabled)
+                    {
+                        pointerRenderer.enabled = true;
+                    }
+                    if (!pointerAPIndic.enabled)
+                    {
+                        pointerAPIndic.enabled = true;
+                        
+                    }
+                    if (!pointerAPLeftIndic.enabled)
+                    {
+                        pointerAPLeftIndic.enabled = true;
+
+                    }
+                }
+                else
+                {
+                    if (pointerRenderer.enabled)
+                    {
+                        pointerRenderer.enabled = false;
+                    }
+                    if (pointerAPIndic.enabled)
+                    {
+                        pointerAPIndic.enabled = false;
+                    }
+                    if (pointerAPLeftIndic.enabled)
+                    {
+                        pointerAPLeftIndic.enabled = false;
+
+                    }
                 }
                  
             }
@@ -394,7 +442,7 @@ public class FormsManager : MonoBehaviour {
             
             }
             
-            else if (Input.GetMouseButtonUp(0) && Vector3.Distance(spawnedForms[curForm].transform.position, lineEndPos) > 2)
+            else if (Input.GetMouseButtonUp(0) && Vector3.Distance(spawnedForms[curForm].transform.position, lineEndPos) > 2 && path.corners.Length > 0)
             {
                 //Debug.Log("click to move");
                 AudioManager.PlayClip(playerWalkSound);
@@ -402,7 +450,8 @@ public class FormsManager : MonoBehaviour {
                 curAgent.SetDestination(lineEndPos);
                 curAnimator.SetBool("move", true);
                 pointerLine.gameObject.SetActive(false);
-                pointerText.gameObject.SetActive(false);
+                pointerAPIndic.gameObject.SetActive(false);
+                pointerAPLeftIndic.gameObject.SetActive(false);
                 pointer.gameObject.SetActive(false);
 
                 if (curForm != 1)
@@ -428,6 +477,7 @@ public class FormsManager : MonoBehaviour {
             }
         }
     }
+
     void move()
     {
         if (!CONTROLS_IS_ON)
@@ -485,7 +535,8 @@ public class FormsManager : MonoBehaviour {
     {
         actionPointsLeft = maxActionPoints;
         pointerLine.gameObject.SetActive(true);
-        pointerText.gameObject.SetActive(true);
+        pointerAPIndic.gameObject.SetActive(true);
+        pointerAPLeftIndic.gameObject.SetActive(true);
         pointer.gameObject.SetActive(true);
     }
 
@@ -500,10 +551,14 @@ public class FormsManager : MonoBehaviour {
             pointerLine.gameObject.SetActive(true);
             pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
         }
-        if (!pointerText.gameObject.activeSelf)
+        if (!pointerAPIndic.gameObject.activeSelf)
         {
-            pointerText.gameObject.SetActive(true);
-            pointerText.text = "" + 0;
+            pointerAPIndic.gameObject.SetActive(true);
+            pointerAPIndic.fillAmount = 0;
+        }
+        if (!pointerAPLeftIndic.gameObject.activeSelf)
+        {
+            pointerAPLeftIndic.gameObject.SetActive(true);
         }
     }
 
