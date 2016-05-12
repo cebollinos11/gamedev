@@ -36,6 +36,8 @@ public class EnemyGuard : Enemy {
 
     UIMaster ui;
 
+    Animator myAnim;
+
     enum enemyState
     {
         stand,
@@ -52,6 +54,8 @@ public class EnemyGuard : Enemy {
         actionpointsLeft = maxActionPoints;
         player = GameObject.FindGameObjectWithTag("Player");
         ui = GameObject.FindObjectOfType<UIMaster>();
+
+        myAnim = GetComponent<Animator>();
 
         startingPos = transform.position;
         startingRot = transform.rotation;
@@ -152,6 +156,7 @@ public class EnemyGuard : Enemy {
         
         if(actionpointsLeft <= 0)
         {
+            myAnim.SetBool("move", false);
             actionpointsLeft = maxActionPoints;
             agent.SetDestination(transform.position);
             eState = enemyState.stand;
@@ -184,6 +189,8 @@ public class EnemyGuard : Enemy {
 
     void stand()
     {
+        myAnim.SetBool("move", false);
+
         if (!investigate && waypoints.Length <= 0 && Vector3.Distance(transform.position, startingPos) > 1)
         {
             eState = enemyState.patrol;
@@ -261,6 +268,10 @@ public class EnemyGuard : Enemy {
 
         if (agent.remainingDistance <= 0.01F)
         {
+            if (myAnim.GetBool("move") == false)
+            {
+                myAnim.SetBool("move", true);
+            }
             if (!investigate && waypoints.Length > 0)
             {
                 waypointID++;

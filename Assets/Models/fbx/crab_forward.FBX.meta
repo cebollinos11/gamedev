@@ -356,11 +356,177 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Crab
+        weight: 1
+      - path: CrabHub
+        weight: 1
+      - path: CrabHub/CrabLLeg11
+        weight: 1
+      - path: CrabHub/CrabLLeg11/CrabLLeg12
+        weight: 1
+      - path: CrabHub/CrabLLeg11/CrabLLeg12/CrabLLeg13
+        weight: 1
+      - path: CrabHub/CrabRLeg1
+        weight: 1
+      - path: CrabHub/CrabRLeg1/CrabRLeg2
+        weight: 1
+      - path: CrabHub/CrabRLeg1/CrabRLeg2/CrabRLeg3
+        weight: 1
+      - path: CrabHub/CrabLLeg21
+        weight: 1
+      - path: CrabHub/CrabLLeg21/CrabLLeg22
+        weight: 1
+      - path: CrabHub/CrabLLeg21/CrabLLeg22/CrabLLeg23
+        weight: 1
+      - path: CrabHub/CrabRLeg1 1
+        weight: 1
+      - path: CrabHub/CrabRLeg1 1/CrabRLeg2 1
+        weight: 1
+      - path: CrabHub/CrabRLeg1 1/CrabRLeg2 1/CrabRLeg3 1
+        weight: 1
+      - path: CrabHub/CrabLLeg31
+        weight: 1
+      - path: CrabHub/CrabLLeg31/CrabLLeg32
+        weight: 1
+      - path: CrabHub/CrabLLeg31/CrabLLeg32/CrabLLeg33
+        weight: 1
+      - path: CrabHub/CrabRLeg1 2
+        weight: 1
+      - path: CrabHub/CrabRLeg1 2/CrabRLeg2 2
+        weight: 1
+      - path: CrabHub/CrabRLeg1 2/CrabRLeg2 2/CrabRLeg3 3
+        weight: 1
+      - path: CrabHub/CrabLLeg41
+        weight: 1
+      - path: CrabHub/CrabLLeg41/CrabLLeg42
+        weight: 1
+      - path: CrabHub/CrabLLeg41/CrabLLeg42/CrabLLeg43
+        weight: 1
+      - path: CrabHub/CrabRLeg1 3
+        weight: 1
+      - path: CrabHub/CrabRLeg1 3/CrabRLeg2 3
+        weight: 1
+      - path: CrabHub/CrabRLeg1 3/CrabRLeg2 3/CrabRLeg3 2
+        weight: 1
+      - path: CrabHub/CrabLArm1
+        weight: 1
+      - path: CrabHub/CrabLArm1/CrabLArm2
+        weight: 1
+      - path: CrabHub/CrabLArm1/CrabLArm2/CrabLArmPalm
+        weight: 1
+      - path: CrabHub/CrabLArm1/CrabLArm2/CrabLArmPalm/CrabLArmDigit1
+        weight: 1
+      - path: CrabHub/CrabRArm1
+        weight: 1
+      - path: CrabHub/CrabRArm1/CrabRArm2
+        weight: 1
+      - path: CrabHub/CrabEyeL1
+        weight: 1
+      - path: CrabHub/CrabEyeL1/CrabEyeL2
+        weight: 1
+      - path: CrabHub/CrabEyeL1/CrabEyeL2/CrabEyeL3
+        weight: 1
+      - path: CrabHub/CrabEyeL1/CrabEyeL2/CrabEyeL3/CrabEyeL4
+        weight: 1
+      - path: CrabHub/CrabEyeL1/CrabEyeL2/CrabEyeL3/CrabEyeL4/CrabEyeL5
+        weight: 1
+      - path: CrabHub/CrabEyeR1
+        weight: 1
+      - path: CrabHub/CrabEyeR1/CrabEyeR2
+        weight: 1
+      - path: CrabHub/CrabEyeR1/CrabEyeR2/CrabEyeR3
+        weight: 1
+      - path: CrabHub/CrabEyeR1/CrabEyeR2/CrabEyeR3/CrabEyeR4
+        weight: 1
+      - path: CrabHub/CrabEyeR1/CrabEyeR2/CrabEyeR3/CrabEyeR4/CrabEyeR5
+        weight: 1
+      - path: CrabLLeg1Platform
+        weight: 1
+      - path: CrabRLegPlatform 3
+        weight: 1
+      - path: CrabLLeg2Platform
+        weight: 1
+      - path: CrabRLegPlatform 1
+        weight: 1
+      - path: CrabLLeg3Platform
+        weight: 1
+      - path: CrabRLegPlatform
+        weight: 1
+      - path: CrabLLeg4Platform
+        weight: 1
+      - path: CrabRLegPlatform 2
+        weight: 1
+      - path: cRABBBY MODEL
+        weight: 1
+      - path: cRABBBY MODEL/Cylinder001
+        weight: 1
+      - path: cRABBBY MODEL/Cylinder002
+        weight: 1
+      - path: cRABBBY MODEL/Cylinder003
+        weight: 1
+      - path: cRABBBY MODEL/Cylinder004
+        weight: 1
+      - path: cRABBBY MODEL/Cylinder005
+        weight: 1
+      - path: cRABBBY MODEL/Cylinder006
+        weight: 1
+      - path: cRABBBY MODEL/Cylinder007
+        weight: 1
+      - path: cRABBBY MODEL/Cylinder008
+        weight: 1
+      - path: cRABBBY MODEL/Sphere001
+        weight: 1
+      - path: cRABBBY MODEL/Sphere002
+        weight: 1
+      - path: cRABBBY MODEL/Sphere003
+        weight: 1
+      - path: cRABBBY MODEL/Sphere004
+        weight: 1
+      - path: cRABBBY MODEL/Sphere005
+        weight: 1
+      - path: cRABBBY MODEL/Sphere006
+        weight: 1
+      - path: cRABBBY MODEL/Sphere007
+        weight: 1
+      - path: cRABBBY MODEL/Sphere008
+        weight: 1
+      - path: cRABBBY MODEL/ChamferBox001
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 40
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
