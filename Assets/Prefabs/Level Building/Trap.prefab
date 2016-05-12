@@ -518,6 +518,7 @@ MonoBehaviour:
   turnsLeft: 0
   trapActivated: 0
   trapEffects: {fileID: 171756}
+  TrapSound: {fileID: 8300000, guid: a7911785340069f4aae7db4853592367, type: 3}
 --- !u!114 &11419344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -529,7 +530,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d053d92e63a0a83459451caa3a6caf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinnedMeshRenderer: 0
   speed: 5
+  otherAxis: 0
 --- !u!114 &11485856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -541,7 +544,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d053d92e63a0a83459451caa3a6caf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skinnedMeshRenderer: 0
   speed: 5
+  otherAxis: 0
 --- !u!136 &13624222
 CapsuleCollider:
   m_ObjectHideFlags: 1
