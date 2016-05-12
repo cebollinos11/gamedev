@@ -6024,8 +6024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 0
-  dialogText: Good news, Sigma. We fixed the bug with your optic form. It should be
-    functional soon.
+  dialogText: Good news, Sigma. We fixed your optic decoy form. It should be functional
+    soon.
   dialogTalker: 0
 --- !u!1001 &1350963835
 Prefab:

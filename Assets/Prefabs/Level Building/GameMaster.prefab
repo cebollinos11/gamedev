@@ -239,12 +239,13 @@ MonoBehaviour:
   - {fileID: 0}
   playerWalkSound: {fileID: 8300000, guid: 0af3c41c4a9455b449f0940d8873afab, type: 3}
   digitalSplitSound: {fileID: 8300000, guid: 3c27580af79f8614791395c007729300, type: 3}
-  splitExplosion: {fileID: 150770, guid: 85b077264f3e8f14c96ba8acf03ba48b, type: 2}
   state: 0
   blockMovement1Frame: 0
   opticFormPrefab: {fileID: 171880, guid: bb66cfd90c947844d8a1176380d56336, type: 2}
   physLineColor: {r: 0.38039216, g: 0.11764706, b: 0.60784316, a: 0.5137255}
   digiLineColor: {r: 1, g: 1, b: 1, a: 0.5137255}
+  OpticCastSound: {fileID: 8300000, guid: 1e5c8ce6ec9c9c84fbcc6f2c4b589c1a, type: 3}
+  OpticCastedSound: {fileID: 8300000, guid: fb0006ad87594ad45865b54ee64d6e64, type: 3}
 --- !u!114 &11477806
 MonoBehaviour:
   m_ObjectHideFlags: 1
