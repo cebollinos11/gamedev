@@ -3,6 +3,9 @@ using System.Collections;
 
 public class EnemyCam : Enemy {
 
+    [SerializeField]
+    AudioClip CameraSound;
+
     GameObject player;
 
     [SerializeField] bool rotatingCamera = false;
@@ -109,6 +112,8 @@ public class EnemyCam : Enemy {
     {
         if(rotatingCamera)
         {
+            if(Vector3.Distance(transform.position, player.transform.position)<50)
+                AudioManager.PlayClip(CameraSound);
             transform.Rotate(Vector3.up * 90);
         }
         base.state = Enemy.enemyState.idle;

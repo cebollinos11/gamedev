@@ -258,6 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionpointsLeft: 3
   state: 0
+  CameraSound: {fileID: 8300000, guid: 43be12b3bee514e4295157a61fccb83c, type: 3}
   rotatingCamera: 1
   FOVUpdateInterval: 0.25
   fieldOfViewRange: 50
