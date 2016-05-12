@@ -72,6 +72,7 @@ public class PressurePlate : MonoBehaviour {
 
             if (!activated)
             {
+
                 bool secondCameraActive = false;
 
                 myRenderer.material.color = enabledColor;
@@ -84,7 +85,12 @@ public class PressurePlate : MonoBehaviour {
                     if (!secondCameraActive)
                     {
                         secondCameraActive = true;
-                        Instantiate(camFocuser, obj.transform.position, Quaternion.identity);
+                        if(GameObject.FindObjectOfType<FocusCamera>() == null)
+                        {
+                            Instantiate(camFocuser, obj.transform.position, Quaternion.identity);
+                            Debug.Log("TURBO CAMMMMMMMMMMMMMMMMMMMMM");
+                        }
+                            
                     }
                 }
 
