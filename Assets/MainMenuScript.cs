@@ -3,14 +3,25 @@ using System.Collections;
 
 public class MainMenuScript : MonoBehaviour {
 
-	
-	
-	// Update is called once per frame
-	void Update () {
+    [SerializeField]
+    GameObject ButtonStart, ButtonExit,Panel;
 
-        if (Input.anyKeyDown) {
-            Debug.Log("load first level");
-            Application.LoadLevel(1);
-        }
-	}
+    void PlaySound()
+    {
+
+        Application.LoadLevel(1);
+    }
+
+    public void LoadGame()
+    {
+        //
+
+        ButtonExit.SetActive(false);
+        ButtonStart.SetActive(false);
+        Panel.SetActive(false);
+        GetComponent<AudioSource>().Play();
+        Invoke("PlaySound", 2f);
+    }
+	
+
 }
