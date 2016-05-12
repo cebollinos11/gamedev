@@ -161,8 +161,12 @@ public class EnemyGuard : Enemy {
         {
             if (actionpointsLeft == maxActionPoints)
             {
-                if (Vector3.Distance(transform.position, player.transform.position) < 50)
+                if (Vector3.Distance(transform.position, player.transform.position) < 50 && eState == enemyState.patrol)
+                {
                     AudioManager.PlayCraberino();
+                    
+                }
+                    
             }
             switch (eState)
             {
