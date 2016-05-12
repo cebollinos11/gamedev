@@ -29,8 +29,10 @@ public class EndOfLevel : MonoBehaviour {
                 AudioManager.PlayClip(ElevatorSound);
                 triggeredAlready = true;
                 Debug.Log("SHOW LEVEL COMPLETE!");
+                CameraShaderManager cam = GameObject.FindObjectOfType<CameraShaderManager>();
+                cam.RunWin();
                 Debug.Log(Application.loadedLevel);
-                Invoke("GoToNextLevel", 2f);
+                Invoke("GoToNextLevel", 3f);
 
             
             }

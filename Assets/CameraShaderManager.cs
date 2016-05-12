@@ -4,6 +4,7 @@ using System.Collections;
 public class CameraShaderManager : MonoBehaviour {
 
     public Material MaskShader;
+    public Material ShaderWin;
     public Material WaterShader;
     public Material NegativeShader;
     public Material DigitalShader;
@@ -20,6 +21,7 @@ public class CameraShaderManager : MonoBehaviour {
 
         
         RunStart();
+        //RunWin();
         //currentMaterial = DigitalShader;
     }
 
@@ -59,6 +61,26 @@ public class CameraShaderManager : MonoBehaviour {
 
     }
 
+    IEnumerator WinAnimation()
+    {
+
+        currentMaterial = ShaderWin;
+
+        float c = 0.0f;
+
+        do
+        {
+            c += Time.deltaTime;
+            float val = Sin.Evaluate(c);
+            currentMaterial.SetFloat("_MaskAmount", val);
+            transform.Rotate(new Vector3(Time.deltaTime * 20f,0.0f,0.0f));
+            transform.position = (transform.position + new Vector3(0.0f, -Time.deltaTime * 20f, 0.0f));
+            yield return new WaitForEndOfFrame();
+        } while (true);
+
+
+    }
+
     public void SetDigital() {
 
         currentMaterial = DigitalShader;
@@ -91,6 +113,11 @@ public class CameraShaderManager : MonoBehaviour {
     public void RunDeath()
     {
         StartCoroutine(DeathAnimation());
+    }
+
+    public void RunWin()
+    {
+        StartCoroutine(WinAnimation());
     }
 
 
