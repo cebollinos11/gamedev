@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 459920}
   - 33: {fileID: 3337442}
   - 23: {fileID: 2381272}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 429530}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: cRABBBY MODEL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 482194}
   - 137: {fileID: 13756756}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - 4: {fileID: 462668}
   - 33: {fileID: 3361938}
   - 23: {fileID: 2373316}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRArm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - 4: {fileID: 411226}
   - 33: {fileID: 3309642}
   - 23: {fileID: 2357528}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg3 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - 4: {fileID: 456678}
   - 33: {fileID: 3360164}
   - 23: {fileID: 2318696}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - 4: {fileID: 496474}
   - 33: {fileID: 3307442}
   - 23: {fileID: 2377884}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLArm2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 483510}
   - 137: {fileID: 13758224}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 406408}
   - 137: {fileID: 13703490}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   - 4: {fileID: 453894}
   - 33: {fileID: 3372884}
   - 23: {fileID: 2372966}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg3 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 426084}
   - 137: {fileID: 13793304}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +191,7 @@ GameObject:
   - 4: {fileID: 466914}
   - 33: {fileID: 3348314}
   - 23: {fileID: 2356162}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabHub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   - 4: {fileID: 443748}
   - 33: {fileID: 3393910}
   - 23: {fileID: 2349680}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabEyeL4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   - 4: {fileID: 447766}
   - 33: {fileID: 3361142}
   - 23: {fileID: 2392484}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg3 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - 4: {fileID: 453334}
   - 33: {fileID: 3349666}
   - 23: {fileID: 2300932}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 481532}
   - 137: {fileID: 13736506}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   - 4: {fileID: 462792}
   - 33: {fileID: 3319412}
   - 23: {fileID: 2365524}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabEyeR4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   - 4: {fileID: 461090}
   - 33: {fileID: 3372606}
   - 23: {fileID: 2356666}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabEyeR1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485460}
   - 137: {fileID: 13748198}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - 4: {fileID: 441416}
   - 33: {fileID: 3393990}
   - 23: {fileID: 2309530}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   - 4: {fileID: 420252}
   - 33: {fileID: 3387578}
   - 23: {fileID: 2357402}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   - 4: {fileID: 439590}
   - 33: {fileID: 3383860}
   - 23: {fileID: 2301428}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabEyeL3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   - 4: {fileID: 474046}
   - 33: {fileID: 3369660}
   - 23: {fileID: 2322524}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg2 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 494024}
   - 137: {fileID: 13755446}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   - 4: {fileID: 413592}
   - 33: {fileID: 3319632}
   - 23: {fileID: 2309348}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,7 +426,7 @@ GameObject:
   - 4: {fileID: 435264}
   - 33: {fileID: 3382468}
   - 23: {fileID: 2383700}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRArm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   - 195: {fileID: 19513920}
   - 114: {fileID: 11477550}
   - 54: {fileID: 5464534}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemyGuard
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 441788}
   - 137: {fileID: 13778496}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   - 4: {fileID: 495334}
   - 33: {fileID: 3353044}
   - 23: {fileID: 2330676}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   - 4: {fileID: 440278}
   - 33: {fileID: 3313816}
   - 23: {fileID: 2391690}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabEyeL2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   - 4: {fileID: 437438}
   - 33: {fileID: 3321864}
   - 23: {fileID: 2342336}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabEyeR2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - 4: {fileID: 496268}
   - 33: {fileID: 3390332}
   - 23: {fileID: 2316368}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLArm1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +565,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 493848}
   - 137: {fileID: 13751400}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +582,7 @@ GameObject:
   - 4: {fileID: 429792}
   - 33: {fileID: 3300436}
   - 23: {fileID: 2340584}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg1 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,7 +599,7 @@ GameObject:
   - 4: {fileID: 441484}
   - 33: {fileID: 3385638}
   - 23: {fileID: 2323938}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabEyeL5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +616,7 @@ GameObject:
   - 4: {fileID: 497846}
   - 33: {fileID: 3362780}
   - 23: {fileID: 2396212}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   - 4: {fileID: 476996}
   - 33: {fileID: 3315544}
   - 23: {fileID: 2328434}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLArmPalm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,7 +649,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 460340}
   - 137: {fileID: 13756146}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 481688}
   - 137: {fileID: 13706278}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ChamferBox001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -681,7 +681,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 450434}
   - 137: {fileID: 13768530}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   - 4: {fileID: 429724}
   - 33: {fileID: 3338614}
   - 23: {fileID: 2356014}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -715,7 +715,7 @@ GameObject:
   - 4: {fileID: 499756}
   - 33: {fileID: 3353260}
   - 23: {fileID: 2378172}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -732,7 +732,7 @@ GameObject:
   - 4: {fileID: 479940}
   - 33: {fileID: 3320818}
   - 23: {fileID: 2383674}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,7 +749,7 @@ GameObject:
   - 4: {fileID: 426096}
   - 33: {fileID: 3362308}
   - 23: {fileID: 2355776}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLArmDigit1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 456184}
   - 137: {fileID: 13741766}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +782,7 @@ GameObject:
   - 4: {fileID: 493606}
   - 33: {fileID: 3376378}
   - 23: {fileID: 2304642}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabEyeL1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -798,7 +798,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 496724}
   - 137: {fileID: 13784640}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +815,7 @@ GameObject:
   - 4: {fileID: 480132}
   - 33: {fileID: 3371326}
   - 23: {fileID: 2377228}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg2 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   - 4: {fileID: 435540}
   - 33: {fileID: 3372244}
   - 23: {fileID: 2399766}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabEyeR5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +848,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 466374}
   - 137: {fileID: 13739854}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,7 +865,7 @@ GameObject:
   - 4: {fileID: 452084}
   - 33: {fileID: 3304946}
   - 23: {fileID: 2363338}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +882,7 @@ GameObject:
   - 4: {fileID: 418678}
   - 33: {fileID: 3323818}
   - 23: {fileID: 2304630}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,7 +899,7 @@ GameObject:
   - 4: {fileID: 423792}
   - 33: {fileID: 3378816}
   - 23: {fileID: 2333484}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,7 +916,7 @@ GameObject:
   - 4: {fileID: 408304}
   - 33: {fileID: 3369978}
   - 23: {fileID: 2300286}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -933,7 +933,7 @@ GameObject:
   - 4: {fileID: 454036}
   - 33: {fileID: 3364900}
   - 23: {fileID: 2331738}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabRLeg1 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -950,7 +950,7 @@ GameObject:
   - 4: {fileID: 455756}
   - 33: {fileID: 3379404}
   - 23: {fileID: 2326808}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -967,7 +967,7 @@ GameObject:
   - 4: {fileID: 492830}
   - 33: {fileID: 3367442}
   - 23: {fileID: 2344194}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabEyeR3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -983,7 +983,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 429632}
   - 137: {fileID: 13798620}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1000,7 +1000,7 @@ GameObject:
   - 4: {fileID: 415988}
   - 33: {fileID: 3392946}
   - 23: {fileID: 2341730}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CrabLLeg23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1016,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 459122}
   - 137: {fileID: 13781094}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3235,7 +3235,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145084}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 5, y: 2.83, z: 3.5}

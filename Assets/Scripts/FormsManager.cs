@@ -217,9 +217,11 @@ public class FormsManager : MonoBehaviour {
                     {
                         RaycastHit hitt;
 
-                        Vector3 dir = (hit.point - spawnedForms[0].transform.position).normalized;
+                        Vector3 startPos = new Vector3(spawnedForms[0].transform.position.x, spawnedForms[0].transform.position.y+5, spawnedForms[0].transform.position.z);
 
-                        if (Physics.Raycast(spawnedForms[0].transform.position, dir, out hitt))
+                        Vector3 dir = (hit.point - startPos).normalized;
+
+                        if (Physics.Raycast(startPos, dir, out hitt))
                         {
                             if (Vector3.Distance(hitt.point, hit.point) < 0.1f)
                             {
