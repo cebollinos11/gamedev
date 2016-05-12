@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Checkpoint : MonoBehaviour {
 
+    [SerializeField]
+    AudioClip CheckpointSound;
+
 	// Use this for initialization
 	void Start () {
         GetComponent<MeshRenderer>().enabled = false;
@@ -14,7 +17,8 @@ public class Checkpoint : MonoBehaviour {
     {
         Debug.Log(col.gameObject.name);
         if (col.gameObject.name == "PhysicalForm") {
-            SendToSingleton(col.gameObject.transform.position); 
+            SendToSingleton(col.gameObject.transform.position);
+            AudioManager.PlayClip(CheckpointSound);
         }
     }
 
