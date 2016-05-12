@@ -20,7 +20,7 @@ public class MainMenuScript : MonoBehaviour {
         ButtonStart.SetActive(false);
         Panel.SetActive(false);
         GetComponent<AudioSource>().Play();
-        Invoke("PlaySound", 2f);
+        Invoke("PlaySound", 4f);
     }
 	
 
