@@ -260,6 +260,8 @@ public class EnemyGuard : Enemy {
 
     void patrol()
     {
+			myAnim.SetBool("move", true);
+
         if(Vector3.Distance(transform.position, curPosition) >= actionPointLength)
         {
             actionpointsLeft--;
@@ -268,10 +270,7 @@ public class EnemyGuard : Enemy {
 
         if (agent.remainingDistance <= 0.01F)
         {
-            if (myAnim.GetBool("move") == false)
-            {
-                myAnim.SetBool("move", true);
-            }
+            
             if (!investigate && waypoints.Length > 0)
             {
                 waypointID++;
