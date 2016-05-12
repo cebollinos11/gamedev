@@ -553,14 +553,30 @@ public class FormsManager : MonoBehaviour {
             pointerLine.gameObject.SetActive(true);
             pointerLine.SetPosition(0, spawnedForms[curForm].transform.position);
         }
-        if (!pointerAPIndic.gameObject.activeSelf)
+
+        if (curForm == 0)
         {
-            pointerAPIndic.gameObject.SetActive(true);
-            pointerAPIndic.fillAmount = 0;
+            if (!pointerAPIndic.gameObject.activeSelf)
+            {
+                pointerAPIndic.gameObject.SetActive(true);
+                pointerAPIndic.fillAmount = 0;
+            }
+            if (!pointerAPLeftIndic.gameObject.activeSelf)
+            {
+                pointerAPLeftIndic.gameObject.SetActive(true);
+            }
         }
-        if (!pointerAPLeftIndic.gameObject.activeSelf)
+        else
         {
-            pointerAPLeftIndic.gameObject.SetActive(true);
+            if (pointerAPIndic.gameObject.activeSelf)
+            {
+                pointerAPIndic.gameObject.SetActive(false);
+                pointerAPIndic.fillAmount = 0;
+            }
+            if (pointerAPLeftIndic.gameObject.activeSelf)
+            {
+                pointerAPLeftIndic.gameObject.SetActive(false);
+            }
         }
     }
 
