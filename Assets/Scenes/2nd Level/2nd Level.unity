@@ -755,7 +755,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489074, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_RootOrder
-      value: 34
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 177070, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_Name
@@ -2989,14 +2989,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 11449150, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
-      propertyPath: spawnedForms.Array.data[0]
-      value: 
-      objectReference: {fileID: 1192338349}
-    - target: {fileID: 11477806, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
-      propertyPath: soundEndTurn
-      value: 
-      objectReference: {fileID: 8300000, guid: 98d2970133c07034ea196c0e7d234137, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
   m_IsPrefabParent: 0
@@ -3825,10 +3817,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 415732, guid: fe07d8782eaa7f04cb9e4a8c819d1e55, type: 2}
   m_PrefabInternal: {fileID: 1155290610}
---- !u!1 &1192338349 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 136242, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
-  m_PrefabInternal: {fileID: 295248322}
 --- !u!1001 &1210938491
 Prefab:
   m_ObjectHideFlags: 0
@@ -5138,7 +5126,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489074, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_RootOrder
-      value: 35
+      value: 36
       objectReference: {fileID: 0}
     - target: {fileID: 177070, guid: bc3ed2c7e9ae54a979c1347ced6ec06f, type: 2}
       propertyPath: m_Name

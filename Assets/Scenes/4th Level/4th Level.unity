@@ -1778,14 +1778,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
-    - target: {fileID: 11449150, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
-      propertyPath: spawnedForms.Array.data[0]
-      value: 
-      objectReference: {fileID: 1192338349}
-    - target: {fileID: 11477806, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
-      propertyPath: soundEndTurn
-      value: 
-      objectReference: {fileID: 8300000, guid: 98d2970133c07034ea196c0e7d234137, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
   m_IsPrefabParent: 0
@@ -2241,10 +2233,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400936, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
   m_PrefabInternal: {fileID: 1190461204}
---- !u!1 &1192338349 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 136242, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
-  m_PrefabInternal: {fileID: 295248322}
 --- !u!1001 &1224809769
 Prefab:
   m_ObjectHideFlags: 0

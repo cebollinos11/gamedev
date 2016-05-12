@@ -3321,10 +3321,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 11449150, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
-      propertyPath: spawnedForms.Array.data[0]
-      value: 
-      objectReference: {fileID: 1192338349}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7c96db5adfb556498d24c43d787bb94, type: 2}
   m_IsPrefabParent: 0
@@ -4135,10 +4131,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 408598, guid: de4d15dc28e497b418be940e4827ca5f, type: 2}
   m_PrefabInternal: {fileID: 1183274220}
---- !u!1 &1192338349 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 136242, guid: c66cba97a1cb3ce4c83896d8a2fa2c43, type: 2}
-  m_PrefabInternal: {fileID: 295248322}
 --- !u!1001 &1227198765
 Prefab:
   m_ObjectHideFlags: 0
@@ -4686,11 +4678,11 @@ Transform:
   - {fileID: 1391752048}
   - {fileID: 1529573516}
   - {fileID: 433493392}
+  - {fileID: 1752862055}
   - {fileID: 384244554}
   - {fileID: 1566981256}
   - {fileID: 1040107141}
   - {fileID: 1680556745}
-  - {fileID: 1752862055}
   - {fileID: 865306190}
   - {fileID: 912501023}
   - {fileID: 151594312}
@@ -5907,7 +5899,7 @@ Transform:
   m_LocalScale: {x: 4.308695, y: 6.616835, z: 4.135204}
   m_Children: []
   m_Father: {fileID: 1453121105}
-  m_RootOrder: 15
+  m_RootOrder: 11
 --- !u!1 &1764907643
 GameObject:
   m_ObjectHideFlags: 0
