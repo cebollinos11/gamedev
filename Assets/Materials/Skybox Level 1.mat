@@ -106,7 +106,7 @@ Material:
       data:
         first:
           name: _AtmosphereThickness
-        second: 0.38
+        second: 1.73
       data:
         first:
           name: _Parallax
@@ -159,4 +159,4 @@ Material:
       data:
         first:
           name: _GroundColor
-        second: {r: 0.10036569, g: 0.14705884, b: 0.044333916, a: 1}
+        second: {r: 0.52941173, g: 0.9705882, b: 0, a: 1}
