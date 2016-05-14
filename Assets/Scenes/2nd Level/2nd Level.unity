@@ -5609,7 +5609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 5
-  dialogText: No. But it must be a vital part of Animo's ambitions to extablish a
+  dialogText: No. But it must be a vital part of Animo's ambitions to establish a
     false utopia in Haven.
   dialogTalker: 0
 --- !u!114 &1810070358

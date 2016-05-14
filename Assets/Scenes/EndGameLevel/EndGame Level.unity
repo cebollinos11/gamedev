@@ -2271,7 +2271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 10
-  dialogText: The data says they're developing it to be a bodyguard for families.
+  dialogText: The datasheet says they're developing it to be a bodyguard for families.
     Like a maid, but with upgrades.
   dialogTalker: 1
 --- !u!114 &1811513718
@@ -2314,7 +2314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 30
-  dialogText: Got it. Hmmm, it looks like there must be a trigger on the floor somewhere...
+  dialogText: Got it. It looks like there must be a trigger on the floor somewhere...
   dialogTalker: 1
 --- !u!1001 &1822391699
 Prefab:

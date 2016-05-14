@@ -2782,8 +2782,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 0
-  dialogText: Click the Optic icon or Press 3 to equip your optic form. Then LEFT
-    CLICK to select where to place it. Enemies will think that it's you.
+  dialogText: Click the Optic button or Press 3 to equip your optic form. Then LEFT
+    CLICK to select where to place it.
   dialogTalker: 0
 --- !u!114 &1034926401
 MonoBehaviour:
@@ -2811,7 +2811,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 5
-  dialogText: It might still have some glitches though, so be wary.
+  dialogText: Enemies will think that it's you until they come into contact. It might
+    still have some glitches though, so be wary.
   dialogTalker: 0
 --- !u!1 &1048788402
 GameObject:

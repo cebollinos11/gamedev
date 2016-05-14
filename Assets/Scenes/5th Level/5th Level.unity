@@ -8410,7 +8410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 15
-  dialogText: Intel says those are recharging chambers for some versions of the crabs.
+  dialogText: Intel says those are recharging chambers for older versions of the robots.
     The pressure plates activate the chamber entrance.
   dialogTalker: 0
 --- !u!114 &1676046045
@@ -8454,8 +8454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 0
-  dialogText: I see a pressure plate on the ground. My physical form should be able
-    to trigger it - I wonder what it does...
+  dialogText: I see a pressure plate on the ground. I wonder what it does...
   dialogTalker: 1
 --- !u!1001 &1685227221
 Prefab:

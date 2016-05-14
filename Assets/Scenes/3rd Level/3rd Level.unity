@@ -7968,7 +7968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 0
-  dialogText: Some cameras can be hacked from the electrical network too.
+  dialogText: Intel says some cameras can be hacked from the electrical network too.
   dialogTalker: 0
 --- !u!114 &1707764162
 MonoBehaviour:

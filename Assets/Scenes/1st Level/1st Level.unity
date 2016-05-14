@@ -2151,7 +2151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 5
-  dialogText: One of Animo Corps' mascots. They must be security bots - stay away
+  dialogText: One of Animo Corps' mascots. They must be security robots - stay away
     from their vision cones!
   dialogTalker: 0
 --- !u!114 &928892934
@@ -2431,7 +2431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 5
-  dialogText: Also, CLICK the physical button or Press 1 to access your physical form.
+  dialogText: Also, CLICK the Physical button or Press 1 to access your physical form.
   dialogTalker: 0
 --- !u!114 &965076526
 MonoBehaviour:
@@ -2447,6 +2447,20 @@ MonoBehaviour:
   dialogID: 10
   dialogText: When both forms are near a terminal, CLICK the Combine button or Press
     TAB to merge. This ends your turn.
+  dialogTalker: 0
+--- !u!114 &965076527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965076523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 8
+  dialogText: Remember that you need to be recombined to hack into physical switches.
   dialogTalker: 0
 --- !u!1001 &981392840
 Prefab:
@@ -4067,7 +4081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 0
-  dialogText: Omega, the door ahead doesn't have a visible switch.
+  dialogText: Omega, the door ahead doesn't have a switch.
   dialogTalker: 1
 --- !u!114 &1752564827
 MonoBehaviour:
@@ -4081,7 +4095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 15
-  dialogText: To access your digital form, CLICK the digital button or Press 2 when
+  dialogText: To access your digital form, CLICK the Digital button or Press 2 when
     near a terminal. This ends your turn.
   dialogTalker: 0
 --- !u!1 &1764907643

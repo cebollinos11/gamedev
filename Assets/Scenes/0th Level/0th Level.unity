@@ -1423,8 +1423,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 15
-  dialogText: LEFT CLICK to select a point to move to. Moving costs Action Points
-    - when your points are used up, your turn ends.
+  dialogText: LEFT CLICK a position to move to it. Moving costs Action Points - when
+    your points are used up, your turn ends.
   dialogTalker: 0
 --- !u!114 &199863268
 MonoBehaviour:
@@ -5017,8 +5017,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 5
-  dialogText: RIGHT CLICK to rotate your view, and MIDDLE MOUSE BUTTON lets you pan
-    your view
+  dialogText: RIGHT CLICK to rotate your view, and use the MIDDLE MOUSE BUTTON to
+    pan your view
   dialogTalker: 0
 --- !u!114 &584151622
 MonoBehaviour:
@@ -5032,7 +5032,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 10
-  dialogText: Also, you can click END TURN or press SPACE to end your turn manually.
+  dialogText: Also, you can click END TURN or Press SPACE to end your turn manually.
   dialogTalker: 0
 --- !u!114 &584151627
 MonoBehaviour:

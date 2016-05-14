@@ -1826,7 +1826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 10
-  dialogText: At least it won't stop my physical form.
+  dialogText: Good thing it won't stop my physical form.
   dialogTalker: 1
 --- !u!114 &863307838
 MonoBehaviour:
@@ -1841,7 +1841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogID: 5
   dialogText: Intel says it is a magnetic field. It prevents electromagnetic signatures
-    like your digital form from passing through.
+    like those in your digital form from passing through.
   dialogTalker: 0
 --- !u!114 &863307839
 MonoBehaviour:
@@ -2172,7 +2172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
 --- !u!1001 &1020412148
 Prefab:
   m_ObjectHideFlags: 0
