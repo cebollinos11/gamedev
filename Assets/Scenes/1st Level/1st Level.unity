@@ -2460,7 +2460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogID: 8
-  dialogText: Remember that you need to be recombined to hack into physical switches.
+  dialogText: Remember that you need to be recombined to hack into physical switches
+    and elevators.
   dialogTalker: 0
 --- !u!1001 &981392840
 Prefab:
