@@ -2426,7 +2426,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 456562, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -34.32025
+      value: -33.82
       objectReference: {fileID: 0}
     - target: {fileID: 456562, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2434,7 +2434,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 456562, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -43.973404
+      value: -45.54
       objectReference: {fileID: 0}
     - target: {fileID: 456562, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2504,6 +2504,18 @@ Prefab:
       propertyPath: objectsToEnable.Array.data[0]
       value: 
       objectReference: {fileID: 787784596}
+    - target: {fileID: 456562, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 8.096494
+      objectReference: {fileID: 0}
+    - target: {fileID: 456562, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 5.1390576
+      objectReference: {fileID: 0}
+    - target: {fileID: 456562, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.4999999
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13e93b8f9376fdb43928e3e9ddd6443f, type: 2}
   m_IsPrefabParent: 0
@@ -2614,7 +2626,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11456332, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
       propertyPath: doorUnlocked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 912558c20c0e3424290d24044f72c93c, type: 2}
