@@ -193,6 +193,7 @@ GameObject:
   - 54: {fileID: 5454230}
   - 195: {fileID: 19500810}
   - 65: {fileID: 6589556}
+  - 114: {fileID: 11474522}
   m_Layer: 0
   m_Name: PhysicalForm
   m_TagString: Player
@@ -804,6 +805,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11474522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9e3fab18256744db646f1d7f68a838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &13765304
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
