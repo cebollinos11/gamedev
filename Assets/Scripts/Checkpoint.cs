@@ -20,8 +20,12 @@ public class Checkpoint : MonoBehaviour {
         Debug.Log(col.gameObject.name);
         if (col.gameObject.name == "PhysicalForm") {
             if(!hasTriggered)
+            {
                 AudioManager.PlayClip(CheckpointSound);
-            SendToSingleton(col.gameObject.transform.position);
+                SendToSingleton(col.gameObject.transform.position);
+
+            }
+                
             
             hasTriggered = true;
         }

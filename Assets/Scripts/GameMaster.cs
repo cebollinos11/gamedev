@@ -54,7 +54,9 @@ public class GameMaster : MonoBehaviour {
         if (CheckPointManager.GetLevel() == Application.loadedLevel)
         {
             Debug.Log("Using checkpoint");
+            CheckPointManager.init();
             GameObject.FindGameObjectWithTag("Player").transform.position = CheckPointManager.GetPosition();
+            Debug.Log("Send player to checkpoint at " + CheckPointManager.GetPosition().ToString());
             camFocus.GoTo("PhysicalForm");
             
         }
