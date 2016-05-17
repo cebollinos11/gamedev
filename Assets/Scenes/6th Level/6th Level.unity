@@ -2814,6 +2814,20 @@ MonoBehaviour:
   dialogText: Enemies will think that it's you until they come into contact. It might
     still have some glitches though, so be wary.
   dialogTalker: 0
+--- !u!114 &1034926403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034926398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b16cda11970ee3749a329fafc95075d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 2
+  dialogText: You MUST have line of sight with where you want to put your optic form.
+  dialogTalker: 0
 --- !u!1 &1048788402
 GameObject:
   m_ObjectHideFlags: 0
