@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 407948}
   - 33: {fileID: 3344952}
   - 23: {fileID: 2376778}
-  - 65: {fileID: 6598368}
   - 114: {fileID: 11448152}
   - 114: {fileID: 11482294}
+  - 64: {fileID: 6454186}
   m_Layer: 8
   m_Name: wire junction
   m_TagString: Untagged
@@ -65,8 +65,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139294}
   m_Mesh: {fileID: 4300000, guid: 30b43d55bece1744589f227ae3b3178a, type: 3}
---- !u!65 &6598368
-BoxCollider:
+--- !u!64 &6454186
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -75,8 +75,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 30b43d55bece1744589f227ae3b3178a, type: 3}
 --- !u!114 &11448152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skinnedMeshRenderer: 0
   speed: 1
+  otherAxis: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
