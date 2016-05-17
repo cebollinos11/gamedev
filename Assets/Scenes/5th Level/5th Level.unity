@@ -7870,7 +7870,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11477550, guid: fe07d8782eaa7f04cb9e4a8c819d1e55, type: 2}
       propertyPath: spotRange
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11477550, guid: fe07d8782eaa7f04cb9e4a8c819d1e55, type: 2}
       propertyPath: visionRange
